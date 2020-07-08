@@ -103,23 +103,17 @@ where po.SupplierID is null
 * имя контактного лица принимавшего заказ (ContactPerson).
 Таблицы: Purchasing.Suppliers, Purchasing.PurchaseOrders, Application.DeliveryMethods, Application.People.*/
 
-select dm.DeliveryMethodName
+select distinct 
+       dm.DeliveryMethodName
       ,s.SupplierName 
       ,po.[ExpectedDeliveryDate]
-      ,p.FullName  SupplierContactPerson
-      ,po.[LastEditedWhen]
+      ,p.FullName  SupplierContactPerson 
   from [Purchasing].Suppliers s
     join [Purchasing].PurchaseOrders po on po.SupplierID = s.SupplierID
 	join [Application].DeliveryMethods dm on dm.DeliveryMethodID = po.DeliveryMethodID
 	join [Application].[People] p on p.PersonID = po.ContactPersonID
  where po.ExpectedDeliveryDate between '20140101' and '20140131'
-   and dm.DeliveryMethodName in( 'Air Freight', 'Refrigerated Air Freight')
-group by dm.DeliveryMethodName
-      ,s.SupplierName 
-      ,po.[ExpectedDeliveryDate]
-      ,p.FullName
-      ,po.[LastEditedWhen]
-
+   and dm.DeliveryMethodName in( 'Air Freight', 'Refrigerated Air Freight') 
 
 /*5. Десять последних продаж (по дате) с именем клиента и именем сотрудника, который оформил заказ (SalespersonPerson).*/
 
@@ -134,14 +128,12 @@ order by o.OrderDate desc
 
 /*6. Все ид и имена клиентов и их контактные телефоны, которые покупали товар Chocolate frogs 250g. Имя товара смотреть в Warehouse.StockItems.*/
 
-select o.CustomerID
+select distinct 
+       o.CustomerID
      , c.CustomerName
 	 , c.PhoneNumber
    from Warehouse.StockItems si
        join Sales.OrderLines ol on ol.StockItemID = si.SupplierID
 	   join Sales.Orders o on o.OrderID = ol.OrderLineID
 	   join Sales.Customers c on c.CustomerID = o.CustomerID
-   where si.StockItemName = 'Chocolate frogs 250g'
-group by o.CustomerID
-     , c.CustomerName
-	 , c.PhoneNumber
+   where si.StockItemName = 'Chocolate frogs 250g' 
