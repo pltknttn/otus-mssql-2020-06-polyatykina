@@ -78,7 +78,7 @@ where po.SupplierID is null
 Добавьте вариант этого запроса с постраничной выборкой, пропустив первую 1000 и отобразив следующие 100 записей. Сортировка должна быть по номеру квартала, трети года, дате заказа (везде по возрастанию).
 Таблицы: Sales.Orders, Sales.OrderLines, Sales.Customers.*/
 
- select 
+   select 
        o.[OrderID]      
       ,convert(varchar(30), o.[OrderDate], 104)  OrderDateDDMMYYYY
 	  ,DATENAME(month, o.[OrderDate])            OrderMonth 
@@ -91,13 +91,7 @@ where po.SupplierID is null
    from [Sales].[Orders] o
       join [Sales].[OrderLines] ol on ol.OrderID = o.OrderID 
 	  join [Sales].[Customers] c on c.CustomerID = o.CustomerID
-   where  o.PickingCompletedWhen is not null
-   group 
-      by o.[OrderID]
-        ,o.[CustomerID] 
-		,c.CustomerName
-		,o.[OrderDate]
-   having max(ol.UnitPrice) > 100 or sum(ol.Quantity) > 20
+   where (ol.UnitPrice > 100 or ol.Quantity > 20) and o.PickingCompletedWhen is not null
    order by [Quarter] ASC, [Third] ASC, [OrderDate] ASC
    OFFSET 1000 ROWS FETCH NEXT 100 ROWS ONLY
 
