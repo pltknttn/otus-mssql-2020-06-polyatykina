@@ -29,7 +29,8 @@ SELECT [StockItemID]
       ,[SearchDetails]
       ,[LastEditedBy] 
   FROM [Warehouse].[StockItems]
-  where StockItemName like '%urgent%' or StockItemName like 'animal%'
+  where StockItemName like '%urgent%' COLLATE Latin1_General_CS_AS
+     or StockItemName like 'Animal%' COLLATE Latin1_General_CS_AS
 
  /*2. Поставщиков (Suppliers), у которых не было сделано ни одного заказа (PurchaseOrders). Сделать через JOIN, с подзапросом задание принято не будет.
 Таблицы: Purchasing.Suppliers, Purchasing.PurchaseOrders.*/
@@ -96,7 +97,9 @@ where po.SupplierID is null
         ,o.[CustomerID] 
 		,c.CustomerName
 		,o.[OrderDate]
-   having max(ol.UnitPrice) > 0 or count(ol.OrderLineID) > 20
+   having max(ol.UnitPrice) > 100 or sum(ol.Quantity) > 20
+   order by [Quarter] ASC, [Third] ASC, [OrderDate] ASC
+   OFFSET 1000 ROWS FETCH NEXT 100 ROWS ONLY
 
 /*4. Заказы поставщикам (Purchasing.Suppliers), которые были исполнены в январе 2014 года с доставкой Air Freight или Refrigerated Air Freight (DeliveryMethodName).
 Вывести:
@@ -133,9 +136,6 @@ select top 10
  from Sales.Orders o
    join Sales.Customers c on c.CustomerID = o.CustomerID
    join [Application].[People] p on p.PersonID = o.SalespersonPersonID
-group by o.OrderDate
-     , c.CustomerName
-	 , p.FullName
 order by o.OrderDate desc
 
 /*6. Все ид и имена клиентов и их контактные телефоны, которые покупали товар Chocolate frogs 250g. Имя товара смотреть в Warehouse.StockItems.*/
