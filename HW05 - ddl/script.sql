@@ -1,14 +1,14 @@
 /*
-Начало проектной работы.
-Создание таблиц и представлений для своего проекта.
-Если вы не сделали этого раньше, придумайте и сделайте краткое описание проекта, который будете делать в рамках всего курса.
+РќР°С‡Р°Р»Рѕ РїСЂРѕРµРєС‚РЅРѕР№ СЂР°Р±РѕС‚С‹.
+РЎРѕР·РґР°РЅРёРµ С‚Р°Р±Р»РёС† Рё РїСЂРµРґСЃС‚Р°РІР»РµРЅРёР№ РґР»СЏ СЃРІРѕРµРіРѕ РїСЂРѕРµРєС‚Р°.
+Р•СЃР»Рё РІС‹ РЅРµ СЃРґРµР»Р°Р»Рё СЌС‚РѕРіРѕ СЂР°РЅСЊС€Рµ, РїСЂРёРґСѓРјР°Р№С‚Рµ Рё СЃРґРµР»Р°Р№С‚Рµ РєСЂР°С‚РєРѕРµ РѕРїРёСЃР°РЅРёРµ РїСЂРѕРµРєС‚Р°, РєРѕС‚РѕСЂС‹Р№ Р±СѓРґРµС‚Рµ РґРµР»Р°С‚СЊ РІ СЂР°РјРєР°С… РІСЃРµРіРѕ РєСѓСЂСЃР°.
 
-Нужно используя операторы DDL создать:
-1. Создать базу данных.
-2. 3-4 основные таблицы для своего проекта.
-3. Первичные и внешние ключи для всех созданных таблиц.
-4. 1-2 индекса на таблицы.
-5. Наложите по одному ограничению в каждой таблице на ввод данных.
+РќСѓР¶РЅРѕ РёСЃРїРѕР»СЊР·СѓСЏ РѕРїРµСЂР°С‚РѕСЂС‹ DDL СЃРѕР·РґР°С‚СЊ:
+1. РЎРѕР·РґР°С‚СЊ Р±Р°Р·Сѓ РґР°РЅРЅС‹С….
+2. 3-4 РѕСЃРЅРѕРІРЅС‹Рµ С‚Р°Р±Р»РёС†С‹ РґР»СЏ СЃРІРѕРµРіРѕ РїСЂРѕРµРєС‚Р°.
+3. РџРµСЂРІРёС‡РЅС‹Рµ Рё РІРЅРµС€РЅРёРµ РєР»СЋС‡Рё РґР»СЏ РІСЃРµС… СЃРѕР·РґР°РЅРЅС‹С… С‚Р°Р±Р»РёС†.
+4. 1-2 РёРЅРґРµРєСЃР° РЅР° С‚Р°Р±Р»РёС†С‹.
+5. РќР°Р»РѕР¶РёС‚Рµ РїРѕ РѕРґРЅРѕРјСѓ РѕРіСЂР°РЅРёС‡РµРЅРёСЋ РІ РєР°Р¶РґРѕР№ С‚Р°Р±Р»РёС†Рµ РЅР° РІРІРѕРґ РґР°РЅРЅС‹С….
 */
 
 USE master
@@ -37,7 +37,7 @@ GO
 create schema Dictionary
 go
 
-/*Виды контрагентов - НАПРИМЕР, ЮРЛИЦО, ФИЗЛИЦО, ИНОСТРАННОЕ*/
+/*Р’РёРґС‹ РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРІ - РќРђРџР РРњР•Р , Р®Р Р›РР¦Рћ, Р¤РР—Р›РР¦Рћ, РРќРћРЎРўР РђРќРќРћР•*/
 create table Dictionary.ContragentType
 (
    ContragentTypeId int not null identity(1,1),
@@ -50,7 +50,7 @@ GO
 ALTER TABLE Dictionary.ContragentType ADD CONSTRAINT CHK_Dictionary_ContragentType_ContragentTypeName CHECK (trim(ContragentTypeName) != '');
 GO
 
-/*Контрагенты*/
+/*РљРѕРЅС‚СЂР°РіРµРЅС‚С‹*/
 create table Dictionary.Contragents
 (
   ContragentId int not null identity(1,1),
@@ -81,7 +81,7 @@ GO
 CREATE NONCLUSTERED INDEX [IX_Dictionary_Contragents_ContragentTypeId] ON [Dictionary].[Contragents] (ContragentTypeId ASC)
 GO
 
-/*Реквизиты*/
+/*Р РµРєРІРёР·РёС‚С‹*/
 create table Dictionary.ContragentRequisites
 (
 	RequisiteId int not null identity(1,1),
@@ -104,7 +104,7 @@ GO
 CREATE UNIQUE NONCLUSTERED INDEX [UQ_Dictionary_ContragentRequisites_ContragentId_BeginDate] ON [Dictionary].[ContragentRequisites] (ContragentId ASC,BeginDate ASC)
 GO
 
-/*Список свойств*/
+/*РЎРїРёСЃРѕРє СЃРІРѕР№СЃС‚РІ*/
 create table Dictionary.ContragentProperty
 (
  PropertyId int not null identity(1,1),
@@ -117,7 +117,7 @@ GO
 ALTER TABLE Dictionary.ContragentProperty ADD CONSTRAINT CHK_Dictionary_ContragentProperty_PropertyName CHECK (trim(PropertyName) != '');
 GO
 
-/*Значения свойств контрагентов*/
+/*Р—РЅР°С‡РµРЅРёСЏ СЃРІРѕР№СЃС‚РІ РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРІ*/
 create table Dictionary.ContragentProperties
 (
 RowId        bigint not null identity(1,1),

@@ -1,3 +1,16 @@
+/*
+Начало проектной работы.
+Создание таблиц и представлений для своего проекта.
+Если вы не сделали этого раньше, придумайте и сделайте краткое описание проекта, который будете делать в рамках всего курса.
+
+Нужно используя операторы DDL создать:
+1. Создать базу данных.
+2. 3-4 основные таблицы для своего проекта.
+3. Первичные и внешние ключи для всех созданных таблиц.
+4. 1-2 индекса на таблицы.
+5. Наложите по одному ограничению в каждой таблице на ввод данных.
+*/
+
 USE master
 go
  
@@ -24,7 +37,7 @@ GO
 create schema Dictionary
 go
 
-/*���� ������������ - ��������, ������, �������, �����������*/
+/*Виды контрагентов - НАПРИМЕР, ЮРЛИЦО, ФИЗЛИЦО, ИНОСТРАННОЕ*/
 create table Dictionary.ContragentType
 (
    ContragentTypeId int not null identity(1,1),
@@ -37,7 +50,7 @@ GO
 ALTER TABLE Dictionary.ContragentType ADD CONSTRAINT CHK_Dictionary_ContragentType_ContragentTypeName CHECK (trim(ContragentTypeName) != '');
 GO
 
-/*�����������*/
+/*Контрагенты*/
 create table Dictionary.Contragents
 (
   ContragentId int not null identity(1,1),
@@ -68,7 +81,7 @@ GO
 CREATE NONCLUSTERED INDEX [IX_Dictionary_Contragents_ContragentTypeId] ON [Dictionary].[Contragents] (ContragentTypeId ASC)
 GO
 
-/*���������*/
+/*Реквизиты*/
 create table Dictionary.ContragentRequisites
 (
 	RequisiteId int not null identity(1,1),
@@ -91,7 +104,7 @@ GO
 CREATE UNIQUE NONCLUSTERED INDEX [UQ_Dictionary_ContragentRequisites_ContragentId_BeginDate] ON [Dictionary].[ContragentRequisites] (ContragentId ASC,BeginDate ASC)
 GO
 
-/*������ �������*/
+/*Список свойств*/
 create table Dictionary.ContragentProperty
 (
  PropertyId int not null identity(1,1),
@@ -104,7 +117,7 @@ GO
 ALTER TABLE Dictionary.ContragentProperty ADD CONSTRAINT CHK_Dictionary_ContragentProperty_PropertyName CHECK (trim(PropertyName) != '');
 GO
 
-/*�������� ������� ������������*/
+/*Значения свойств контрагентов*/
 create table Dictionary.ContragentProperties
 (
 RowId        bigint not null identity(1,1),
