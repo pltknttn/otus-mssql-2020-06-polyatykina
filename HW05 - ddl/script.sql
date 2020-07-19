@@ -37,6 +37,28 @@ GO
 create schema Dictionary
 go
 
+CREATE TABLE Dictionary.Countries(
+	[CountryId] int not null identity(1,1),
+	[CountryName] varchar(255) not null,
+	[CountryFullName] varchar(500) not null, 
+	[IsoAlpha3Code] [nvarchar](3) NULL,
+	[IsoNumericCode] [int] NULL,
+	CONSTRAINT [PK_Dictionary_Countries] PRIMARY KEY CLUSTERED  ( CountryId ASC)
+)
+GO
+
+CREATE NONCLUSTERED INDEX [IX_Dictionary_Countries_IsoAlpha3Code] ON [Dictionary].[Countries] (IsoAlpha3Code ASC)
+GO
+
+CREATE NONCLUSTERED INDEX [IX_Dictionary_Countries_IsoNumericCode] ON [Dictionary].[Countries] (IsoNumericCode ASC)
+GO
+
+ALTER TABLE Dictionary.Countries ADD CONSTRAINT CHK_Dictionary_Countries_CountryName CHECK (trim(CountryName) != '');
+GO
+
+ALTER TABLE Dictionary.Countries ADD CONSTRAINT CHK_Dictionary_Countries_CountryFullName CHECK (trim(CountryFullName) != '');
+GO
+
 /*Виды контрагентов - НАПРИМЕР, ЮРЛИЦО, ФИЗЛИЦО, ИНОСТРАННОЕ*/
 create table Dictionary.ContragentType
 (
@@ -50,6 +72,7 @@ GO
 ALTER TABLE Dictionary.ContragentType ADD CONSTRAINT CHK_Dictionary_ContragentType_ContragentTypeName CHECK (trim(ContragentTypeName) != '');
 GO
 
+
 /*Контрагенты*/
 create table Dictionary.Contragents
 (
@@ -59,6 +82,9 @@ create table Dictionary.Contragents
   ContragentTypeId int not null,
   Inn varchar(30), 
   ParentContragentId int,
+  CountryId int not null,
+  Ogrn varchar(30), 
+  OgrnDate datetime,
   CONSTRAINT [PK_Dictionary_Contragents] PRIMARY KEY CLUSTERED  ( [ContragentId] ASC)
 )   
 GO
@@ -78,6 +104,9 @@ GO
 ALTER TABLE Dictionary.Contragents ADD CONSTRAINT [FK_Dictionary_Contragents_ContragentId_Dictionary_Contragents] FOREIGN KEY(ParentContragentId) REFERENCES Dictionary.Contragents (ContragentId)
 GO
 
+ALTER TABLE Dictionary.Contragents ADD CONSTRAINT [FK_Dictionary_Contragents_CountryId_Dictionary_Countries] FOREIGN KEY(ParentContragentId) REFERENCES Dictionary.Countries (CountryId)
+GO
+
 CREATE NONCLUSTERED INDEX [IX_Dictionary_Contragents_ContragentTypeId] ON [Dictionary].[Contragents] (ContragentTypeId ASC)
 GO
 
@@ -91,7 +120,7 @@ create table Dictionary.ContragentRequisites
 	RegisterDate datetime,	
     Kpp varchar(30),
 	JurAddress varchar(1000),
-	FactAddress varchar(1000),
+	FactAddress varchar(1000), 
 	CONSTRAINT [PK_Dictionary_ContragentRequisites] PRIMARY KEY CLUSTERED  ([RequisiteId] ASC))   
 GO
 
