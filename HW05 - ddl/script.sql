@@ -124,7 +124,7 @@ create table Dictionary.ContragentRequisites
 	CONSTRAINT [PK_Dictionary_ContragentRequisites] PRIMARY KEY CLUSTERED  ([RequisiteId] ASC))   
 GO
 
-ALTER TABLE Dictionary.ContragentRequisites ADD CONSTRAINT CHK_Dictionary_ContragentRequisites_BeginDate_EndDate CHECK (BeginDate >= ISNULL(EndDate, BeginDate));
+ALTER TABLE Dictionary.ContragentRequisites ADD CONSTRAINT CHK_Dictionary_ContragentRequisites_BeginDate_EndDate CHECK (BeginDate <= ISNULL(EndDate, BeginDate));
 GO
 
 ALTER TABLE Dictionary.ContragentRequisites ADD CONSTRAINT [FK_Dictionary_ContragentRequisites_ContragentId_Dictionary_Contragents] FOREIGN KEY(ContragentId) REFERENCES Dictionary.Contragents (ContragentId)
