@@ -39,8 +39,8 @@ go
 
 CREATE TABLE Dictionary.Countries(
 	[CountryId] int not null identity(1,1),
-	[CountryName] varchar(255) not null,
-	[CountryFullName] varchar(500) not null, 
+	[CountryName] nvarchar(100) not null,
+	[CountryFullName] nvarchar(150) not null, 
 	[IsoAlpha3Code] [nvarchar](3) NULL,
 	[IsoNumericCode] [int] NULL,
 	CONSTRAINT [PK_Dictionary_Countries] PRIMARY KEY CLUSTERED  ( CountryId ASC)
@@ -63,8 +63,8 @@ GO
 create table Dictionary.ContragentType
 (
    ContragentTypeId int not null identity(1,1),
-   ContragentTypeName varchar(255) not null,
-   [Description] varchar(500) not null, 
+   ContragentTypeName nvarchar(255) not null,
+   [Description] nvarchar(500) not null, 
    CONSTRAINT [PK_Dictionary_ContragentType] PRIMARY KEY CLUSTERED  ( [ContragentTypeId] ASC)
 )   
 GO
@@ -77,14 +77,14 @@ GO
 create table Dictionary.Contragents
 (
   ContragentId int not null identity(1,1),
-  ContragentName varchar(255) not null,
-  ContragetFullName varchar(500) not null,  
+  ContragentName nvarchar(255) not null,
+  ContragetFullName nvarchar(500) not null,  
   ContragentTypeId int not null,
-  Inn varchar(30), 
+  Inn nvarchar(30), 
   ParentContragentId int,
   CountryId int not null,
-  Ogrn varchar(30), 
-  OgrnDate datetime,
+  Ogrn nvarchar(30), 
+  OgrnDate datetime2(3),
   CONSTRAINT [PK_Dictionary_Contragents] PRIMARY KEY CLUSTERED  ( [ContragentId] ASC)
 )   
 GO
@@ -117,10 +117,10 @@ create table Dictionary.ContragentRequisites
 	ContragentId int not null,
 	BeginDate date not null,
 	EndDate   date,
-	RegisterDate datetime,	
-    Kpp varchar(30),
-	JurAddress varchar(1000),
-	FactAddress varchar(1000), 
+	RegisterDate datetime2(3),	
+    Kpp nvarchar(30),
+	JurAddress nvarchar(1000),
+	FactAddress nvarchar(1000), 
 	CONSTRAINT [PK_Dictionary_ContragentRequisites] PRIMARY KEY CLUSTERED  ([RequisiteId] ASC))   
 GO
 
@@ -137,8 +137,8 @@ GO
 create table Dictionary.ContragentProperty
 (
  PropertyId int not null identity(1,1),
- PropertyName varchar(255) not null,
- [Description] varchar(500) not null, 
+ PropertyName nvarchar(255) not null,
+ [Description] nvarchar(500) not null, 
  CONSTRAINT [PK_Dictionary_ContragentProperty] PRIMARY KEY CLUSTERED  ( [PropertyId] ASC)
 )   
 GO
@@ -154,8 +154,8 @@ ContragentId int not null,
 PropertyId   int not null,
 ValueInt       int,
 ValueDecimal   decimal(20,4),
-ValueDatetime  datetime,
-ValueVarchar   varchar(max), 
+ValueDatetime  datetime2(3),
+ValueVarchar   nvarchar(4000), 
 CONSTRAINT [PK_Dictionary_ContragentProperties] PRIMARY KEY CLUSTERED  ( [RowId] ASC)
 )   
 go
