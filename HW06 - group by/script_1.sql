@@ -2,18 +2,18 @@ use WideWorldImporters
 go
  
 /*
-1. ѕосчитать среднюю цену товара, общую сумму продажи по мес¤цам
+1. Посчитать среднюю цену товара, общую сумму продажи по месяцам
 
-¬ывести:
-* √од продажи
-* ћес¤ц продажи
-* —редн¤¤ цена за мес¤ц по всем товарам
-* ќбща¤ сумма продаж
+Вывести:
+* Год продажи
+* Месяц продажи
+* Средняя цена за месяц по всем товарам
+* Общая сумма продаж
 
-ѕродажи смотреть в таблице Sales.Invoices и св¤занных таблицах.
+Продажи смотреть в таблице Sales.Invoices и связанных таблицах.
 
-ќпционально:
-Ќаписать запросы 1-3 так, чтобы если в каком-то мес¤це не было продаж, то этот мес¤ц также отображалс¤ бы в результатах, но там были нули.
+Опционально:
+Написать запросы 1-3 так, чтобы если в каком-то месяце не было продаж, то этот месяц также отображался бы в результатах, но там были нули.
 */
 
 select YEAR(i.InvoiceDate)  [Year], 
@@ -24,7 +24,7 @@ select YEAR(i.InvoiceDate)  [Year],
      join Sales.InvoiceLines il on il.InvoiceID = i.InvoiceID
  group by YEAR(i.InvoiceDate), FORMAT(i.InvoiceDate, 'MMMM', 'ru-RU')
 
- /*ќпционально: ѕосчитаем с 2012г по текущий год, по всем мес¤цам*/
+ /*Опционально: Посчитаем с 2012г по текущий год, по всем месяцам*/
 ;with Years as (
              select cast(2012 as int ) [Year] 
              union all 
@@ -51,10 +51,10 @@ select YEAR(i.InvoiceDate)  [Year],
  order by my.[Year], my.[Month]
 
 
-/*≈сли бы потребовались итоги по году и всего*/
-select case when GROUPING(YEAR(i.InvoiceDate)) = 1 then N'¬сего'
-            when GROUPING(FORMAT(i.InvoiceDate, 'MMMM', 'ru-RU')) = 1 then N'¬сего за год'
-			else N'¬сего за мес¤ц' end Result,   
+/*Если бы потребовались итоги по году и всего*/
+select case when GROUPING(YEAR(i.InvoiceDate)) = 1 then N'Всего'
+            when GROUPING(FORMAT(i.InvoiceDate, 'MMMM', 'ru-RU')) = 1 then N'Всего за год'
+			else N'Всего за месяц' end Result,   
        YEAR(i.InvoiceDate)  [Year], 
 	   FORMAT(i.InvoiceDate, 'MMMM', 'ru-RU') [Month],
        SUM(il.Quantity*il.UnitPrice) TotalSum,
