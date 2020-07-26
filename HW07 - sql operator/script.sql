@@ -420,6 +420,7 @@ begin
 	set @Cmd = 'bcp "[WideWorldImporters].[Purchasing].Suppliers_Copy" out  "D:\1\Suppliers_Copy_2.txt" -T -w -t"@eu&$1&" -S '+ @ServerName
     exec master..xp_cmdshell @Cmd
 end
+go
 
 begin
 
@@ -499,6 +500,7 @@ select [SupplierID]
 	  ,[LastEditedBy]  
   from [Purchasing].Suppliers_Copy_Bulk
 end
+go
 
 drop table if exists [Purchasing].Suppliers_Copy
 go
