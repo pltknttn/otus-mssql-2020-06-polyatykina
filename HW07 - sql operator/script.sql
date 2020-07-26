@@ -499,13 +499,13 @@ select [SupplierID]
 	  ,[PostalPostalCode]
 	  ,[LastEditedBy]  
   from [Purchasing].Suppliers_Copy_Bulk
+
+  drop table if exists [Purchasing].Suppliers_Copy_Bulk
+
 end
 go
 
 drop table if exists [Purchasing].Suppliers_Copy
-go
-
-drop table if exists [Purchasing].Suppliers_Copy_Bulk
 go
 
 /*Сбросить счетчик последовательности [Sequences].[SupplierID]*/
