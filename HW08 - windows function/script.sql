@@ -255,11 +255,11 @@ group by il.StockItemID, FORMAT(i.InvoiceDate, 'MMMM', 'ru-RU'), MONTH (i.Invoic
 select i.[MonthName],
        si.[StockItemName],
 	   i.Quantity
-  from Sales i JOIN Warehouse.[StockItems] si on si.StockItemID = i.StockItemID
-  where i.Quantity IN (SELECT top 2 ii.Quantity 
-                         FROM Sales ii 
-						WHERE ii.[Month] = i.[Month] 
-					    ORDER BY Quantity desc)
+  from Sales i JOIN Warehouse.[StockItems] si on si.StockItemID = i.StockItemID  
+  where i.StockItemID IN (SELECT top 2 ii.StockItemID 
+                            FROM Sales ii 
+						   WHERE ii.[Month] = i.[Month] 
+					       ORDER BY Quantity desc) 
 ORDER BY i.[Month], si.[StockItemName]
 
 
@@ -365,28 +365,30 @@ where i.rn <= 2
 select il.StockItemID
      , i.InvoiceDate 
 	 , i.CustomerID
-	 , max(il.UnitPrice)  UnitPrice   
+	 , max(il.UnitPrice)     UnitPrice    
  from Sales.Invoices i
    join Sales.InvoiceLines il on il.InvoiceID = i.InvoiceID
 where YEAR(i.InvoiceDate) = 2016
 group by il.StockItemID
      , i.InvoiceDate 
 	 , i.CustomerID
-)  
+)
 select i.CustomerID,
        c.CustomerName,
 	   i.StockItemID,
        si.[StockItemName],
 	   i.UnitPrice,
-	   i.InvoiceDate
+	   i.InvoiceDate 
   from Sales i 
   JOIN Warehouse.[StockItems] si on si.StockItemID = i.StockItemID
   JOIN Sales.Customers c on c.CustomerID = i.CustomerID
-where i.UnitPrice IN (SELECT top 2 ii.UnitPrice 
-                         FROM Sales ii 
-						WHERE ii.CustomerID = i.CustomerID 
-					    ORDER BY UnitPrice desc)
+where EXISTS
+          ( SELECT G.*
+		      FROM (SELECT TOP 2 ii.StockItemID, ii.InvoiceDate,i.UnitPrice  FROM Sales ii WHERE ii.CustomerID = i.CustomerID ORDER BY ii.UnitPrice desc) G
+			 WHERE G.StockItemID = i.StockItemID and G.InvoiceDate = i.InvoiceDate and G.UnitPrice = i.UnitPrice
+			 ) 
  ORDER BY c.CustomerName, i.UnitPrice desc, si.[StockItemName] 
+ 
 
  /*
  Итог выполнения с включенным SET STATISTICS IO, TIME ON;
@@ -412,19 +414,19 @@ Table 'StockItems'. Scan count 1, logical reads 6, physical reads 0, page server
  запрос без windows function:
 
 SQL Server parse and compile time: 
-   CPU time = 45 ms, elapsed time = 45 ms.
+   CPU time = 31 ms, elapsed time = 37 ms.
 
-(1598 rows affected)
-Table 'InvoiceLines'. Scan count 186323, logical reads 2236471, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 161, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+(1326 rows affected)
+Table 'InvoiceLines'. Scan count 438087, logical reads 5266800, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 161, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
 Table 'InvoiceLines'. Segment reads 1, segment skipped 0.
-Table 'Worktable'. Scan count 12844, logical reads 194395, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+Table 'Worktable'. Scan count 29427, logical reads 255926, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
 Table 'Invoices'. Scan count 2, logical reads 22800, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
 Table 'Worktable'. Scan count 0, logical reads 0, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
 Table 'Customers'. Scan count 1, logical reads 40, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
 Table 'StockItems'. Scan count 1, logical reads 6, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
 
  SQL Server Execution Times:
-   CPU time = 2485 ms,  elapsed time = 2534 ms.
+   CPU time = 5579 ms,  elapsed time = 5582 ms.
 
  Первый запрос работает быстрее,
  второй запрос работает медленнее Table 'Invoices' - SQL Server делает больше чтений, что бы отфильтровать данные
