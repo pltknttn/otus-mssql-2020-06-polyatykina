@@ -10,7 +10,7 @@ USE [WideWorldImporters]
 GO
 
 drop table if exists #result 
-create table #result (InvoiceMonth date)
+create table #result (InvoiceMonth date, InvoiceMonthDisplay as (FORMAT(InvoiceMonth, 'MMMM.yyyy', 'ru-RU')))
 
 drop table if exists #report
 select isnull(p2.CustomerName, p1.CustomerName) CustomerName,  
@@ -29,8 +29,7 @@ declare @CustomerName NVARCHAR(max),  @CustomerField NVARCHAR(max),
 insert into #result
 SELECT InvoiceMonth,  @CustomerName 
 FROM  ( select CustomerName, InvoiceMonth, CountInvoices from #report
-) p PIVOT ( max(CountInvoices) FOR CustomerName IN  ( @CustomerName )) AS pvt  
-ORDER BY pvt.InvoiceMonth;', 
+) p PIVOT ( max(CountInvoices) FOR CustomerName IN  ( @CustomerName )) AS pvt', 
         @CommandAlterTable NVARCHAR(max)  = 'ALTER TABLE #result ADD @CustomerField;'
 
 set @CustomerField = stuff((select distinct ', ['+CustomerName+'] int' as 'data()'  from #report for xml path('')), 1, 1, '');
@@ -47,4 +46,4 @@ set @Command = REPLACE(@Command, '@CustomerName', @CustomerName )
  
 EXEC sp_executesql @Command  
 
-select * from #result
+select * from #result order by InvoiceMonth
