@@ -215,7 +215,7 @@ PRINT (N'Create table [fin].[TransactionType]')
 GO
 CREATE TABLE fin.TransactionType (
   TransactionTypeId int NOT NULL IDENTITY(1,1),
-  TransactionTypeName varchar(150) NOT NULL,
+  TransactionTypeName nvarchar(150) NOT NULL,
   CONSTRAINT PK_Fin_TransactionType_TransactionTypeId PRIMARY KEY CLUSTERED (TransactionTypeId)
 )
 ON [PRIMARY]
@@ -236,7 +236,7 @@ PRINT (N'Create table [fin].[TransactionSubType]')
 GO
 CREATE TABLE fin.TransactionSubType (
   TransactionSubTypeId int NOT NULL IDENTITY(1,1),
-  TransactionSubTypeName varchar(150) NOT NULL,
+  TransactionSubTypeName nvarchar(150) NOT NULL,
   TransactionTypeId int NOT NULL,
   CONSTRAINT PK_Fin_TransactionSubType_TransactionSubTypeId PRIMARY KEY CLUSTERED (TransactionSubTypeId)
 )
@@ -468,6 +468,7 @@ CREATE TABLE supply.SupplyProcessingTask (
   RealQuantity int NOT NULL,
   GoodQuanity int NOT NULL,
   BrokenQuantity int NOT NULL,
+  IsFinish bit NOT NULL CONSTRAINT [DF_Supply_SupplyProcessingTask_IsFinish]  DEFAULT ((0)),
   CONSTRAINT PK_Supply_SupplyProcessingTask_TaskId PRIMARY KEY CLUSTERED (TaskId)
 )
 ON [PRIMARY]
@@ -1852,6 +1853,7 @@ CREATE TABLE stock.SaleProcessingTask (
   SaleQuantity int NOT NULL,
   RefuseQuantity int NOT NULL,
   BrokenQuantity int NOT NULL,
+  IsFinish bit NOT NULL CONSTRAINT [DF_Stock_SaleProcessingTask_IsFinish]  DEFAULT ((0)),
   CONSTRAINT PK_Stock_SaleProcessingTask_TaskId PRIMARY KEY CLUSTERED (TaskId)
 )
 ON [PRIMARY]
