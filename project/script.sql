@@ -132,57 +132,107 @@ EXEC sys.sp_addextendedproperty N'MS_Description', 'Статус заказа в
 GO
 
 --
--- Create table [stock].[Places]
+-- Create table [stock].[StorageUnitType]
 --
-PRINT (N'Create table [stock].[Places]')
+PRINT (N'Create table [stock].[StorageUnitType]')
 GO
-CREATE TABLE stock.Places (
-  PlaceId bigint NOT NULL IDENTITY(1,1),
-  PlaceName nvarchar(100) NOT NULL,
-  PlaceBarCode nvarchar(30) NOT NULL,
-  CONSTRAINT PK_Place_PlaceId PRIMARY KEY CLUSTERED (PlaceId)
+CREATE TABLE stock.StorageUnitType (
+  ID int IDENTITY (1,1) NOT NULL,
+  Name nvarchar(255) NOT NULL,
+  WaresAllocationAllowed bit NOT NULL DEFAULT (0),
+  CONSTRAINT PK_Stock_StorageUnitType_ID PRIMARY KEY CLUSTERED (ID)
 )
 ON [PRIMARY]
 GO
 
 --
--- Add extended property [MS_Description] on table [stock].[Places]
+-- Add extended property [MS_Description] on table [stock].[StorageUnitType]
 --
-PRINT (N'Add extended property [MS_Description] on table [stock].[Places]')
+PRINT (N'Add extended property [MS_Description] on table [stock].[StorageUnitType]')
 GO
-EXEC sys.sp_addextendedproperty N'MS_Description', 'Полки, места', 'SCHEMA', N'stock', 'TABLE', N'Places'
+EXEC sys.sp_addextendedproperty N'MS_Description', 'Типы единиц хранения', 'SCHEMA', N'stock', 'TABLE', N'StorageUnitType'
 GO
 
 --
--- Create table [stock].[Cells]
+-- Create table [stock].[StorageUnitDependence]
 --
-PRINT (N'Create table [stock].[Cells]')
+PRINT (N'Create table [stock].[StorageUnitDependence]')
 GO
-CREATE TABLE stock.Cells (
-  CellId bigint NOT NULL IDENTITY(1,1),
-  CellName nvarchar(100) NOT NULL,
-  CellBarCode nvarchar(30) NOT NULL,
-  PlaceId bigint NOT NULL,
-  CONSTRAINT PK_Stock_Cells_CellId PRIMARY KEY CLUSTERED (CellId)
+CREATE TABLE stock.StorageUnitDependence (
+  DependenceID int IDENTITY (1,1) NOT NULL,
+  StorageUnitTypeID int NOT NULL,
+  StorageUnitTypeParentID int NOT NULL,
+  CONSTRAINT PK_Stock_StorageUnitDependence_DependenceID PRIMARY KEY CLUSTERED (DependenceID)
 )
 ON [PRIMARY]
 GO
 
 --
--- Create foreign key [FK_Stock_Cells_PlaceId] on table [stock].[Cells]
+-- Create foreign key [FK_Stock_StorageUnitDependence_StorageUnitTypeID] on table [stock].[StorageUnitDependence]
 --
-PRINT (N'Create foreign key [FK_Stock_Cells_PlaceId] on table [stock].[Cells]')
+PRINT (N'Create foreign key [FK_Stock_StorageUnitDependence_StorageUnitTypeID] on table [stock].[StorageUnitDependence]')
 GO
-ALTER TABLE stock.Cells
-  ADD CONSTRAINT FK_Stock_Cells_PlaceId FOREIGN KEY (PlaceId) REFERENCES stock.Places (PlaceId)
+ALTER TABLE stock.StorageUnitDependence
+  ADD CONSTRAINT FK_Stock_StorageUnitDependence_StorageUnitTypeID FOREIGN KEY (StorageUnitTypeID) REFERENCES stock.StorageUnitType (ID)
 GO
 
 --
--- Add extended property [MS_Description] on table [stock].[Cells]
+-- Create foreign key [FK_Stock_StorageUnitDependence_StorageUnitTypeParentID] on table [stock].[StorageUnitDependence]
 --
-PRINT (N'Add extended property [MS_Description] on table [stock].[Cells]')
+PRINT (N'Create foreign key [FK_Stock_StorageUnitDependence_StorageUnitTypeParentID] on table [stock].[StorageUnitDependence]')
 GO
-EXEC sys.sp_addextendedproperty N'MS_Description', 'Ячейки', 'SCHEMA', N'stock', 'TABLE', N'Cells'
+ALTER TABLE stock.StorageUnitDependence
+  ADD CONSTRAINT FK_Stock_StorageUnitDependence_StorageUnitTypeParentID FOREIGN KEY (StorageUnitTypeParentID) REFERENCES stock.StorageUnitType (ID)
+GO
+
+--
+-- Add extended property [MS_Description] on table [stock].[StorageUnitDependence]
+--
+PRINT (N'Add extended property [MS_Description] on table [stock].[StorageUnitDependence]')
+GO
+EXEC sys.sp_addextendedproperty N'MS_Description', 'Зависимости между единицами хранения', 'SCHEMA', N'stock', 'TABLE', N'StorageUnitDependence'
+GO
+
+--
+-- Create table [stock].[StorageMap]
+--
+PRINT (N'Create table [stock].[StorageMap]')
+GO
+CREATE TABLE stock.StorageMap (
+  ID int IDENTITY (1,1) NOT NULL,
+  Name nvarchar(255) NOT NULL,
+  StorageUnitTypeID int NOT NULL,
+  ParentID int NULL,
+  BarCode nvarchar(30) NULL,
+  CONSTRAINT PK_Stock_StorageMap_ID PRIMARY KEY CLUSTERED (ID)
+)
+ON [PRIMARY]
+GO
+
+--
+-- Create foreign key [FK_Stock_StorageMap_ParentID] on table [stock].[StorageMap]
+--
+PRINT (N'Create foreign key [FK_Stock_StorageMap_ParentID] on table [stock].[StorageMap]')
+GO
+ALTER TABLE stock.StorageMap
+  ADD CONSTRAINT FK_Stock_StorageMap_ParentID FOREIGN KEY (ParentID) REFERENCES stock.StorageMap (ID)
+GO
+
+--
+-- Create foreign key [FK_Stock_StorageMap_StorageUnitTypeID] on table [stock].[StorageMap]
+--
+PRINT (N'Create foreign key [FK_Stock_StorageMap_StorageUnitTypeID] on table [stock].[StorageMap]')
+GO
+ALTER TABLE stock.StorageMap
+  ADD CONSTRAINT FK_Stock_StorageMap_StorageUnitTypeID FOREIGN KEY (StorageUnitTypeID) REFERENCES stock.StorageUnitType (ID)
+GO
+
+--
+-- Add extended property [MS_Description] on table [stock].[StorageMap]
+--
+PRINT (N'Add extended property [MS_Description] on table [stock].[StorageMap]')
+GO
+EXEC sys.sp_addextendedproperty N'MS_Description', 'Схема размещения', 'SCHEMA', N'stock', 'TABLE', N'StorageMap'
 GO
 
 --
@@ -469,6 +519,7 @@ CREATE TABLE supply.SupplyProcessingTask (
   GoodQuanity int NOT NULL,
   BrokenQuantity int NOT NULL,
   IsFinish bit NOT NULL CONSTRAINT [DF_Supply_SupplyProcessingTask_IsFinish]  DEFAULT ((0)),
+  SupplierId BIGINT NOT NULL,
   CONSTRAINT PK_Supply_SupplyProcessingTask_TaskId PRIMARY KEY CLUSTERED (TaskId)
 )
 ON [PRIMARY]
@@ -481,6 +532,15 @@ PRINT (N'Create foreign key [FK_Supply_SupplyProcessingTask_SupplyId] on table [
 GO
 ALTER TABLE supply.SupplyProcessingTask
   ADD CONSTRAINT FK_Supply_SupplyProcessingTask_SupplyId FOREIGN KEY (SupplyId) REFERENCES supply.Supplies (SupplyId)
+GO
+
+--
+-- Create foreign key [FK_Supply_SupplyProcessingTask_SupplierId] on table [supply].[SupplyProcessingTask]
+--
+PRINT (N'Create foreign key [FK_Supply_SupplyProcessingTask_SupplierId] on table [supply].[SupplyProcessingTask]')
+GO
+ALTER TABLE WMS.supply.SupplyProcessingTask
+ADD CONSTRAINT FK_Supply_SupplyProcessingTask_SupplierId FOREIGN KEY (SupplierId) REFERENCES dict.Suppliers (SupplierId)
 GO
 
 --
@@ -674,32 +734,13 @@ GO
 PRINT (N'Create table [stock].[Storage]')
 GO
 CREATE TABLE stock.Storage (
-  StorageId bigint NOT NULL IDENTITY(1,1),
+  StorageId bigint IDENTITY (1,1) NOT NULL,
   ProductId bigint NOT NULL,
-  PlaceId bigint NOT NULL,
-  CellId bigint NULL,
   Quantity int NOT NULL,
+  StorageMapID int NOT NULL,
   CONSTRAINT PK_Stock_Storage_StorageId PRIMARY KEY CLUSTERED (StorageId)
 )
 ON [PRIMARY]
-GO
-
---
--- Create foreign key [FK_Stock_Storage_CellId] on table [stock].[Storage]
---
-PRINT (N'Create foreign key [FK_Stock_Storage_CellId] on table [stock].[Storage]')
-GO
-ALTER TABLE stock.Storage
-  ADD CONSTRAINT FK_Stock_Storage_CellId FOREIGN KEY (CellId) REFERENCES stock.Cells (CellId)
-GO
-
---
--- Create foreign key [FK_Stock_Storage_PlaceId] on table [stock].[Storage]
---
-PRINT (N'Create foreign key [FK_Stock_Storage_PlaceId] on table [stock].[Storage]')
-GO
-ALTER TABLE stock.Storage
-  ADD CONSTRAINT FK_Stock_Storage_PlaceId FOREIGN KEY (PlaceId) REFERENCES stock.Places (PlaceId)
 GO
 
 --
@@ -709,6 +750,15 @@ PRINT (N'Create foreign key [FK_Stock_Storage_ProductId] on table [stock].[Stora
 GO
 ALTER TABLE stock.Storage
   ADD CONSTRAINT FK_Stock_Storage_ProductId FOREIGN KEY (ProductId) REFERENCES goods.ProductItems (ProductId)
+GO
+
+--
+-- Create foreign key [FK_Stock_Storage_StorageMapID] on table [stock].[Storage]
+--
+PRINT (N'Create foreign key [FK_Stock_Storage_StorageMapID] on table [stock].[Storage]')
+GO
+ALTER TABLE stock.Storage
+  ADD CONSTRAINT FK_Stock_Storage_StorageMapID FOREIGN KEY (StorageMapID) REFERENCES stock.StorageMap (ID)
 GO
 
 --
@@ -1706,8 +1756,8 @@ PRINT (N'Create table [zak].[SaleOrders]')
 GO
 CREATE TABLE zak.SaleOrders (
   OrderId bigint NOT NULL IDENTITY(1,1),
-  OrderNumber nvarchar(255) NULL,
-  OrderDate date NULL,
+  OrderNumber nvarchar(255) NOT NULL,
+  OrderDate date NOT NULL,
   CreateDate datetime2 NOT NULL CONSTRAINT DF_Zak_SaleOrders_CreateDate DEFAULT (getdate()),
   DeliveryDate datetime2 NULL,
   ClientId bigint NOT NULL,
