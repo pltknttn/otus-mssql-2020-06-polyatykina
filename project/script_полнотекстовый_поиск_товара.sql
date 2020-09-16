@@ -7,12 +7,12 @@ GO
 --DROP FULLTEXT CATALOG WMS_FullText_Catalog
 --GO
  
--- Создаем полнотекстовый каталог
+-- РЎРѕР·РґР°РµРј РїРѕР»РЅРѕС‚РµРєСЃС‚РѕРІС‹Р№ РєР°С‚Р°Р»РѕРі
 CREATE FULLTEXT CATALOG WMS_FullText_Catalog
 WITH ACCENT_SENSITIVITY = ON AS DEFAULT AUTHORIZATION [dbo] 
 GO
 
--- Создаем Full-Text Index на [goods].[ProductItems]
+-- РЎРѕР·РґР°РµРј Full-Text Index РЅР° [goods].[ProductItems]
 CREATE FULLTEXT INDEX ON goods.ProductItems([ProductName] LANGUAGE Russian, [Article] LANGUAGE Russian)
 KEY INDEX [PK_Goods_ProductItems_ProductId]
 ON (WMS_FullText_Catalog)
