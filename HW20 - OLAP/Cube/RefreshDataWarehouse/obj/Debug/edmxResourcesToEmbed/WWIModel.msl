@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WideWorldImportersModelStoreContainer" CdmEntityContainer="WWIEntities">
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="WideWorldImportersModel.People">
+        <MappingFragment StoreEntitySet="People">
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="PreferredName" ColumnName="PreferredName" />
+          <ScalarProperty Name="SearchName" ColumnName="SearchName" />
+          <ScalarProperty Name="IsPermittedToLogon" ColumnName="IsPermittedToLogon" />
+          <ScalarProperty Name="LogonName" ColumnName="LogonName" />
+          <ScalarProperty Name="IsExternalLogonProvider" ColumnName="IsExternalLogonProvider" />
+          <ScalarProperty Name="HashedPassword" ColumnName="HashedPassword" />
+          <ScalarProperty Name="IsSystemUser" ColumnName="IsSystemUser" />
+          <ScalarProperty Name="IsEmployee" ColumnName="IsEmployee" />
+          <ScalarProperty Name="IsSalesperson" ColumnName="IsSalesperson" />
+          <ScalarProperty Name="UserPreferences" ColumnName="UserPreferences" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="CustomFields" ColumnName="CustomFields" />
+          <ScalarProperty Name="OtherLanguages" ColumnName="OtherLanguages" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+          <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupplierCategories">
+      <EntityTypeMapping TypeName="WideWorldImportersModel.SupplierCategories">
+        <MappingFragment StoreEntitySet="SupplierCategories">
+          <ScalarProperty Name="SupplierCategoryID" ColumnName="SupplierCategoryID" />
+          <ScalarProperty Name="SupplierCategoryName" ColumnName="SupplierCategoryName" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+          <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="WideWorldImportersModel.Suppliers">
+        <MappingFragment StoreEntitySet="Suppliers">
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="SupplierCategoryID" ColumnName="SupplierCategoryID" />
+          <ScalarProperty Name="PrimaryContactPersonID" ColumnName="PrimaryContactPersonID" />
+          <ScalarProperty Name="AlternateContactPersonID" ColumnName="AlternateContactPersonID" />
+          <ScalarProperty Name="DeliveryMethodID" ColumnName="DeliveryMethodID" />
+          <ScalarProperty Name="DeliveryCityID" ColumnName="DeliveryCityID" />
+          <ScalarProperty Name="PostalCityID" ColumnName="PostalCityID" />
+          <ScalarProperty Name="SupplierReference" ColumnName="SupplierReference" />
+          <ScalarProperty Name="BankAccountName" ColumnName="BankAccountName" />
+          <ScalarProperty Name="BankAccountBranch" ColumnName="BankAccountBranch" />
+          <ScalarProperty Name="BankAccountCode" ColumnName="BankAccountCode" />
+          <ScalarProperty Name="BankAccountNumber" ColumnName="BankAccountNumber" />
+          <ScalarProperty Name="BankInternationalCode" ColumnName="BankInternationalCode" />
+          <ScalarProperty Name="PaymentDays" ColumnName="PaymentDays" />
+          <ScalarProperty Name="InternalComments" ColumnName="InternalComments" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+          <ScalarProperty Name="WebsiteURL" ColumnName="WebsiteURL" />
+          <ScalarProperty Name="DeliveryAddressLine1" ColumnName="DeliveryAddressLine1" />
+          <ScalarProperty Name="DeliveryAddressLine2" ColumnName="DeliveryAddressLine2" />
+          <ScalarProperty Name="DeliveryPostalCode" ColumnName="DeliveryPostalCode" />
+          <ScalarProperty Name="DeliveryLocation" ColumnName="DeliveryLocation" />
+          <ScalarProperty Name="PostalAddressLine1" ColumnName="PostalAddressLine1" />
+          <ScalarProperty Name="PostalAddressLine2" ColumnName="PostalAddressLine2" />
+          <ScalarProperty Name="PostalPostalCode" ColumnName="PostalPostalCode" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+          <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerCategories">
+      <EntityTypeMapping TypeName="WideWorldImportersModel.CustomerCategories">
+        <MappingFragment StoreEntitySet="CustomerCategories">
+          <ScalarProperty Name="CustomerCategoryID" ColumnName="CustomerCategoryID" />
+          <ScalarProperty Name="CustomerCategoryName" ColumnName="CustomerCategoryName" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+          <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="WideWorldImportersModel.Customers">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="BillToCustomerID" ColumnName="BillToCustomerID" />
+          <ScalarProperty Name="CustomerCategoryID" ColumnName="CustomerCategoryID" />
+          <ScalarProperty Name="BuyingGroupID" ColumnName="BuyingGroupID" />
+          <ScalarProperty Name="PrimaryContactPersonID" ColumnName="PrimaryContactPersonID" />
+          <ScalarProperty Name="AlternateContactPersonID" ColumnName="AlternateContactPersonID" />
+          <ScalarProperty Name="DeliveryMethodID" ColumnName="DeliveryMethodID" />
+          <ScalarProperty Name="DeliveryCityID" ColumnName="DeliveryCityID" />
+          <ScalarProperty Name="PostalCityID" ColumnName="PostalCityID" />
+          <ScalarProperty Name="CreditLimit" ColumnName="CreditLimit" />
+          <ScalarProperty Name="AccountOpenedDate" ColumnName="AccountOpenedDate" />
+          <ScalarProperty Name="StandardDiscountPercentage" ColumnName="StandardDiscountPercentage" />
+          <ScalarProperty Name="IsStatementSent" ColumnName="IsStatementSent" />
+          <ScalarProperty Name="IsOnCreditHold" ColumnName="IsOnCreditHold" />
+          <ScalarProperty Name="PaymentDays" ColumnName="PaymentDays" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+          <ScalarProperty Name="DeliveryRun" ColumnName="DeliveryRun" />
+          <ScalarProperty Name="RunPosition" ColumnName="RunPosition" />
+          <ScalarProperty Name="WebsiteURL" ColumnName="WebsiteURL" />
+          <ScalarProperty Name="DeliveryAddressLine1" ColumnName="DeliveryAddressLine1" />
+          <ScalarProperty Name="DeliveryAddressLine2" ColumnName="DeliveryAddressLine2" />
+          <ScalarProperty Name="DeliveryPostalCode" ColumnName="DeliveryPostalCode" />
+          <ScalarProperty Name="DeliveryLocation" ColumnName="DeliveryLocation" />
+          <ScalarProperty Name="PostalAddressLine1" ColumnName="PostalAddressLine1" />
+          <ScalarProperty Name="PostalAddressLine2" ColumnName="PostalAddressLine2" />
+          <ScalarProperty Name="PostalPostalCode" ColumnName="PostalPostalCode" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+          <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvoiceLines">
+      <EntityTypeMapping TypeName="WideWorldImportersModel.InvoiceLines">
+        <MappingFragment StoreEntitySet="InvoiceLines">
+          <ScalarProperty Name="InvoiceLineID" ColumnName="InvoiceLineID" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="StockItemID" ColumnName="StockItemID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PackageTypeID" ColumnName="PackageTypeID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="TaxRate" ColumnName="TaxRate" />
+          <ScalarProperty Name="TaxAmount" ColumnName="TaxAmount" />
+          <ScalarProperty Name="LineProfit" ColumnName="LineProfit" />
+          <ScalarProperty Name="ExtendedPrice" ColumnName="ExtendedPrice" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="LastEditedWhen" ColumnName="LastEditedWhen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoices">
+      <EntityTypeMapping TypeName="WideWorldImportersModel.Invoices">
+        <MappingFragment StoreEntitySet="Invoices">
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="BillToCustomerID" ColumnName="BillToCustomerID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="DeliveryMethodID" ColumnName="DeliveryMethodID" />
+          <ScalarProperty Name="ContactPersonID" ColumnName="ContactPersonID" />
+          <ScalarProperty Name="AccountsPersonID" ColumnName="AccountsPersonID" />
+          <ScalarProperty Name="SalespersonPersonID" ColumnName="SalespersonPersonID" />
+          <ScalarProperty Name="PackedByPersonID" ColumnName="PackedByPersonID" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="CustomerPurchaseOrderNumber" ColumnName="CustomerPurchaseOrderNumber" />
+          <ScalarProperty Name="IsCreditNote" ColumnName="IsCreditNote" />
+          <ScalarProperty Name="CreditNoteReason" ColumnName="CreditNoteReason" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="DeliveryInstructions" ColumnName="DeliveryInstructions" />
+          <ScalarProperty Name="InternalComments" ColumnName="InternalComments" />
+          <ScalarProperty Name="TotalDryItems" ColumnName="TotalDryItems" />
+          <ScalarProperty Name="TotalChillerItems" ColumnName="TotalChillerItems" />
+          <ScalarProperty Name="DeliveryRun" ColumnName="DeliveryRun" />
+          <ScalarProperty Name="RunPosition" ColumnName="RunPosition" />
+          <ScalarProperty Name="ReturnedDeliveryData" ColumnName="ReturnedDeliveryData" />
+          <ScalarProperty Name="ConfirmedDeliveryTime" ColumnName="ConfirmedDeliveryTime" />
+          <ScalarProperty Name="ConfirmedReceivedBy" ColumnName="ConfirmedReceivedBy" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="LastEditedWhen" ColumnName="LastEditedWhen" />
+          <ScalarProperty Name="InvoiceConfirmedForProcessing" ColumnName="InvoiceConfirmedForProcessing" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Colors">
+      <EntityTypeMapping TypeName="WideWorldImportersModel.Colors">
+        <MappingFragment StoreEntitySet="Colors">
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+          <ScalarProperty Name="ColorName" ColumnName="ColorName" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+          <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockItems">
+      <EntityTypeMapping TypeName="WideWorldImportersModel.StockItems">
+        <MappingFragment StoreEntitySet="StockItems">
+          <ScalarProperty Name="StockItemID" ColumnName="StockItemID" />
+          <ScalarProperty Name="StockItemName" ColumnName="StockItemName" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+          <ScalarProperty Name="UnitPackageID" ColumnName="UnitPackageID" />
+          <ScalarProperty Name="OuterPackageID" ColumnName="OuterPackageID" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="LeadTimeDays" ColumnName="LeadTimeDays" />
+          <ScalarProperty Name="QuantityPerOuter" ColumnName="QuantityPerOuter" />
+          <ScalarProperty Name="IsChillerStock" ColumnName="IsChillerStock" />
+          <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+          <ScalarProperty Name="TaxRate" ColumnName="TaxRate" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="RecommendedRetailPrice" ColumnName="RecommendedRetailPrice" />
+          <ScalarProperty Name="TypicalWeightPerUnit" ColumnName="TypicalWeightPerUnit" />
+          <ScalarProperty Name="MarketingComments" ColumnName="MarketingComments" />
+          <ScalarProperty Name="InternalComments" ColumnName="InternalComments" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="CustomFields" ColumnName="CustomFields" />
+          <ScalarProperty Name="Tags" ColumnName="Tags" />
+          <ScalarProperty Name="SearchDetails" ColumnName="SearchDetails" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+          <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockGroups">
+      <EntityTypeMapping TypeName="WideWorldImportersModel.StockGroups">
+        <MappingFragment StoreEntitySet="StockGroups">
+          <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+          <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="StockGroupName" ColumnName="StockGroupName" />
+          <ScalarProperty Name="StockGroupID" ColumnName="StockGroupID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockItemStockGroups">
+      <EntityTypeMapping TypeName="WideWorldImportersModel.StockItemStockGroups">
+        <MappingFragment StoreEntitySet="StockItemStockGroups">
+          <ScalarProperty Name="LastEditedWhen" ColumnName="LastEditedWhen" />
+          <ScalarProperty Name="LastEditedBy" ColumnName="LastEditedBy" />
+          <ScalarProperty Name="StockGroupID" ColumnName="StockGroupID" />
+          <ScalarProperty Name="StockItemID" ColumnName="StockItemID" />
+          <ScalarProperty Name="StockItemStockGroupID" ColumnName="StockItemStockGroupID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

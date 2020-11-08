@@ -1,0 +1,220 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="68391ef1-9b9d-47a6-957a-354277c8f78e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Product Item</ID>
+  <Name>Товар</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1064" scrolltop="-5636" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="5265" y="16272" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimProductItem" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3096" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000180c000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimProductItem" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1064</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5636</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="5a444072-b6da-43d0-ba9e-d7b4bfc6c241">
+    <DataSourceViewID>WAREHOUS</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="15b68ac1-9725-4246-bf72-654ee5c009db">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="10be4f48-9623-44ba-82da-10081993f757">
+      <ID>Product Key</ID>
+      <Name>Product Key</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9924f6c5-d6d4-4e37-9f0b-55782555a320">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="024986de-483c-45c5-a480-d1d58661a40c">
+            <TableID>dbo_DimProductItem</TableID>
+            <ColumnID>ProductKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="65b7b072-b26c-4453-8ccf-48116d70ba45">
+          <AttributeID>Product Name</AttributeID>
+          <Name>Товар</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="25bc58c3-8769-45d6-b3ea-0191ea880f45">
+          <AttributeID>Producer Name</AttributeID>
+          <Name>Бренд</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="22ebde34-510a-4f40-86ba-607f4772ce86">
+          <AttributeID>Retail Unit Price</AttributeID>
+          <Name>Рыночная цена</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="86877eea-b5a6-4c7f-a698-a8a54b583b10">
+          <AttributeID>Weight Per Unit</AttributeID>
+          <Name>Вес единицы товара</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="409d3a1f-e027-4f15-8d92-ce51d72a1f6f">
+          <AttributeID>Color</AttributeID>
+          <Name>Цвет</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7ac981c4-aa36-4014-9a1d-a160872f5bc0">
+          <AttributeID>Size</AttributeID>
+          <Name>Размер</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="961a088b-662b-40c7-9d9f-a445b2986101">
+      <ID>Product Name</ID>
+      <Name>Товар</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8ddaa220-7929-4c90-9c31-e20740f7e56e">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="51732879-5b9b-41ba-8ed7-325991ec2314">
+            <TableID>dbo_DimProductItem</TableID>
+            <ColumnID>ProductName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7a737227-3913-4220-bb80-edf959e089f6">
+      <ID>Producer Name</ID>
+      <Name>Бренд</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4f5462ca-d78e-4436-ad1b-0ceb2764d7f6">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4a53353d-0335-4674-ab65-220aa29daaa8">
+            <TableID>dbo_DimProductItem</TableID>
+            <ColumnID>ProducerName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="35c046ee-8a21-438f-ace5-5c7b38a917d6">
+      <ID>Retail Unit Price</ID>
+      <Name>Рыночная цена</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a5fb24b8-cc93-48de-95d1-3983e2ce9da4">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9cebf7c9-951b-43a2-8919-d6a022c7fee1">
+            <TableID>dbo_DimProductItem</TableID>
+            <ColumnID>RetailUnitPrice</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="10904ec7-a0cd-48e0-bdbe-51f0bbcc07d5">
+      <ID>Weight Per Unit</ID>
+      <Name>Вес единицы товара</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="93eb5021-e401-47c8-9242-349f807c445f">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="229b426d-6f39-4a35-b063-dbdbc2e47cc6">
+            <TableID>dbo_DimProductItem</TableID>
+            <ColumnID>WeightPerUnit</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6fb9e372-597d-4879-97d0-e11981eae264">
+      <ID>Color</ID>
+      <Name>Цвет</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e63f8c99-f635-4015-98bc-beed9b045188">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="82cd6eb2-cf19-4cbb-96eb-78b4290f5faf">
+            <TableID>dbo_DimProductItem</TableID>
+            <ColumnID>Color</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4a3a9704-27c0-4527-8256-a36708bad621">
+      <ID>Size</ID>
+      <Name>Размер</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="10b33a13-4e46-4959-a6a5-3dce38098fe1">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="564b353c-3d89-4dbd-a62c-76be2dd942c5">
+            <TableID>dbo_DimProductItem</TableID>
+            <ColumnID>Size</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

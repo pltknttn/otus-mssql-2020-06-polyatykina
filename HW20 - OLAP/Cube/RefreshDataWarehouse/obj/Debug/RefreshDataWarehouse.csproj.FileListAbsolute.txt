@@ -1,0 +1,13 @@
+D:\Working\GitRepository\Otus\Cube\RefreshDataWarehouse\bin\Debug\RefreshDataWarehouse.exe.config
+D:\Working\GitRepository\Otus\Cube\RefreshDataWarehouse\bin\Debug\RefreshDataWarehouse.exe
+D:\Working\GitRepository\Otus\Cube\RefreshDataWarehouse\bin\Debug\RefreshDataWarehouse.pdb
+D:\Working\GitRepository\Otus\Cube\RefreshDataWarehouse\bin\Debug\EntityFramework.dll
+D:\Working\GitRepository\Otus\Cube\RefreshDataWarehouse\bin\Debug\EntityFramework.SqlServer.dll
+D:\Working\GitRepository\Otus\Cube\RefreshDataWarehouse\bin\Debug\EntityFramework.Utilities.dll
+D:\Working\GitRepository\Otus\Cube\RefreshDataWarehouse\bin\Debug\EntityFramework.xml
+D:\Working\GitRepository\Otus\Cube\RefreshDataWarehouse\bin\Debug\EntityFramework.SqlServer.xml
+D:\Working\GitRepository\Otus\Cube\RefreshDataWarehouse\obj\Debug\RefreshDataWarehouse.csproj.CoreCompileInputs.cache
+D:\Working\GitRepository\Otus\Cube\RefreshDataWarehouse\obj\Debug\RefreshDataWarehouse.csproj.CopyComplete
+D:\Working\GitRepository\Otus\Cube\RefreshDataWarehouse\obj\Debug\RefreshDataWarehouse.exe
+D:\Working\GitRepository\Otus\Cube\RefreshDataWarehouse\obj\Debug\RefreshDataWarehouse.pdb
+D:\Working\GitRepository\Otus\Cube\RefreshDataWarehouse\obj\Debug\RefreshDataWarehouse.csprojAssemblyReference.cache

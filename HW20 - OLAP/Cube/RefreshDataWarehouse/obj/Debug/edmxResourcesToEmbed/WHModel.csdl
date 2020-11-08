@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WHModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DimCustomer">
+    <Key>
+      <PropertyRef Name="CustomerKey" />
+    </Key>
+    <Property Name="CustomerKey" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerID" Type="Int64" Nullable="false" />
+    <Property Name="CustomerName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ContactName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="PostAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FaxNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="FactSale" Relationship="Self.FK_FactSale_CustomerKey" FromRole="DimCustomer" ToRole="FactSale" />
+  </EntityType>
+  <EntityType Name="DimProductItem">
+    <Key>
+      <PropertyRef Name="ProductKey" />
+    </Key>
+    <Property Name="ProductKey" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductID" Type="Int64" Nullable="false" />
+    <Property Name="ProductName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProducerName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CategoryName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RetailUnitPrice" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+    <Property Name="WeightPerUnit" Type="Decimal" Precision="16" Scale="3" Nullable="false" />
+    <Property Name="Color" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Size" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="FactSale" Relationship="Self.FK_FactSale_ProductKey" FromRole="DimProductItem" ToRole="FactSale" />
+  </EntityType>
+  <EntityType Name="DimSupplier">
+    <Key>
+      <PropertyRef Name="SupplierKey" />
+    </Key>
+    <Property Name="SupplierKey" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierID" Type="Int64" Nullable="false" />
+    <Property Name="SupplierName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ContactName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="PostAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FaxNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="FactSale" Relationship="Self.FK_FactSale_SupplierKey" FromRole="DimSupplier" ToRole="FactSale" />
+  </EntityType>
+  <EntityType Name="FactSale">
+    <Key>
+      <PropertyRef Name="SaleKey" />
+    </Key>
+    <Property Name="SaleKey" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerKey" Type="Int64" Nullable="false" />
+    <Property Name="SupplierKey" Type="Int64" Nullable="false" />
+    <Property Name="ProductKey" Type="Int64" Nullable="false" />
+    <Property Name="InvoiceNum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InvoiceDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+    <Property Name="Amount" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+    <Property Name="TaxRate" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+    <Property Name="TaxAmount" Type="Decimal" Precision="16" Scale="2" Nullable="false" />
+    <NavigationProperty Name="DimCustomer" Relationship="Self.FK_FactSale_CustomerKey" FromRole="FactSale" ToRole="DimCustomer" />
+    <NavigationProperty Name="DimProductItem" Relationship="Self.FK_FactSale_ProductKey" FromRole="FactSale" ToRole="DimProductItem" />
+    <NavigationProperty Name="DimSupplier" Relationship="Self.FK_FactSale_SupplierKey" FromRole="FactSale" ToRole="DimSupplier" />
+    <NavigationProperty Name="DimDate" Relationship="WHModel.FK_FactSale_InvoiceDate" FromRole="FactSale" ToRole="DimDate" />
+    <Property Name="InvoiceID" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LoadedDataInfo">
+    <Key>
+      <PropertyRef Name="DataKey" />
+    </Key>
+    <Property Name="DataKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TableName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LoadStart" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="7" />
+    <Property Name="Successful" Type="Boolean" Nullable="false" />
+    <Property Name="ErrorMessage" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_FactSale_CustomerKey">
+    <End Role="DimCustomer" Type="Self.DimCustomer" Multiplicity="1" />
+    <End Role="FactSale" Type="Self.FactSale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimCustomer">
+        <PropertyRef Name="CustomerKey" />
+      </Principal>
+      <Dependent Role="FactSale">
+        <PropertyRef Name="CustomerKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactSale_ProductKey">
+    <End Role="DimProductItem" Type="Self.DimProductItem" Multiplicity="1" />
+    <End Role="FactSale" Type="Self.FactSale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimProductItem">
+        <PropertyRef Name="ProductKey" />
+      </Principal>
+      <Dependent Role="FactSale">
+        <PropertyRef Name="ProductKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FactSale_SupplierKey">
+    <End Role="DimSupplier" Type="Self.DimSupplier" Multiplicity="1" />
+    <End Role="FactSale" Type="Self.FactSale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimSupplier">
+        <PropertyRef Name="SupplierKey" />
+      </Principal>
+      <Dependent Role="FactSale">
+        <PropertyRef Name="SupplierKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WHEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DimCustomer" EntityType="Self.DimCustomer" />
+    <EntitySet Name="DimProductItem" EntityType="Self.DimProductItem" />
+    <EntitySet Name="DimSupplier" EntityType="Self.DimSupplier" />
+    <EntitySet Name="FactSale" EntityType="Self.FactSale" />
+    <EntitySet Name="LoadedDataInfo" EntityType="Self.LoadedDataInfo" />
+    <AssociationSet Name="FK_FactSale_CustomerKey" Association="Self.FK_FactSale_CustomerKey">
+      <End Role="DimCustomer" EntitySet="DimCustomer" />
+      <End Role="FactSale" EntitySet="FactSale" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactSale_ProductKey" Association="Self.FK_FactSale_ProductKey">
+      <End Role="DimProductItem" EntitySet="DimProductItem" />
+      <End Role="FactSale" EntitySet="FactSale" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FactSale_SupplierKey" Association="Self.FK_FactSale_SupplierKey">
+      <End Role="DimSupplier" EntitySet="DimSupplier" />
+      <End Role="FactSale" EntitySet="FactSale" />
+    </AssociationSet>
+    <EntitySet Name="DimDate" EntityType="WHModel.DimDate" />
+    <AssociationSet Name="FK_FactSale_InvoiceDate" Association="WHModel.FK_FactSale_InvoiceDate">
+      <End Role="DimDate" EntitySet="DimDate" />
+      <End Role="FactSale" EntitySet="FactSale" />
+    </AssociationSet>
+    <FunctionImport Name="LoadDimDate">
+      <Parameter Name="p_date_from" Mode="In" Type="DateTime" />
+      <Parameter Name="p_date_to" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="DimDate">
+    <Key>
+      <PropertyRef Name="Date" />
+    </Key>
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DayNumber" Type="Int32" Nullable="false" />
+    <Property Name="DateName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="MonthNumber" Type="Int32" Nullable="false" />
+    <Property Name="MonthName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WeekNumber" Type="Int32" Nullable="false" />
+    <Property Name="WeekName" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Year" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="FactSale" Relationship="WHModel.FK_FactSale_InvoiceDate" FromRole="DimDate" ToRole="FactSale" />
+  </EntityType>
+  <Association Name="FK_FactSale_InvoiceDate">
+    <End Type="WHModel.DimDate" Role="DimDate" Multiplicity="1" />
+    <End Type="WHModel.FactSale" Role="FactSale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimDate">
+        <PropertyRef Name="Date" />
+      </Principal>
+      <Dependent Role="FactSale">
+        <PropertyRef Name="InvoiceDate" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,781 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WideWorldImportersModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="People">
+    <Key>
+      <PropertyRef Name="PersonID" />
+    </Key>
+    <Property Name="PersonID" Type="Int32" Nullable="false" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PreferredName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SearchName" Type="String" MaxLength="101" FixedLength="false" Unicode="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="IsPermittedToLogon" Type="Boolean" Nullable="false" />
+    <Property Name="LogonName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsExternalLogonProvider" Type="Boolean" Nullable="false" />
+    <Property Name="HashedPassword" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="IsSystemUser" Type="Boolean" Nullable="false" />
+    <Property Name="IsEmployee" Type="Boolean" Nullable="false" />
+    <Property Name="IsSalesperson" Type="Boolean" Nullable="false" />
+    <Property Name="UserPreferences" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FaxNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="CustomFields" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OtherLanguages" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="LastEditedBy" Type="Int32" Nullable="false" />
+    <Property Name="ValidFrom" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="ValidTo" Type="DateTime" Nullable="false" Precision="7" />
+    <NavigationProperty Name="People1" Relationship="Self.FK_Application_People_Application_People" FromRole="People" ToRole="People1" />
+    <NavigationProperty Name="People2" Relationship="Self.FK_Application_People_Application_People" FromRole="People1" ToRole="People" />
+    <NavigationProperty Name="SupplierCategories" Relationship="Self.FK_Purchasing_SupplierCategories_Application_People" FromRole="People" ToRole="SupplierCategories" />
+    <NavigationProperty Name="Suppliers" Relationship="Self.FK_Purchasing_Suppliers_AlternateContactPersonID_Application_People" FromRole="People" ToRole="Suppliers" />
+    <NavigationProperty Name="Suppliers1" Relationship="Self.FK_Purchasing_Suppliers_Application_People" FromRole="People" ToRole="Suppliers" />
+    <NavigationProperty Name="Suppliers2" Relationship="Self.FK_Purchasing_Suppliers_PrimaryContactPersonID_Application_People" FromRole="People" ToRole="Suppliers" />
+    <NavigationProperty Name="CustomerCategories" Relationship="Self.FK_Sales_CustomerCategories_Application_People" FromRole="People" ToRole="CustomerCategories" />
+    <NavigationProperty Name="Customers" Relationship="Self.FK_Sales_Customers_AlternateContactPersonID_Application_People" FromRole="People" ToRole="Customers" />
+    <NavigationProperty Name="Customers1" Relationship="Self.FK_Sales_Customers_Application_People" FromRole="People" ToRole="Customers" />
+    <NavigationProperty Name="Customers2" Relationship="Self.FK_Sales_Customers_PrimaryContactPersonID_Application_People" FromRole="People" ToRole="Customers" />
+    <NavigationProperty Name="InvoiceLines" Relationship="Self.FK_Sales_InvoiceLines_Application_People" FromRole="People" ToRole="InvoiceLines" />
+    <NavigationProperty Name="Invoices" Relationship="Self.FK_Sales_Invoices_AccountsPersonID_Application_People" FromRole="People" ToRole="Invoices" />
+    <NavigationProperty Name="Invoices1" Relationship="Self.FK_Sales_Invoices_Application_People" FromRole="People" ToRole="Invoices" />
+    <NavigationProperty Name="Invoices2" Relationship="Self.FK_Sales_Invoices_ContactPersonID_Application_People" FromRole="People" ToRole="Invoices" />
+    <NavigationProperty Name="Invoices3" Relationship="Self.FK_Sales_Invoices_PackedByPersonID_Application_People" FromRole="People" ToRole="Invoices" />
+    <NavigationProperty Name="Invoices4" Relationship="Self.FK_Sales_Invoices_SalespersonPersonID_Application_People" FromRole="People" ToRole="Invoices" />
+    <NavigationProperty Name="Colors" Relationship="Self.FK_Warehouse_Colors_Application_People" FromRole="People" ToRole="Colors" />
+    <NavigationProperty Name="StockItems" Relationship="Self.FK_Warehouse_StockItems_Application_People" FromRole="People" ToRole="StockItems" />
+    <NavigationProperty Name="StockGroups" Relationship="WideWorldImportersModel.FK_Warehouse_StockGroups_Application_People" FromRole="People" ToRole="StockGroups" />
+    <NavigationProperty Name="StockItemStockGroups" Relationship="WideWorldImportersModel.FK_Warehouse_StockItemStockGroups_Application_People" FromRole="People" ToRole="StockItemStockGroups" />
+  </EntityType>
+  <EntityType Name="SupplierCategories">
+    <Key>
+      <PropertyRef Name="SupplierCategoryID" />
+    </Key>
+    <Property Name="SupplierCategoryID" Type="Int32" Nullable="false" />
+    <Property Name="SupplierCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastEditedBy" Type="Int32" Nullable="false" />
+    <Property Name="ValidFrom" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="ValidTo" Type="DateTime" Nullable="false" Precision="7" />
+    <NavigationProperty Name="People" Relationship="Self.FK_Purchasing_SupplierCategories_Application_People" FromRole="SupplierCategories" ToRole="People" />
+    <NavigationProperty Name="Suppliers" Relationship="Self.FK_Purchasing_Suppliers_SupplierCategoryID_Purchasing_SupplierCategories" FromRole="SupplierCategories" ToRole="Suppliers" />
+  </EntityType>
+  <EntityType Name="Suppliers">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+    </Key>
+    <Property Name="SupplierID" Type="Int32" Nullable="false" />
+    <Property Name="SupplierName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SupplierCategoryID" Type="Int32" Nullable="false" />
+    <Property Name="PrimaryContactPersonID" Type="Int32" Nullable="false" />
+    <Property Name="AlternateContactPersonID" Type="Int32" Nullable="false" />
+    <Property Name="DeliveryMethodID" Type="Int32" />
+    <Property Name="DeliveryCityID" Type="Int32" Nullable="false" />
+    <Property Name="PostalCityID" Type="Int32" Nullable="false" />
+    <Property Name="SupplierReference" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="BankAccountName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BankAccountBranch" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BankAccountCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="BankAccountNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="BankInternationalCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentDays" Type="Int32" Nullable="false" />
+    <Property Name="InternalComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FaxNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="WebsiteURL" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DeliveryAddressLine1" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DeliveryAddressLine2" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryPostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DeliveryLocation" Type="Geography" />
+    <Property Name="PostalAddressLine1" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PostalAddressLine2" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="PostalPostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastEditedBy" Type="Int32" Nullable="false" />
+    <Property Name="ValidFrom" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="ValidTo" Type="DateTime" Nullable="false" Precision="7" />
+    <NavigationProperty Name="People" Relationship="Self.FK_Purchasing_Suppliers_AlternateContactPersonID_Application_People" FromRole="Suppliers" ToRole="People" />
+    <NavigationProperty Name="People1" Relationship="Self.FK_Purchasing_Suppliers_Application_People" FromRole="Suppliers" ToRole="People" />
+    <NavigationProperty Name="People2" Relationship="Self.FK_Purchasing_Suppliers_PrimaryContactPersonID_Application_People" FromRole="Suppliers" ToRole="People" />
+    <NavigationProperty Name="SupplierCategories" Relationship="Self.FK_Purchasing_Suppliers_SupplierCategoryID_Purchasing_SupplierCategories" FromRole="Suppliers" ToRole="SupplierCategories" />
+    <NavigationProperty Name="StockItems" Relationship="Self.FK_Warehouse_StockItems_SupplierID_Purchasing_Suppliers" FromRole="Suppliers" ToRole="StockItems" />
+  </EntityType>
+  <EntityType Name="CustomerCategories">
+    <Key>
+      <PropertyRef Name="CustomerCategoryID" />
+    </Key>
+    <Property Name="CustomerCategoryID" Type="Int32" Nullable="false" />
+    <Property Name="CustomerCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastEditedBy" Type="Int32" Nullable="false" />
+    <Property Name="ValidFrom" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="ValidTo" Type="DateTime" Nullable="false" Precision="7" />
+    <NavigationProperty Name="People" Relationship="Self.FK_Sales_CustomerCategories_Application_People" FromRole="CustomerCategories" ToRole="People" />
+    <NavigationProperty Name="Customers" Relationship="Self.FK_Sales_Customers_CustomerCategoryID_Sales_CustomerCategories" FromRole="CustomerCategories" ToRole="Customers" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="Int32" Nullable="false" />
+    <Property Name="CustomerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BillToCustomerID" Type="Int32" Nullable="false" />
+    <Property Name="CustomerCategoryID" Type="Int32" Nullable="false" />
+    <Property Name="BuyingGroupID" Type="Int32" />
+    <Property Name="PrimaryContactPersonID" Type="Int32" Nullable="false" />
+    <Property Name="AlternateContactPersonID" Type="Int32" />
+    <Property Name="DeliveryMethodID" Type="Int32" Nullable="false" />
+    <Property Name="DeliveryCityID" Type="Int32" Nullable="false" />
+    <Property Name="PostalCityID" Type="Int32" Nullable="false" />
+    <Property Name="CreditLimit" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AccountOpenedDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="StandardDiscountPercentage" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="IsStatementSent" Type="Boolean" Nullable="false" />
+    <Property Name="IsOnCreditHold" Type="Boolean" Nullable="false" />
+    <Property Name="PaymentDays" Type="Int32" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FaxNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DeliveryRun" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="RunPosition" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="WebsiteURL" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DeliveryAddressLine1" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DeliveryAddressLine2" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryPostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DeliveryLocation" Type="Geography" />
+    <Property Name="PostalAddressLine1" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PostalAddressLine2" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="PostalPostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastEditedBy" Type="Int32" Nullable="false" />
+    <Property Name="ValidFrom" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="ValidTo" Type="DateTime" Nullable="false" Precision="7" />
+    <NavigationProperty Name="People" Relationship="Self.FK_Sales_Customers_AlternateContactPersonID_Application_People" FromRole="Customers" ToRole="People" />
+    <NavigationProperty Name="People1" Relationship="Self.FK_Sales_Customers_Application_People" FromRole="Customers" ToRole="People" />
+    <NavigationProperty Name="People2" Relationship="Self.FK_Sales_Customers_PrimaryContactPersonID_Application_People" FromRole="Customers" ToRole="People" />
+    <NavigationProperty Name="CustomerCategories" Relationship="Self.FK_Sales_Customers_CustomerCategoryID_Sales_CustomerCategories" FromRole="Customers" ToRole="CustomerCategories" />
+    <NavigationProperty Name="Customers1" Relationship="Self.FK_Sales_Customers_BillToCustomerID_Sales_Customers" FromRole="Customers" ToRole="Customers1" />
+    <NavigationProperty Name="Customers2" Relationship="Self.FK_Sales_Customers_BillToCustomerID_Sales_Customers" FromRole="Customers1" ToRole="Customers" />
+    <NavigationProperty Name="Invoices" Relationship="Self.FK_Sales_Invoices_BillToCustomerID_Sales_Customers" FromRole="Customers" ToRole="Invoices" />
+    <NavigationProperty Name="Invoices1" Relationship="Self.FK_Sales_Invoices_CustomerID_Sales_Customers" FromRole="Customers" ToRole="Invoices" />
+  </EntityType>
+  <EntityType Name="InvoiceLines">
+    <Key>
+      <PropertyRef Name="InvoiceLineID" />
+    </Key>
+    <Property Name="InvoiceLineID" Type="Int32" Nullable="false" />
+    <Property Name="InvoiceID" Type="Int32" Nullable="false" />
+    <Property Name="StockItemID" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PackageTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TaxRate" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="TaxAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="LineProfit" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ExtendedPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="LastEditedBy" Type="Int32" Nullable="false" />
+    <Property Name="LastEditedWhen" Type="DateTime" Nullable="false" Precision="7" />
+    <NavigationProperty Name="People" Relationship="Self.FK_Sales_InvoiceLines_Application_People" FromRole="InvoiceLines" ToRole="People" />
+    <NavigationProperty Name="Invoices" Relationship="Self.FK_Sales_InvoiceLines_InvoiceID_Sales_Invoices" FromRole="InvoiceLines" ToRole="Invoices" />
+    <NavigationProperty Name="StockItems" Relationship="Self.FK_Sales_InvoiceLines_StockItemID_Warehouse_StockItems" FromRole="InvoiceLines" ToRole="StockItems" />
+  </EntityType>
+  <EntityType Name="Invoices">
+    <Key>
+      <PropertyRef Name="InvoiceID" />
+    </Key>
+    <Property Name="InvoiceID" Type="Int32" Nullable="false" />
+    <Property Name="CustomerID" Type="Int32" Nullable="false" />
+    <Property Name="BillToCustomerID" Type="Int32" Nullable="false" />
+    <Property Name="OrderID" Type="Int32" />
+    <Property Name="DeliveryMethodID" Type="Int32" Nullable="false" />
+    <Property Name="ContactPersonID" Type="Int32" Nullable="false" />
+    <Property Name="AccountsPersonID" Type="Int32" Nullable="false" />
+    <Property Name="SalespersonPersonID" Type="Int32" Nullable="false" />
+    <Property Name="PackedByPersonID" Type="Int32" Nullable="false" />
+    <Property Name="InvoiceDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CustomerPurchaseOrderNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="IsCreditNote" Type="Boolean" Nullable="false" />
+    <Property Name="CreditNoteReason" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryInstructions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InternalComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TotalDryItems" Type="Int32" Nullable="false" />
+    <Property Name="TotalChillerItems" Type="Int32" Nullable="false" />
+    <Property Name="DeliveryRun" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="RunPosition" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="ReturnedDeliveryData" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ConfirmedDeliveryTime" Type="DateTime" annotation:StoreGeneratedPattern="Computed" Precision="7" />
+    <Property Name="ConfirmedReceivedBy" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="LastEditedBy" Type="Int32" Nullable="false" />
+    <Property Name="LastEditedWhen" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="InvoiceConfirmedForProcessing" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="People" Relationship="Self.FK_Sales_Invoices_AccountsPersonID_Application_People" FromRole="Invoices" ToRole="People" />
+    <NavigationProperty Name="People1" Relationship="Self.FK_Sales_Invoices_Application_People" FromRole="Invoices" ToRole="People" />
+    <NavigationProperty Name="People2" Relationship="Self.FK_Sales_Invoices_ContactPersonID_Application_People" FromRole="Invoices" ToRole="People" />
+    <NavigationProperty Name="People3" Relationship="Self.FK_Sales_Invoices_PackedByPersonID_Application_People" FromRole="Invoices" ToRole="People" />
+    <NavigationProperty Name="People4" Relationship="Self.FK_Sales_Invoices_SalespersonPersonID_Application_People" FromRole="Invoices" ToRole="People" />
+    <NavigationProperty Name="Customers" Relationship="Self.FK_Sales_Invoices_BillToCustomerID_Sales_Customers" FromRole="Invoices" ToRole="Customers" />
+    <NavigationProperty Name="Customers1" Relationship="Self.FK_Sales_Invoices_CustomerID_Sales_Customers" FromRole="Invoices" ToRole="Customers" />
+    <NavigationProperty Name="InvoiceLines" Relationship="Self.FK_Sales_InvoiceLines_InvoiceID_Sales_Invoices" FromRole="Invoices" ToRole="InvoiceLines" />
+  </EntityType>
+  <EntityType Name="Colors">
+    <Key>
+      <PropertyRef Name="ColorID" />
+    </Key>
+    <Property Name="ColorID" Type="Int32" Nullable="false" />
+    <Property Name="ColorName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastEditedBy" Type="Int32" Nullable="false" />
+    <Property Name="ValidFrom" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="ValidTo" Type="DateTime" Nullable="false" Precision="7" />
+    <NavigationProperty Name="People" Relationship="Self.FK_Warehouse_Colors_Application_People" FromRole="Colors" ToRole="People" />
+    <NavigationProperty Name="StockItems" Relationship="Self.FK_Warehouse_StockItems_ColorID_Warehouse_Colors" FromRole="Colors" ToRole="StockItems" />
+  </EntityType>
+  <EntityType Name="StockItems">
+    <Key>
+      <PropertyRef Name="StockItemID" />
+    </Key>
+    <Property Name="StockItemID" Type="Int32" Nullable="false" />
+    <Property Name="StockItemName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SupplierID" Type="Int32" Nullable="false" />
+    <Property Name="ColorID" Type="Int32" />
+    <Property Name="UnitPackageID" Type="Int32" Nullable="false" />
+    <Property Name="OuterPackageID" Type="Int32" Nullable="false" />
+    <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Size" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="LeadTimeDays" Type="Int32" Nullable="false" />
+    <Property Name="QuantityPerOuter" Type="Int32" Nullable="false" />
+    <Property Name="IsChillerStock" Type="Boolean" Nullable="false" />
+    <Property Name="Barcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TaxRate" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="RecommendedRetailPrice" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TypicalWeightPerUnit" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="MarketingComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InternalComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="CustomFields" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Tags" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="SearchDetails" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="LastEditedBy" Type="Int32" Nullable="false" />
+    <Property Name="ValidFrom" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="ValidTo" Type="DateTime" Nullable="false" Precision="7" />
+    <NavigationProperty Name="People" Relationship="Self.FK_Warehouse_StockItems_Application_People" FromRole="StockItems" ToRole="People" />
+    <NavigationProperty Name="Suppliers" Relationship="Self.FK_Warehouse_StockItems_SupplierID_Purchasing_Suppliers" FromRole="StockItems" ToRole="Suppliers" />
+    <NavigationProperty Name="InvoiceLines" Relationship="Self.FK_Sales_InvoiceLines_StockItemID_Warehouse_StockItems" FromRole="StockItems" ToRole="InvoiceLines" />
+    <NavigationProperty Name="Colors" Relationship="Self.FK_Warehouse_StockItems_ColorID_Warehouse_Colors" FromRole="StockItems" ToRole="Colors" />
+    <NavigationProperty Name="StockItemStockGroups" Relationship="WideWorldImportersModel.FK_Warehouse_StockItemStockGroups_StockItemID_Warehouse_StockItems" FromRole="StockItems" ToRole="StockItemStockGroups" />
+  </EntityType>
+  <Association Name="FK_Application_People_Application_People">
+    <End Role="People" Type="Self.People" Multiplicity="1" />
+    <End Role="People1" Type="Self.People" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="People1">
+        <PropertyRef Name="LastEditedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purchasing_SupplierCategories_Application_People">
+    <End Role="People" Type="Self.People" Multiplicity="1" />
+    <End Role="SupplierCategories" Type="Self.SupplierCategories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="SupplierCategories">
+        <PropertyRef Name="LastEditedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purchasing_Suppliers_AlternateContactPersonID_Application_People">
+    <End Role="People" Type="Self.People" Multiplicity="1" />
+    <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Suppliers">
+        <PropertyRef Name="AlternateContactPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purchasing_Suppliers_Application_People">
+    <End Role="People" Type="Self.People" Multiplicity="1" />
+    <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Suppliers">
+        <PropertyRef Name="LastEditedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purchasing_Suppliers_PrimaryContactPersonID_Application_People">
+    <End Role="People" Type="Self.People" Multiplicity="1" />
+    <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Suppliers">
+        <PropertyRef Name="PrimaryContactPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sales_CustomerCategories_Application_People">
+    <End Role="People" Type="Self.People" Multiplicity="1" />
+    <End Role="CustomerCategories" Type="Self.CustomerCategories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="CustomerCategories">
+        <PropertyRef Name="LastEditedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sales_Customers_AlternateContactPersonID_Application_People">
+    <End Role="People" Type="Self.People" Multiplicity="0..1" />
+    <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Customers">
+        <PropertyRef Name="AlternateContactPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sales_Customers_Application_People">
+    <End Role="People" Type="Self.People" Multiplicity="1" />
+    <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Customers">
+        <PropertyRef Name="LastEditedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sales_Customers_PrimaryContactPersonID_Application_People">
+    <End Role="People" Type="Self.People" Multiplicity="1" />
+    <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Customers">
+        <PropertyRef Name="PrimaryContactPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sales_InvoiceLines_Application_People">
+    <End Role="People" Type="Self.People" Multiplicity="1" />
+    <End Role="InvoiceLines" Type="Self.InvoiceLines" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="InvoiceLines">
+        <PropertyRef Name="LastEditedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sales_Invoices_AccountsPersonID_Application_People">
+    <End Role="People" Type="Self.People" Multiplicity="1" />
+    <End Role="Invoices" Type="Self.Invoices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Invoices">
+        <PropertyRef Name="AccountsPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sales_Invoices_Application_People">
+    <End Role="People" Type="Self.People" Multiplicity="1" />
+    <End Role="Invoices" Type="Self.Invoices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Invoices">
+        <PropertyRef Name="LastEditedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sales_Invoices_ContactPersonID_Application_People">
+    <End Role="People" Type="Self.People" Multiplicity="1" />
+    <End Role="Invoices" Type="Self.Invoices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Invoices">
+        <PropertyRef Name="ContactPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sales_Invoices_PackedByPersonID_Application_People">
+    <End Role="People" Type="Self.People" Multiplicity="1" />
+    <End Role="Invoices" Type="Self.Invoices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Invoices">
+        <PropertyRef Name="PackedByPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sales_Invoices_SalespersonPersonID_Application_People">
+    <End Role="People" Type="Self.People" Multiplicity="1" />
+    <End Role="Invoices" Type="Self.Invoices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Invoices">
+        <PropertyRef Name="SalespersonPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Warehouse_Colors_Application_People">
+    <End Role="People" Type="Self.People" Multiplicity="1" />
+    <End Role="Colors" Type="Self.Colors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Colors">
+        <PropertyRef Name="LastEditedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Warehouse_StockItems_Application_People">
+    <End Role="People" Type="Self.People" Multiplicity="1" />
+    <End Role="StockItems" Type="Self.StockItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="StockItems">
+        <PropertyRef Name="LastEditedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purchasing_Suppliers_SupplierCategoryID_Purchasing_SupplierCategories">
+    <End Role="SupplierCategories" Type="Self.SupplierCategories" Multiplicity="1" />
+    <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SupplierCategories">
+        <PropertyRef Name="SupplierCategoryID" />
+      </Principal>
+      <Dependent Role="Suppliers">
+        <PropertyRef Name="SupplierCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Warehouse_StockItems_SupplierID_Purchasing_Suppliers">
+    <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="1" />
+    <End Role="StockItems" Type="Self.StockItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="StockItems">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sales_Customers_CustomerCategoryID_Sales_CustomerCategories">
+    <End Role="CustomerCategories" Type="Self.CustomerCategories" Multiplicity="1" />
+    <End Role="Customers" Type="Self.Customers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerCategories">
+        <PropertyRef Name="CustomerCategoryID" />
+      </Principal>
+      <Dependent Role="Customers">
+        <PropertyRef Name="CustomerCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sales_Customers_BillToCustomerID_Sales_Customers">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="Customers1" Type="Self.Customers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Customers1">
+        <PropertyRef Name="BillToCustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sales_Invoices_BillToCustomerID_Sales_Customers">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="Invoices" Type="Self.Invoices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Invoices">
+        <PropertyRef Name="BillToCustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sales_Invoices_CustomerID_Sales_Customers">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="Invoices" Type="Self.Invoices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Invoices">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sales_InvoiceLines_InvoiceID_Sales_Invoices">
+    <End Role="Invoices" Type="Self.Invoices" Multiplicity="1" />
+    <End Role="InvoiceLines" Type="Self.InvoiceLines" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoices">
+        <PropertyRef Name="InvoiceID" />
+      </Principal>
+      <Dependent Role="InvoiceLines">
+        <PropertyRef Name="InvoiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sales_InvoiceLines_StockItemID_Warehouse_StockItems">
+    <End Role="StockItems" Type="Self.StockItems" Multiplicity="1" />
+    <End Role="InvoiceLines" Type="Self.InvoiceLines" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockItems">
+        <PropertyRef Name="StockItemID" />
+      </Principal>
+      <Dependent Role="InvoiceLines">
+        <PropertyRef Name="StockItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Warehouse_StockItems_ColorID_Warehouse_Colors">
+    <End Role="Colors" Type="Self.Colors" Multiplicity="0..1" />
+    <End Role="StockItems" Type="Self.StockItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Colors">
+        <PropertyRef Name="ColorID" />
+      </Principal>
+      <Dependent Role="StockItems">
+        <PropertyRef Name="ColorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WWIEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="People" EntityType="Self.People" />
+    <EntitySet Name="SupplierCategories" EntityType="Self.SupplierCategories" />
+    <EntitySet Name="Suppliers" EntityType="Self.Suppliers" />
+    <EntitySet Name="CustomerCategories" EntityType="Self.CustomerCategories" />
+    <EntitySet Name="Customers" EntityType="Self.Customers" />
+    <EntitySet Name="InvoiceLines" EntityType="Self.InvoiceLines" />
+    <EntitySet Name="Invoices" EntityType="Self.Invoices" />
+    <EntitySet Name="Colors" EntityType="Self.Colors" />
+    <EntitySet Name="StockItems" EntityType="Self.StockItems" />
+    <AssociationSet Name="FK_Application_People_Application_People" Association="Self.FK_Application_People_Application_People">
+      <End Role="People" EntitySet="People" />
+      <End Role="People1" EntitySet="People" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purchasing_SupplierCategories_Application_People" Association="Self.FK_Purchasing_SupplierCategories_Application_People">
+      <End Role="People" EntitySet="People" />
+      <End Role="SupplierCategories" EntitySet="SupplierCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purchasing_Suppliers_AlternateContactPersonID_Application_People" Association="Self.FK_Purchasing_Suppliers_AlternateContactPersonID_Application_People">
+      <End Role="People" EntitySet="People" />
+      <End Role="Suppliers" EntitySet="Suppliers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purchasing_Suppliers_Application_People" Association="Self.FK_Purchasing_Suppliers_Application_People">
+      <End Role="People" EntitySet="People" />
+      <End Role="Suppliers" EntitySet="Suppliers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purchasing_Suppliers_PrimaryContactPersonID_Application_People" Association="Self.FK_Purchasing_Suppliers_PrimaryContactPersonID_Application_People">
+      <End Role="People" EntitySet="People" />
+      <End Role="Suppliers" EntitySet="Suppliers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sales_CustomerCategories_Application_People" Association="Self.FK_Sales_CustomerCategories_Application_People">
+      <End Role="People" EntitySet="People" />
+      <End Role="CustomerCategories" EntitySet="CustomerCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sales_Customers_AlternateContactPersonID_Application_People" Association="Self.FK_Sales_Customers_AlternateContactPersonID_Application_People">
+      <End Role="People" EntitySet="People" />
+      <End Role="Customers" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sales_Customers_Application_People" Association="Self.FK_Sales_Customers_Application_People">
+      <End Role="People" EntitySet="People" />
+      <End Role="Customers" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sales_Customers_PrimaryContactPersonID_Application_People" Association="Self.FK_Sales_Customers_PrimaryContactPersonID_Application_People">
+      <End Role="People" EntitySet="People" />
+      <End Role="Customers" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sales_InvoiceLines_Application_People" Association="Self.FK_Sales_InvoiceLines_Application_People">
+      <End Role="People" EntitySet="People" />
+      <End Role="InvoiceLines" EntitySet="InvoiceLines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sales_Invoices_AccountsPersonID_Application_People" Association="Self.FK_Sales_Invoices_AccountsPersonID_Application_People">
+      <End Role="People" EntitySet="People" />
+      <End Role="Invoices" EntitySet="Invoices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sales_Invoices_Application_People" Association="Self.FK_Sales_Invoices_Application_People">
+      <End Role="People" EntitySet="People" />
+      <End Role="Invoices" EntitySet="Invoices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sales_Invoices_ContactPersonID_Application_People" Association="Self.FK_Sales_Invoices_ContactPersonID_Application_People">
+      <End Role="People" EntitySet="People" />
+      <End Role="Invoices" EntitySet="Invoices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sales_Invoices_PackedByPersonID_Application_People" Association="Self.FK_Sales_Invoices_PackedByPersonID_Application_People">
+      <End Role="People" EntitySet="People" />
+      <End Role="Invoices" EntitySet="Invoices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sales_Invoices_SalespersonPersonID_Application_People" Association="Self.FK_Sales_Invoices_SalespersonPersonID_Application_People">
+      <End Role="People" EntitySet="People" />
+      <End Role="Invoices" EntitySet="Invoices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Warehouse_Colors_Application_People" Association="Self.FK_Warehouse_Colors_Application_People">
+      <End Role="People" EntitySet="People" />
+      <End Role="Colors" EntitySet="Colors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Warehouse_StockItems_Application_People" Association="Self.FK_Warehouse_StockItems_Application_People">
+      <End Role="People" EntitySet="People" />
+      <End Role="StockItems" EntitySet="StockItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purchasing_Suppliers_SupplierCategoryID_Purchasing_SupplierCategories" Association="Self.FK_Purchasing_Suppliers_SupplierCategoryID_Purchasing_SupplierCategories">
+      <End Role="SupplierCategories" EntitySet="SupplierCategories" />
+      <End Role="Suppliers" EntitySet="Suppliers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Warehouse_StockItems_SupplierID_Purchasing_Suppliers" Association="Self.FK_Warehouse_StockItems_SupplierID_Purchasing_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="StockItems" EntitySet="StockItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sales_Customers_CustomerCategoryID_Sales_CustomerCategories" Association="Self.FK_Sales_Customers_CustomerCategoryID_Sales_CustomerCategories">
+      <End Role="CustomerCategories" EntitySet="CustomerCategories" />
+      <End Role="Customers" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sales_Customers_BillToCustomerID_Sales_Customers" Association="Self.FK_Sales_Customers_BillToCustomerID_Sales_Customers">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Customers1" EntitySet="Customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sales_Invoices_BillToCustomerID_Sales_Customers" Association="Self.FK_Sales_Invoices_BillToCustomerID_Sales_Customers">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Invoices" EntitySet="Invoices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sales_Invoices_CustomerID_Sales_Customers" Association="Self.FK_Sales_Invoices_CustomerID_Sales_Customers">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Invoices" EntitySet="Invoices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sales_InvoiceLines_InvoiceID_Sales_Invoices" Association="Self.FK_Sales_InvoiceLines_InvoiceID_Sales_Invoices">
+      <End Role="Invoices" EntitySet="Invoices" />
+      <End Role="InvoiceLines" EntitySet="InvoiceLines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sales_InvoiceLines_StockItemID_Warehouse_StockItems" Association="Self.FK_Sales_InvoiceLines_StockItemID_Warehouse_StockItems">
+      <End Role="StockItems" EntitySet="StockItems" />
+      <End Role="InvoiceLines" EntitySet="InvoiceLines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Warehouse_StockItems_ColorID_Warehouse_Colors" Association="Self.FK_Warehouse_StockItems_ColorID_Warehouse_Colors">
+      <End Role="Colors" EntitySet="Colors" />
+      <End Role="StockItems" EntitySet="StockItems" />
+    </AssociationSet>
+    <EntitySet Name="StockGroups" EntityType="WideWorldImportersModel.StockGroups" />
+    <EntitySet Name="StockItemStockGroups" EntityType="WideWorldImportersModel.StockItemStockGroups" />
+    <AssociationSet Name="FK_Warehouse_StockGroups_Application_People" Association="WideWorldImportersModel.FK_Warehouse_StockGroups_Application_People">
+      <End Role="People" EntitySet="People" />
+      <End Role="StockGroups" EntitySet="StockGroups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Warehouse_StockItemStockGroups_Application_People" Association="WideWorldImportersModel.FK_Warehouse_StockItemStockGroups_Application_People">
+      <End Role="People" EntitySet="People" />
+      <End Role="StockItemStockGroups" EntitySet="StockItemStockGroups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Warehouse_StockItemStockGroups_StockGroupID_Warehouse_StockGroups" Association="WideWorldImportersModel.FK_Warehouse_StockItemStockGroups_StockGroupID_Warehouse_StockGroups">
+      <End Role="StockGroups" EntitySet="StockGroups" />
+      <End Role="StockItemStockGroups" EntitySet="StockItemStockGroups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Warehouse_StockItemStockGroups_StockItemID_Warehouse_StockItems" Association="WideWorldImportersModel.FK_Warehouse_StockItemStockGroups_StockItemID_Warehouse_StockItems">
+      <End Role="StockItems" EntitySet="StockItems" />
+      <End Role="StockItemStockGroups" EntitySet="StockItemStockGroups" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="StockGroups">
+    <Key>
+      <PropertyRef Name="StockGroupID" />
+    </Key>
+    <Property Name="StockGroupID" Type="Int32" Nullable="false" />
+    <Property Name="StockGroupName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastEditedBy" Type="Int32" Nullable="false" />
+    <Property Name="ValidFrom" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="ValidTo" Type="DateTime" Nullable="false" Precision="7" />
+    <NavigationProperty Name="People" Relationship="WideWorldImportersModel.FK_Warehouse_StockGroups_Application_People" FromRole="StockGroups" ToRole="People" />
+    <NavigationProperty Name="StockItemStockGroups" Relationship="WideWorldImportersModel.FK_Warehouse_StockItemStockGroups_StockGroupID_Warehouse_StockGroups" FromRole="StockGroups" ToRole="StockItemStockGroups" />
+  </EntityType>
+  <EntityType Name="StockItemStockGroups">
+    <Key>
+      <PropertyRef Name="StockItemStockGroupID" />
+    </Key>
+    <Property Name="StockItemStockGroupID" Type="Int32" Nullable="false" />
+    <Property Name="StockItemID" Type="Int32" Nullable="false" />
+    <Property Name="StockGroupID" Type="Int32" Nullable="false" />
+    <Property Name="LastEditedBy" Type="Int32" Nullable="false" />
+    <Property Name="LastEditedWhen" Type="DateTime" Nullable="false" Precision="7" />
+    <NavigationProperty Name="People" Relationship="WideWorldImportersModel.FK_Warehouse_StockItemStockGroups_Application_People" FromRole="StockItemStockGroups" ToRole="People" />
+    <NavigationProperty Name="StockGroups" Relationship="WideWorldImportersModel.FK_Warehouse_StockItemStockGroups_StockGroupID_Warehouse_StockGroups" FromRole="StockItemStockGroups" ToRole="StockGroups" />
+    <NavigationProperty Name="StockItems" Relationship="WideWorldImportersModel.FK_Warehouse_StockItemStockGroups_StockItemID_Warehouse_StockItems" FromRole="StockItemStockGroups" ToRole="StockItems" />
+  </EntityType>
+  <Association Name="FK_Warehouse_StockGroups_Application_People">
+    <End Type="WideWorldImportersModel.People" Role="People" Multiplicity="1" />
+    <End Type="WideWorldImportersModel.StockGroups" Role="StockGroups" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="StockGroups">
+        <PropertyRef Name="LastEditedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Warehouse_StockItemStockGroups_Application_People">
+    <End Type="WideWorldImportersModel.People" Role="People" Multiplicity="1" />
+    <End Type="WideWorldImportersModel.StockItemStockGroups" Role="StockItemStockGroups" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="People">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="StockItemStockGroups">
+        <PropertyRef Name="LastEditedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Warehouse_StockItemStockGroups_StockGroupID_Warehouse_StockGroups">
+    <End Type="WideWorldImportersModel.StockGroups" Role="StockGroups" Multiplicity="1" />
+    <End Type="WideWorldImportersModel.StockItemStockGroups" Role="StockItemStockGroups" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockGroups">
+        <PropertyRef Name="StockGroupID" />
+      </Principal>
+      <Dependent Role="StockItemStockGroups">
+        <PropertyRef Name="StockGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Warehouse_StockItemStockGroups_StockItemID_Warehouse_StockItems">
+    <End Type="WideWorldImportersModel.StockItems" Role="StockItems" Multiplicity="1" />
+    <End Type="WideWorldImportersModel.StockItemStockGroups" Role="StockItemStockGroups" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockItems">
+        <PropertyRef Name="StockItemID" />
+      </Principal>
+      <Dependent Role="StockItemStockGroups">
+        <PropertyRef Name="StockItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

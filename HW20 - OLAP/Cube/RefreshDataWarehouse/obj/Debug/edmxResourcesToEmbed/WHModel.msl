@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WHModelStoreContainer" CdmEntityContainer="WHEntities">
+    <EntitySetMapping Name="DimCustomer">
+      <EntityTypeMapping TypeName="WHModel.DimCustomer">
+        <MappingFragment StoreEntitySet="DimCustomer">
+          <ScalarProperty Name="CustomerKey" ColumnName="CustomerKey" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="PostAddress" ColumnName="PostAddress" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimProductItem">
+      <EntityTypeMapping TypeName="WHModel.DimProductItem">
+        <MappingFragment StoreEntitySet="DimProductItem">
+          <ScalarProperty Name="ProductKey" ColumnName="ProductKey" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="ProducerName" ColumnName="ProducerName" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="RetailUnitPrice" ColumnName="RetailUnitPrice" />
+          <ScalarProperty Name="WeightPerUnit" ColumnName="WeightPerUnit" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimSupplier">
+      <EntityTypeMapping TypeName="WHModel.DimSupplier">
+        <MappingFragment StoreEntitySet="DimSupplier">
+          <ScalarProperty Name="SupplierKey" ColumnName="SupplierKey" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="PostAddress" ColumnName="PostAddress" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FactSale">
+      <EntityTypeMapping TypeName="WHModel.FactSale">
+        <MappingFragment StoreEntitySet="FactSale">
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="SaleKey" ColumnName="SaleKey" />
+          <ScalarProperty Name="CustomerKey" ColumnName="CustomerKey" />
+          <ScalarProperty Name="SupplierKey" ColumnName="SupplierKey" />
+          <ScalarProperty Name="ProductKey" ColumnName="ProductKey" />
+          <ScalarProperty Name="InvoiceNum" ColumnName="InvoiceNum" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="TaxRate" ColumnName="TaxRate" />
+          <ScalarProperty Name="TaxAmount" ColumnName="TaxAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadedDataInfo">
+      <EntityTypeMapping TypeName="WHModel.LoadedDataInfo">
+        <MappingFragment StoreEntitySet="LoadedDataInfo">
+          <ScalarProperty Name="DataKey" ColumnName="DataKey" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="LoadStart" ColumnName="LoadStart" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="Successful" ColumnName="Successful" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimDate">
+      <EntityTypeMapping TypeName="WHModel.DimDate">
+        <MappingFragment StoreEntitySet="DimDate">
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="WeekName" ColumnName="WeekName" />
+          <ScalarProperty Name="WeekNumber" ColumnName="WeekNumber" />
+          <ScalarProperty Name="MonthName" ColumnName="MonthName" />
+          <ScalarProperty Name="MonthNumber" ColumnName="MonthNumber" />
+          <ScalarProperty Name="DateName" ColumnName="DateName" />
+          <ScalarProperty Name="DayNumber" ColumnName="DayNumber" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="LoadDimDate" FunctionName="WHModel.Store.LoadDimDate" />
+  </EntityContainerMapping>
+</Mapping>
