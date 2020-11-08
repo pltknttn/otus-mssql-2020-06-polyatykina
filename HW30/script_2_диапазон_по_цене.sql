@@ -52,6 +52,29 @@ GO
 ALTER TABLE [Sales].[OrderLinesPrices] ADD CONSTRAINT [PK_Sales_OrderLinesPrices]
 PRIMARY KEY CLUSTERED  (UnitPrice, OrderLineID)
  ON [schmPricePartition]([UnitPrice]);
+
+-- Таблица для переноса данных 
+drop table if exists [Sales].[OrderLinesStaging]; 
+CREATE TABLE [Sales].[OrderLinesStaging](
+	[OrderLineID] [int] NOT NULL,
+	[OrderID] [int] NOT NULL,
+	[StockItemID] [int] NOT NULL,
+	[Description] [nvarchar](100) NOT NULL,
+	[PackageTypeID] [int] NOT NULL,
+	[Quantity] [int] NOT NULL,
+	[UnitPrice] [decimal](18, 2) NOT NULL DEFAULT(0),
+	[TaxRate] [decimal](18, 3) NOT NULL,
+	[PickedQuantity] [int] NOT NULL,
+	[PickingCompletedWhen] [datetime2](7) NULL,
+	[LastEditedBy] [int] NOT NULL,
+	[LastEditedWhen] [datetime2](7) NOT NULL,
+) ON [schmPricePartition]([UnitPrice])---в схеме [[schmPricePartition]] по ключу [UnitPrice]
+GO
+
+--создадим кластерный индекс в той же схеме с тем же ключом
+ALTER TABLE [Sales].[OrderLinesStaging] ADD CONSTRAINT [PK_Sales_OrderLinesStaging]
+PRIMARY KEY CLUSTERED  (UnitPrice, OrderLineID)
+ ON [schmPricePartition]([UnitPrice]);
   
  -- 4. Заливка данных 
 
@@ -75,14 +98,13 @@ PRIMARY KEY CLUSTERED  (UnitPrice, OrderLineID)
            ,[Description]
            ,[PackageTypeID]
            ,[Quantity]
-           ,[UnitPrice] 
+           ,isnull([UnitPrice],0) [UnitPrice]
            ,[TaxRate]
            ,[PickedQuantity]
            ,[PickingCompletedWhen]
            ,[LastEditedBy]
            ,[LastEditedWhen] 
   from [Sales].[OrderLines] 
-  WHERE UnitPrice > 0
    
 -- разбивка
 SELECT  $PARTITION.fnPricePartition([UnitPrice]) AS Partition
@@ -106,8 +128,48 @@ SELECT distinct Ord.OrderID
 FROM [Sales].[OrderLinesPrices] AS Ord
 WHERE Ord.UnitPrice > 800 
 
---6. Возвращаем в исходное стостояние
+-- 7. Перенесем данные
 
+ALTER TABLE [Sales].[OrderLinesPrices] SWITCH PARTITION 4 TO [Sales].[OrderLinesStaging] PARTITION 4;
+
+select * from [Sales].[OrderLinesStaging]
+
+-- ушли данные по секции 4
+SELECT  $PARTITION.fnPricePartition([UnitPrice]) AS Partition
+		, COUNT(*) AS [COUNT]
+		, MIN([UnitPrice])
+		,MAX([UnitPrice]) 
+FROM [Sales].[OrderLinesPrices]
+GROUP BY $PARTITION.fnPricePartition([UnitPrice])
+ORDER BY Partition ; 
+
+-- появляются данные по секции 4
+SELECT  $PARTITION.fnPricePartition([UnitPrice]) AS Partition
+		, COUNT(*) AS [COUNT]
+		, MIN([UnitPrice])
+		,MAX([UnitPrice]) 
+FROM [Sales].[OrderLinesStaging]
+GROUP BY $PARTITION.fnPricePartition([UnitPrice])
+ORDER BY Partition ; 
+
+-- обратно
+ALTER TABLE [Sales].[OrderLinesStaging] SWITCH PARTITION 4 TO [Sales].[OrderLinesPrices] PARTITION 4;
+
+-- ушли данные по секции 4
+select * from [Sales].[OrderLinesStaging]
+
+-- появляются данные по секции 4
+SELECT  $PARTITION.fnPricePartition([UnitPrice]) AS Partition
+		, COUNT(*) AS [COUNT]
+		, MIN([UnitPrice])
+		,MAX([UnitPrice]) 
+FROM [Sales].[OrderLinesPrices]
+GROUP BY $PARTITION.fnPricePartition([UnitPrice])
+ORDER BY Partition ;
+
+--8. Возвращаем в исходное стостояние
+
+drop table if exists  [Sales].[OrderLinesStaging]; 
 drop table if exists  [Sales].[OrderLinesPrices]; 
 drop PARTITION SCHEME [schmPricePartition];
 drop PARTITION FUNCTION [fnPricePartition];
