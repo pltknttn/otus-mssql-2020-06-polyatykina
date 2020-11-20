@@ -173,8 +173,8 @@
               <Parent>0</Parent>
             </CustomProperties>
             <Location>
-              <X>-1040 px</X>
-              <Y>330 px</Y>
+              <X>-1150 px</X>
+              <Y>400 px</Y>
             </Location>
             <Size>
               <Width>230 px</Width>
@@ -228,7 +228,7 @@
             </PortAnchors>
             <BendPoints>
               <PointD>
-                <X>-951.382352941176 px</X>
+                <X>-1061.38235294118 px</X>
                 <Y>300 px</Y>
               </PointD>
               <PointD>
@@ -252,8 +252,8 @@
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>56.1933916877298 px</X>
-                  <Y>108.5 px</Y>
+                  <X>-26.9033490349266 px</X>
+                  <Y>100 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Top</Align>
@@ -317,7 +317,7 @@
               </Port>
               <Port>
                 <Location>
-                  <X>Undefined</X>
+                  <X>0 px</X>
                   <Y>70.000007947286 px</Y>
                 </Location>
                 <Anchors>Top Bottom</Anchors>
@@ -331,11 +331,11 @@
             <BendPoints>
               <PointD>
                 <X>-99 px</X>
-                <Y>-199.999984741211 px</Y>
+                <Y>-199.999992052714 px</Y>
               </PointD>
               <PointD>
                 <X>-99 px</X>
-                <Y>-209.999984741211 px</Y>
+                <Y>-209.999992052714 px</Y>
               </PointD>
             </BendPoints>
             <IsManuallyRouted>false</IsManuallyRouted>
@@ -377,12 +377,12 @@
               <Parent>0</Parent>
             </CustomProperties>
             <Location>
-              <X>-810 px</X>
-              <Y>530 px</Y>
+              <X>-930 px</X>
+              <Y>590 px</Y>
             </Location>
             <Size>
               <Width>210 px</Width>
-              <Height>212 px</Height>
+              <Height>229 px</Height>
             </Size>
             <DbOid>
               <Path>FitnessClub.dbo.Service</Path>
@@ -400,8 +400,8 @@
               <Parent>0</Parent>
             </CustomProperties>
             <Location>
-              <X>-250 px</X>
-              <Y>730 px</Y>
+              <X>-470 px</X>
+              <Y>760 px</Y>
             </Location>
             <Size>
               <Width>194 px</Width>
@@ -430,20 +430,20 @@
             <PortAnchors>
               <Port>
                 <Location>
-                  <X>0 px</X>
-                  <Y>182.32 px</Y>
+                  <X>203.805560040309 px</X>
+                  <Y>198.706249989313 px</Y>
                 </Location>
-                <Anchors>Top Bottom</Anchors>
+                <Anchors>None</Anchors>
                 <Align>Right</Align>
                 <CustomProperties>
                   <OID>25</OID>
-                  <PortType>FloatAnchor</PortType>
+                  <PortType>FixedAnchor</PortType>
                 </CustomProperties>
               </Port>
               <Port>
                 <Location>
-                  <X>0 px</X>
-                  <Y>22.3366834170854 px</Y>
+                  <X>Undefined</X>
+                  <Y>23.9551309944728 px</Y>
                 </Location>
                 <Anchors>Top Bottom</Anchors>
                 <Align>Left</Align>
@@ -455,15 +455,15 @@
             </PortAnchors>
             <BendPoints>
               <PointD>
-                <X>-400 px</X>
-                <Y>712.32 px</Y>
+                <X>-690 px</X>
+                <Y>788.706249989313 px</Y>
               </PointD>
               <PointD>
-                <X>-400 px</X>
-                <Y>752.336683417085 px</Y>
+                <X>-690 px</X>
+                <Y>783.955130994473 px</Y>
               </PointD>
             </BendPoints>
-            <IsManuallyRouted>true</IsManuallyRouted>
+            <IsManuallyRouted>false</IsManuallyRouted>
             <DbOid>
               <Path>FitnessClub.dbo.Service.FK_Service_CategoryId</Path>
               <TypeName>ForeignKey</TypeName>
@@ -479,8 +479,8 @@
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>-100 px</X>
-                  <Y>-7.32421869997779E-06 px</Y>
+                  <X>-140 px</X>
+                  <Y>4.75111082915635 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Right</Align>
@@ -846,7 +846,7 @@
               <Parent>0</Parent>
             </CustomProperties>
             <Location>
-              <X>-20 px</X>
+              <X>30 px</X>
               <Y>410 px</Y>
             </Location>
             <Size>
@@ -899,18 +899,6 @@
             <PortAnchors>
               <Port>
                 <Location>
-                  <X>8 px</X>
-                  <Y>95.530612244898 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Left</Align>
-                <CustomProperties>
-                  <OID>53</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-              </Port>
-              <Port>
-                <Location>
                   <X>0 px</X>
                   <Y>142.324 px</Y>
                 </Location>
@@ -919,6 +907,18 @@
                 <CustomProperties>
                   <OID>52</OID>
                   <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>8 px</X>
+                  <Y>95.530612244898 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>53</OID>
+                  <PortType>FixedAnchor</PortType>
                 </CustomProperties>
               </Port>
             </PortAnchors>
@@ -948,7 +948,7 @@
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>-115 px</X>
+                  <X>-90 px</X>
                   <Y>2.53906250691216E-05 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
@@ -1129,11 +1129,11 @@
             <BendPoints>
               <PointD>
                 <X>310 px</X>
-                <Y>340.303009033203 px</Y>
+                <Y>340.303017177968 px</Y>
               </PointD>
               <PointD>
                 <X>310 px</X>
-                <Y>484.545440673828 px</Y>
+                <Y>484.545436483442 px</Y>
               </PointD>
             </BendPoints>
             <IsManuallyRouted>false</IsManuallyRouted>
@@ -1153,7 +1153,7 @@
               <Port xsi:type="LinkPort">
                 <Location>
                   <X>20 px</X>
-                  <Y>-72.121207675548 px</Y>
+                  <Y>-72.1212076755476 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Left</Align>
@@ -1175,8 +1175,8 @@
               <Parent>0</Parent>
             </CustomProperties>
             <Location>
-              <X>-970 px</X>
-              <Y>760 px</Y>
+              <X>-1230 px</X>
+              <Y>700 px</Y>
             </Location>
             <Size>
               <Width>172 px</Width>
@@ -1198,8 +1198,8 @@
               <Parent>0</Parent>
             </CustomProperties>
             <Location>
-              <X>-590 px</X>
-              <Y>800 px</Y>
+              <X>-1640 px</X>
+              <Y>790 px</Y>
             </Location>
             <Size>
               <Width>200 px</Width>
@@ -1229,10 +1229,10 @@
               <Port>
                 <Location>
                   <X>0 px</X>
-                  <Y>145.5 px</Y>
+                  <Y>135.5 px</Y>
                 </Location>
                 <Anchors>Top Bottom</Anchors>
-                <Align>Right</Align>
+                <Align>Left</Align>
                 <CustomProperties>
                   <OID>71</OID>
                   <PortType>FloatAnchor</PortType>
@@ -1241,10 +1241,10 @@
               <Port>
                 <Location>
                   <X>0 px</X>
-                  <Y>9.80612244897959 px</Y>
+                  <Y>25.5 px</Y>
                 </Location>
                 <Anchors>Top Bottom</Anchors>
-                <Align>Left</Align>
+                <Align>Right</Align>
                 <CustomProperties>
                   <OID>72</OID>
                   <PortType>FloatAnchor</PortType>
@@ -1253,12 +1253,12 @@
             </PortAnchors>
             <BendPoints>
               <PointD>
-                <X>-708 px</X>
-                <Y>905.5 px</Y>
+                <X>-1260 px</X>
+                <Y>835.5 px</Y>
               </PointD>
               <PointD>
-                <X>-708 px</X>
-                <Y>809.80612244898 px</Y>
+                <X>-1260 px</X>
+                <Y>815.5 px</Y>
               </PointD>
             </BendPoints>
             <IsManuallyRouted>false</IsManuallyRouted>
@@ -1277,11 +1277,11 @@
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>-90 px</X>
-                  <Y>47.846923828125 px</Y>
+                  <X>120 px</X>
+                  <Y>20 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
-                <Align>Right</Align>
+                <Align>Left</Align>
                 <CustomProperties>
                   <OID>73</OID>
                   <PortType>FixedAnchor</PortType>
@@ -1328,7 +1328,7 @@
             </Location>
             <Size>
               <Width>221 px</Width>
-              <Height>263 px</Height>
+              <Height>280 px</Height>
             </Size>
             <DbOid>
               <Path>FitnessClub.dbo.People</Path>
@@ -1366,7 +1366,7 @@
               <Port>
                 <Location>
                   <X>193 px</X>
-                  <Y>30.6179104477612 px</Y>
+                  <Y>32.5970149253731 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Right</Align>
@@ -1383,7 +1383,7 @@
               </PointD>
               <PointD>
                 <X>-533.375 px</X>
-                <Y>-89.3820895522388 px</Y>
+                <Y>-87.4029850746269 px</Y>
               </PointD>
             </BendPoints>
             <IsManuallyRouted>true</IsManuallyRouted>
@@ -1403,7 +1403,7 @@
               <Port xsi:type="LinkPort">
                 <Location>
                   <X>376.1875 px</X>
-                  <Y>-128.284578959147 px</Y>
+                  <Y>-130.263682047526 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Left</Align>
@@ -1433,7 +1433,7 @@
               <Port>
                 <Location>
                   <X>20.0000437100712 px</X>
-                  <Y>181.747965355553 px</Y>
+                  <Y>193.495932697927 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Left</Align>
@@ -1458,7 +1458,7 @@
             <BendPoints>
               <PointD>
                 <X>-1140 px</X>
-                <Y>61.7479653555532 px</Y>
+                <Y>73.4959326979271 px</Y>
               </PointD>
               <PointD>
                 <X>-1140 px</X>
@@ -1482,7 +1482,7 @@
               <Port xsi:type="LinkPort">
                 <Location>
                   <X>20 px</X>
-                  <Y>49.3739800650258 px</Y>
+                  <Y>55.2479659315697 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Left</Align>
@@ -1705,7 +1705,7 @@
               <Port>
                 <Location>
                   <X>9.39398352545754 px</X>
-                  <Y>13.2828328529091 px</Y>
+                  <Y>14.1414190068994 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Left</Align>
@@ -1718,7 +1718,7 @@
             <BendPoints>
               <PointD>
                 <X>-1566.060546875 px</X>
-                <Y>-106.717170715332 px</Y>
+                <Y>-105.858581542969 px</Y>
               </PointD>
             </BendPoints>
             <IsManuallyRouted>false</IsManuallyRouted>
@@ -1738,7 +1738,7 @@
               <Port xsi:type="LinkPort">
                 <Location>
                   <X>-223.030270790815 px</X>
-                  <Y>-52.282829284668 px</Y>
+                  <Y>-53.1414184570313 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Bottom</Align>
@@ -1760,12 +1760,12 @@
               <Parent>0</Parent>
             </CustomProperties>
             <Location>
-              <X>-720 px</X>
-              <Y>50 px</Y>
+              <X>-710 px</X>
+              <Y>40 px</Y>
             </Location>
             <Size>
               <Width>171 px</Width>
-              <Height>212 px</Height>
+              <Height>246 px</Height>
             </Size>
             <DbOid>
               <Path>FitnessClub.dbo.Agreement</Path>
@@ -1783,15 +1783,15 @@
               <Parent>0</Parent>
             </CustomProperties>
             <Location>
-              <X>-700 px</X>
-              <Y>280 px</Y>
+              <X>-840 px</X>
+              <Y>330 px</Y>
             </Location>
             <Size>
-              <Width>220 px</Width>
-              <Height>178 px</Height>
+              <Width>230 px</Width>
+              <Height>229 px</Height>
             </Size>
             <DbOid>
-              <Path>FitnessClub.dbo.AgreementType</Path>
+              <Path>FitnessClub.dbo.AgreementTemplate</Path>
               <TypeName>Table</TypeName>
             </DbOid>
             <Compartments>
@@ -1814,7 +1814,7 @@
               <Port>
                 <Location>
                   <X>9.39395769677907 px</X>
-                  <Y>119.999992052714 px</Y>
+                  <Y>139.245273797017 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Left</Align>
@@ -1839,7 +1839,7 @@
             <BendPoints>
               <PointD>
                 <X>-945.454528808594 px</X>
-                <Y>169.999984741211 px</Y>
+                <Y>179.245269775391 px</Y>
               </PointD>
             </BendPoints>
             <IsManuallyRouted>false</IsManuallyRouted>
@@ -1858,8 +1858,8 @@
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>112.727294921875 px</X>
-                  <Y>7.31150339561282E-06 px</Y>
+                  <X>117.727294921875 px</X>
+                  <Y>4.02162655177563E-06 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Left</Align>
@@ -1875,93 +1875,14 @@
               <Y>2 px</Y>
             </CommentOffset>
           </Model>
-          <Model xsi:type="RelationLinkModel">
-            <CustomProperties>
-              <OID>108</OID>
-              <Comment>109</Comment>
-              <OutModel>101</OutModel>
-              <InModel>102</InModel>
-              <OutPort>110</OutPort>
-              <InPort>111</InPort>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port>
-                <Location>
-                  <X>195.757596589097 px</X>
-                  <Y>131.818174593377 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Right</Align>
-                <CustomProperties>
-                  <OID>110</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-              </Port>
-              <Port>
-                <Location>
-                  <X>178.181839314373 px</X>
-                  <Y>43.6363491867534 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Right</Align>
-                <CustomProperties>
-                  <OID>111</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-              </Port>
-            </PortAnchors>
-            <BendPoints>
-              <PointD>
-                <X>-461 px</X>
-                <Y>181.818174593377 px</Y>
-              </PointD>
-              <PointD>
-                <X>-461 px</X>
-                <Y>323.636349186753 px</Y>
-              </PointD>
-            </BendPoints>
-            <IsManuallyRouted>false</IsManuallyRouted>
-            <DbOid>
-              <Path>FitnessClub.dbo.Agreement.FK_Agreement_TypeId</Path>
-              <TypeName>ForeignKey</TypeName>
-            </DbOid>
-          </Model>
-          <Model xsi:type="RelationCommentModel">
-            <CustomProperties>
-              <OID>109</OID>
-              <HolderModel>108</HolderModel>
-              <Port>112</Port>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port xsi:type="LinkPort">
-                <Location>
-                  <X>-88 px</X>
-                  <Y>-70.9090898109202 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Right</Align>
-                <CustomProperties>
-                  <OID>112</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-                <LinkPortAnchor>OutPoint</LinkPortAnchor>
-              </Port>
-            </PortAnchors>
-            <CommentOffset>
-              <X>22 px</X>
-              <Y>2 px</Y>
-            </CommentOffset>
-          </Model>
           <Model xsi:type="TableModel">
             <CustomProperties>
-              <OID>113</OID>
+              <OID>108</OID>
               <Parent>0</Parent>
             </CustomProperties>
             <Location>
               <X>-1470 px</X>
-              <Y>240 px</Y>
+              <Y>180 px</Y>
             </Location>
             <Size>
               <Width>195 px</Width>
@@ -1979,12 +1900,12 @@
           </Model>
           <Model xsi:type="RelationLinkModel">
             <CustomProperties>
-              <OID>114</OID>
-              <Comment>115</Comment>
+              <OID>109</OID>
+              <Comment>110</Comment>
               <OutModel>8</OutModel>
               <InModel>21</InModel>
-              <OutPort>116</OutPort>
-              <InPort>117</InPort>
+              <OutPort>111</OutPort>
+              <InPort>112</InPort>
               <Parent>0</Parent>
             </CustomProperties>
             <PortAnchors>
@@ -1996,14 +1917,89 @@
                 <Anchors>Left Right</Anchors>
                 <Align>Bottom</Align>
                 <CustomProperties>
-                  <OID>116</OID>
+                  <OID>111</OID>
                   <PortType>FloatAnchor</PortType>
                 </CustomProperties>
               </Port>
               <Port>
                 <Location>
                   <X>21.5151792704446 px</X>
-                  <Y>46.2545250834848 px</Y>
+                  <Y>49.9636143590473 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>112</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>-1035 px</X>
+                <Y>639.963614359047 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>FitnessClub.dbo.EmployeeService.FK_EmployeeService_ServiceId</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>110</OID>
+              <HolderModel>109</HolderModel>
+              <Port>113</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>0 px</X>
+                  <Y>-57.9818115234375 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Bottom</Align>
+                <CustomProperties>
+                  <OID>113</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>22 px</X>
+              <Y>2 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>114</OID>
+              <Comment>115</Comment>
+              <OutModel>108</OutModel>
+              <InModel>21</InModel>
+              <OutPort>116</OutPort>
+              <InPort>117</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>181 px</X>
+                  <Y>97.9652605459057 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>116</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>16.9697249056102 px</X>
+                  <Y>94.3757338063893 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Left</Align>
@@ -2015,13 +2011,17 @@
             </PortAnchors>
             <BendPoints>
               <PointD>
-                <X>-925 px</X>
-                <Y>576.254525083485 px</Y>
+                <X>-1255 px</X>
+                <Y>277.965260545906 px</Y>
+              </PointD>
+              <PointD>
+                <X>-1255 px</X>
+                <Y>684.375733806389 px</Y>
               </PointD>
             </BendPoints>
             <IsManuallyRouted>false</IsManuallyRouted>
             <DbOid>
-              <Path>FitnessClub.dbo.EmployeeService.FK_EmployeeService_ServiceId</Path>
+              <Path>FitnessClub.dbo.PurchaseService.FK_PurchaseService_SeviceId</Path>
               <TypeName>ForeignKey</TypeName>
             </DbOid>
           </Model>
@@ -2035,11 +2035,11 @@
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>0 px</X>
-                  <Y>-61.1272583007813 px</Y>
+                  <X>-20 px</X>
+                  <Y>-203.205241163079 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
-                <Align>Bottom</Align>
+                <Align>Right</Align>
                 <CustomProperties>
                   <OID>118</OID>
                   <PortType>FixedAnchor</PortType>
@@ -2056,8 +2056,8 @@
             <CustomProperties>
               <OID>119</OID>
               <Comment>120</Comment>
-              <OutModel>113</OutModel>
-              <InModel>21</InModel>
+              <OutModel>108</OutModel>
+              <InModel>11</InModel>
               <OutPort>121</OutPort>
               <InPort>122</InPort>
               <Parent>0</Parent>
@@ -2065,23 +2065,23 @@
             <PortAnchors>
               <Port>
                 <Location>
-                  <X>181 px</X>
-                  <Y>97.9652605459057 px</Y>
+                  <X>0 px</X>
+                  <Y>35 px</Y>
                 </Location>
-                <Anchors>None</Anchors>
+                <Anchors>Top Bottom</Anchors>
                 <Align>Right</Align>
                 <CustomProperties>
                   <OID>121</OID>
-                  <PortType>FixedAnchor</PortType>
+                  <PortType>FloatAnchor</PortType>
                 </CustomProperties>
               </Port>
               <Port>
                 <Location>
-                  <X>16.9697249056102 px</X>
-                  <Y>87.369674964867 px</Y>
+                  <X>50.3030728089673 px</X>
+                  <Y>212.424238751633 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
-                <Align>Left</Align>
+                <Align>Bottom</Align>
                 <CustomProperties>
                   <OID>122</OID>
                   <PortType>FixedAnchor</PortType>
@@ -2090,33 +2090,13 @@
             </PortAnchors>
             <BendPoints>
               <PointD>
-                <X>-1160 px</X>
-                <Y>337.965260545906 px</Y>
-              </PointD>
-              <PointD>
-                <X>-1160 px</X>
-                <Y>550 px</Y>
-              </PointD>
-              <PointD>
-                <X>-1100 px</X>
-                <Y>550 px</Y>
-              </PointD>
-              <PointD>
-                <X>-1100 px</X>
-                <Y>660 px</Y>
-              </PointD>
-              <PointD>
-                <X>-815 px</X>
-                <Y>660 px</Y>
-              </PointD>
-              <PointD>
-                <X>-815 px</X>
-                <Y>617.369674964867 px</Y>
+                <X>-1069.69692719103 px</X>
+                <Y>215 px</Y>
               </PointD>
             </BendPoints>
-            <IsManuallyRouted>true</IsManuallyRouted>
+            <IsManuallyRouted>false</IsManuallyRouted>
             <DbOid>
-              <Path>FitnessClub.dbo.PurchaseService.FK_PurchaseService_SeviceId</Path>
+              <Path>FitnessClub.dbo.PurchaseService.FK_PurchaseService_PeopleId</Path>
               <TypeName>ForeignKey</TypeName>
             </DbOid>
           </Model>
@@ -2130,8 +2110,8 @@
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>-175 px</X>
-                  <Y>-267.034739454094 px</Y>
+                  <X>-102.651611328125 px</X>
+                  <Y>0 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Right</Align>
@@ -2147,84 +2127,9 @@
               <Y>2 px</Y>
             </CommentOffset>
           </Model>
-          <Model xsi:type="RelationLinkModel">
-            <CustomProperties>
-              <OID>124</OID>
-              <Comment>125</Comment>
-              <OutModel>113</OutModel>
-              <InModel>11</InModel>
-              <OutPort>126</OutPort>
-              <InPort>127</InPort>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port>
-                <Location>
-                  <X>50.3030728089673 px</X>
-                  <Y>212.424238751633 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Bottom</Align>
-                <CustomProperties>
-                  <OID>127</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-              </Port>
-              <Port>
-                <Location>
-                  <X>0 px</X>
-                  <Y>35 px</Y>
-                </Location>
-                <Anchors>Top Bottom</Anchors>
-                <Align>Right</Align>
-                <CustomProperties>
-                  <OID>126</OID>
-                  <PortType>FloatAnchor</PortType>
-                </CustomProperties>
-              </Port>
-            </PortAnchors>
-            <BendPoints>
-              <PointD>
-                <X>-1069.69692719103 px</X>
-                <Y>275 px</Y>
-              </PointD>
-            </BendPoints>
-            <IsManuallyRouted>false</IsManuallyRouted>
-            <DbOid>
-              <Path>FitnessClub.dbo.PurchaseService.FK_PurchaseService_PeopleId</Path>
-              <TypeName>ForeignKey</TypeName>
-            </DbOid>
-          </Model>
-          <Model xsi:type="RelationCommentModel">
-            <CustomProperties>
-              <OID>125</OID>
-              <HolderModel>124</HolderModel>
-              <Port>128</Port>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port xsi:type="LinkPort">
-                <Location>
-                  <X>-102.651611328125 px</X>
-                  <Y>0 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Right</Align>
-                <CustomProperties>
-                  <OID>128</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-                <LinkPortAnchor>OutPoint</LinkPortAnchor>
-              </Port>
-            </PortAnchors>
-            <CommentOffset>
-              <X>22 px</X>
-              <Y>2 px</Y>
-            </CommentOffset>
-          </Model>
           <Model xsi:type="TableModel">
             <CustomProperties>
-              <OID>129</OID>
+              <OID>124</OID>
               <Parent>0</Parent>
             </CustomProperties>
             <Location>
@@ -2233,7 +2138,7 @@
             </Location>
             <Size>
               <Width>220 px</Width>
-              <Height>178 px</Height>
+              <Height>195 px</Height>
             </Size>
             <DbOid>
               <Path>FitnessClub.dbo.CheckOperation</Path>
@@ -2247,27 +2152,15 @@
           </Model>
           <Model xsi:type="RelationLinkModel">
             <CustomProperties>
-              <OID>130</OID>
-              <Comment>131</Comment>
-              <OutModel>129</OutModel>
-              <InModel>113</InModel>
-              <OutPort>132</OutPort>
-              <InPort>133</InPort>
+              <OID>125</OID>
+              <Comment>126</Comment>
+              <OutModel>124</OutModel>
+              <InModel>108</InModel>
+              <OutPort>127</OutPort>
+              <InPort>128</InPort>
               <Parent>0</Parent>
             </CustomProperties>
             <PortAnchors>
-              <Port>
-                <Location>
-                  <X>12.7273314288145 px</X>
-                  <Y>119.090894821919 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Left</Align>
-                <CustomProperties>
-                  <OID>133</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-              </Port>
               <Port>
                 <Location>
                   <X>110 px</X>
@@ -2276,15 +2169,27 @@
                 <Anchors>Left Right</Anchors>
                 <Align>Bottom</Align>
                 <CustomProperties>
-                  <OID>132</OID>
+                  <OID>127</OID>
                   <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>12.7273314288145 px</X>
+                  <Y>119.090894821919 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>128</OID>
+                  <PortType>FixedAnchor</PortType>
                 </CustomProperties>
               </Port>
             </PortAnchors>
             <BendPoints>
               <PointD>
                 <X>-1570 px</X>
-                <Y>359.090894821919 px</Y>
+                <Y>299.090894821919 px</Y>
               </PointD>
             </BendPoints>
             <IsManuallyRouted>false</IsManuallyRouted>
@@ -2295,21 +2200,21 @@
           </Model>
           <Model xsi:type="RelationCommentModel">
             <CustomProperties>
-              <OID>131</OID>
-              <HolderModel>130</HolderModel>
-              <Port>134</Port>
+              <OID>126</OID>
+              <HolderModel>125</HolderModel>
+              <Port>129</Port>
               <Parent>0</Parent>
             </CustomProperties>
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
                   <X>0 px</X>
-                  <Y>-125.545440673828 px</Y>
+                  <Y>-87.0454406738281 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Bottom</Align>
                 <CustomProperties>
-                  <OID>134</OID>
+                  <OID>129</OID>
                   <PortType>FixedAnchor</PortType>
                 </CustomProperties>
                 <LinkPortAnchor>OutPoint</LinkPortAnchor>
@@ -2322,12 +2227,12 @@
           </Model>
           <Model xsi:type="TableModel">
             <CustomProperties>
-              <OID>135</OID>
+              <OID>130</OID>
               <Parent>0</Parent>
             </CustomProperties>
             <Location>
-              <X>-1390 px</X>
-              <Y>630 px</Y>
+              <X>-1570 px</X>
+              <Y>540 px</Y>
             </Location>
             <Size>
               <Width>201 px</Width>
@@ -2345,10 +2250,79 @@
           </Model>
           <Model xsi:type="RelationLinkModel">
             <CustomProperties>
+              <OID>131</OID>
+              <Comment>132</Comment>
+              <OutModel>130</OutModel>
+              <InModel>108</InModel>
+              <OutPort>133</OutPort>
+              <InPort>134</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>150.5 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>Left Right</Anchors>
+                <Align>Top</Align>
+                <CustomProperties>
+                  <OID>133</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>50.5 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>Left Right</Anchors>
+                <Align>Bottom</Align>
+                <CustomProperties>
+                  <OID>134</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>FitnessClub.dbo.PurchaseMaterial.FK_PurchaseMaterial_PurchaseId</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>132</OID>
+              <HolderModel>131</HolderModel>
+              <Port>135</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>0 px</X>
+                  <Y>40 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Top</Align>
+                <CustomProperties>
+                  <OID>135</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>22 px</X>
+              <Y>2 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
               <OID>136</OID>
               <Comment>137</Comment>
-              <OutModel>135</OutModel>
-              <InModel>113</InModel>
+              <OutModel>130</OutModel>
+              <InModel>67</InModel>
               <OutPort>138</OutPort>
               <InPort>139</InPort>
               <Parent>0</Parent>
@@ -2356,42 +2330,38 @@
             <PortAnchors>
               <Port>
                 <Location>
-                  <X>62.5 px</X>
-                  <Y>0 px</Y>
+                  <X>99.8504290458359 px</X>
+                  <Y>172.626923684038 px</Y>
                 </Location>
-                <Anchors>Left Right</Anchors>
-                <Align>Top</Align>
+                <Anchors>None</Anchors>
+                <Align>Bottom</Align>
                 <CustomProperties>
                   <OID>138</OID>
-                  <PortType>FloatAnchor</PortType>
+                  <PortType>FixedAnchor</PortType>
                 </CustomProperties>
               </Port>
               <Port>
                 <Location>
-                  <X>132.5 px</X>
-                  <Y>0 px</Y>
+                  <X>2.70802376032248 px</X>
+                  <Y>61.4377515921541 px</Y>
                 </Location>
-                <Anchors>Left Right</Anchors>
-                <Align>Bottom</Align>
+                <Anchors>None</Anchors>
+                <Align>Left</Align>
                 <CustomProperties>
                   <OID>139</OID>
-                  <PortType>FloatAnchor</PortType>
+                  <PortType>FixedAnchor</PortType>
                 </CustomProperties>
               </Port>
             </PortAnchors>
             <BendPoints>
               <PointD>
-                <X>-1327.5 px</X>
-                <Y>610 px</Y>
-              </PointD>
-              <PointD>
-                <X>-1337.5 px</X>
-                <Y>610 px</Y>
+                <X>-1470.14953613281 px</X>
+                <Y>761.437744140625 px</Y>
               </PointD>
             </BendPoints>
             <IsManuallyRouted>false</IsManuallyRouted>
             <DbOid>
-              <Path>FitnessClub.dbo.PurchaseMaterial.FK_PurchaseMaterial_PurchaseId</Path>
+              <Path>FitnessClub.dbo.PurchaseMaterial.FK_PurchaseMaterial_MaterialId</Path>
               <TypeName>ForeignKey</TypeName>
             </DbOid>
           </Model>
@@ -2405,11 +2375,11 @@
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>10 px</X>
-                  <Y>65 px</Y>
+                  <X>-120.074863922914 px</X>
+                  <Y>-77.437744140625 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
-                <Align>Top</Align>
+                <Align>Bottom</Align>
                 <CustomProperties>
                   <OID>140</OID>
                   <PortType>FixedAnchor</PortType>
@@ -2426,7 +2396,7 @@
             <CustomProperties>
               <OID>141</OID>
               <Comment>142</Comment>
-              <OutModel>135</OutModel>
+              <OutModel>124</OutModel>
               <InModel>67</InModel>
               <OutPort>143</OutPort>
               <InPort>144</InPort>
@@ -2435,11 +2405,11 @@
             <PortAnchors>
               <Port>
                 <Location>
-                  <X>202 px</X>
-                  <Y>38 px</Y>
+                  <X>60.6061277365418 px</X>
+                  <Y>160.606052237328 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
-                <Align>Right</Align>
+                <Align>Bottom</Align>
                 <CustomProperties>
                   <OID>143</OID>
                   <PortType>FixedAnchor</PortType>
@@ -2447,34 +2417,34 @@
               </Port>
               <Port>
                 <Location>
-                  <X>66 px</X>
-                  <Y>42 px</Y>
+                  <X>0 px</X>
+                  <Y>80.5 px</Y>
                 </Location>
-                <Anchors>None</Anchors>
-                <Align>Top</Align>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Left</Align>
                 <CustomProperties>
                   <OID>144</OID>
-                  <PortType>FixedAnchor</PortType>
+                  <PortType>FloatAnchor</PortType>
                 </CustomProperties>
               </Port>
             </PortAnchors>
             <BendPoints>
               <PointD>
-                <X>-1139 px</X>
-                <Y>668 px</Y>
+                <X>-1619.39387226346 px</X>
+                <Y>288.875 px</Y>
               </PointD>
               <PointD>
-                <X>-1139 px</X>
-                <Y>731 px</Y>
+                <X>-1650 px</X>
+                <Y>288.875 px</Y>
               </PointD>
               <PointD>
-                <X>-904 px</X>
-                <Y>731 px</Y>
+                <X>-1650 px</X>
+                <Y>780.5 px</Y>
               </PointD>
             </BendPoints>
-            <IsManuallyRouted>false</IsManuallyRouted>
+            <IsManuallyRouted>true</IsManuallyRouted>
             <DbOid>
-              <Path>FitnessClub.dbo.PurchaseMaterial.FK_PurchaseMaterial_MaterialId</Path>
+              <Path>FitnessClub.dbo.CheckOperation.FK_CheckOperation_MaterialId</Path>
               <TypeName>ForeignKey</TypeName>
             </DbOid>
           </Model>
@@ -2488,11 +2458,11 @@
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>-167.5 px</X>
-                  <Y>-63 px</Y>
+                  <X>30.6061277365418 px</X>
+                  <Y>-409.6875 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
-                <Align>Right</Align>
+                <Align>Bottom</Align>
                 <CustomProperties>
                   <OID>145</OID>
                   <PortType>FixedAnchor</PortType>
@@ -2501,88 +2471,13 @@
               </Port>
             </PortAnchors>
             <CommentOffset>
-              <X>22 px</X>
-              <Y>2 px</Y>
-            </CommentOffset>
-          </Model>
-          <Model xsi:type="RelationLinkModel">
-            <CustomProperties>
-              <OID>146</OID>
-              <Comment>147</Comment>
-              <OutModel>129</OutModel>
-              <InModel>67</InModel>
-              <OutPort>148</OutPort>
-              <InPort>149</InPort>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port>
-                <Location>
-                  <X>60.6061277365418 px</X>
-                  <Y>160.606052237328 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Bottom</Align>
-                <CustomProperties>
-                  <OID>148</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-              </Port>
-              <Port>
-                <Location>
-                  <X>0 px</X>
-                  <Y>80.5 px</Y>
-                </Location>
-                <Anchors>Top Bottom</Anchors>
-                <Align>Left</Align>
-                <CustomProperties>
-                  <OID>149</OID>
-                  <PortType>FloatAnchor</PortType>
-                </CustomProperties>
-              </Port>
-            </PortAnchors>
-            <BendPoints>
-              <PointD>
-                <X>-1619.39387226346 px</X>
-                <Y>840.5 px</Y>
-              </PointD>
-            </BendPoints>
-            <IsManuallyRouted>false</IsManuallyRouted>
-            <DbOid>
-              <Path>FitnessClub.dbo.CheckOperation.FK_CheckOperation_MaterialId</Path>
-              <TypeName>ForeignKey</TypeName>
-            </DbOid>
-          </Model>
-          <Model xsi:type="RelationCommentModel">
-            <CustomProperties>
-              <OID>147</OID>
-              <HolderModel>146</HolderModel>
-              <Port>150</Port>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port xsi:type="LinkPort">
-                <Location>
-                  <X>4.8634979293638E-05 px</X>
-                  <Y>-366.25 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Bottom</Align>
-                <CustomProperties>
-                  <OID>150</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-                <LinkPortAnchor>OutPoint</LinkPortAnchor>
-              </Port>
-            </PortAnchors>
-            <CommentOffset>
-              <X>22 px</X>
-              <Y>2 px</Y>
+              <X>355 px</X>
+              <Y>-20.6061277365418 px</Y>
             </CommentOffset>
           </Model>
           <Model xsi:type="TableModel">
             <CustomProperties>
-              <OID>151</OID>
+              <OID>146</OID>
               <Parent>0</Parent>
             </CustomProperties>
             <Location>
@@ -2605,12 +2500,12 @@
           </Model>
           <Model xsi:type="RelationLinkModel">
             <CustomProperties>
-              <OID>152</OID>
-              <Comment>153</Comment>
-              <OutModel>151</OutModel>
+              <OID>147</OID>
+              <Comment>148</Comment>
+              <OutModel>146</OutModel>
               <InModel>48</InModel>
-              <OutPort>154</OutPort>
-              <InPort>155</InPort>
+              <OutPort>149</OutPort>
+              <InPort>150</InPort>
               <Parent>0</Parent>
             </CustomProperties>
             <PortAnchors>
@@ -2622,7 +2517,7 @@
                 <Anchors>Left Right</Anchors>
                 <Align>Bottom</Align>
                 <CustomProperties>
-                  <OID>154</OID>
+                  <OID>149</OID>
                   <PortType>FloatAnchor</PortType>
                 </CustomProperties>
               </Port>
@@ -2634,7 +2529,7 @@
                 <Anchors>Left Right</Anchors>
                 <Align>Top</Align>
                 <CustomProperties>
-                  <OID>155</OID>
+                  <OID>150</OID>
                   <PortType>FloatAnchor</PortType>
                 </CustomProperties>
               </Port>
@@ -2645,7 +2540,7 @@
                 <Y>291 px</Y>
               </PointD>
               <PointD>
-                <X>105.25 px</X>
+                <X>155.25 px</X>
                 <Y>291 px</Y>
               </PointD>
             </BendPoints>
@@ -2657,21 +2552,21 @@
           </Model>
           <Model xsi:type="RelationCommentModel">
             <CustomProperties>
-              <OID>153</OID>
-              <HolderModel>152</HolderModel>
-              <Port>156</Port>
+              <OID>148</OID>
+              <HolderModel>147</HolderModel>
+              <Port>151</Port>
               <Parent>0</Parent>
             </CustomProperties>
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>30 px</X>
+                  <X>-20 px</X>
                   <Y>-69.5 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Bottom</Align>
                 <CustomProperties>
-                  <OID>156</OID>
+                  <OID>151</OID>
                   <PortType>FixedAnchor</PortType>
                 </CustomProperties>
                 <LinkPortAnchor>OutPoint</LinkPortAnchor>
@@ -2684,12 +2579,12 @@
           </Model>
           <Model xsi:type="RelationLinkModel">
             <CustomProperties>
-              <OID>157</OID>
-              <Comment>158</Comment>
+              <OID>152</OID>
+              <Comment>153</Comment>
               <OutModel>74</OutModel>
               <InModel>55</InModel>
-              <OutPort>159</OutPort>
-              <InPort>160</InPort>
+              <OutPort>154</OutPort>
+              <InPort>155</InPort>
               <Parent>0</Parent>
             </CustomProperties>
             <PortAnchors>
@@ -2701,19 +2596,19 @@
                 <Anchors>None</Anchors>
                 <Align>Bottom</Align>
                 <CustomProperties>
-                  <OID>159</OID>
+                  <OID>154</OID>
                   <PortType>FixedAnchor</PortType>
                 </CustomProperties>
               </Port>
               <Port>
                 <Location>
                   <X>110.606042303221 px</X>
-                  <Y>Undefined</Y>
+                  <Y>0 px</Y>
                 </Location>
                 <Anchors>Left Right</Anchors>
                 <Align>Top</Align>
                 <CustomProperties>
-                  <OID>160</OID>
+                  <OID>155</OID>
                   <PortType>FloatAnchor</PortType>
                 </CustomProperties>
               </Port>
@@ -2736,21 +2631,21 @@
           </Model>
           <Model xsi:type="RelationCommentModel">
             <CustomProperties>
-              <OID>158</OID>
-              <HolderModel>157</HolderModel>
-              <Port>161</Port>
+              <OID>153</OID>
+              <HolderModel>152</HolderModel>
+              <Port>156</Port>
               <Parent>0</Parent>
             </CustomProperties>
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>-25.0000062807634 px</X>
+                  <X>-25.0000062807635 px</X>
                   <Y>-50 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Bottom</Align>
                 <CustomProperties>
-                  <OID>161</OID>
+                  <OID>156</OID>
                   <PortType>FixedAnchor</PortType>
                 </CustomProperties>
                 <LinkPortAnchor>OutPoint</LinkPortAnchor>
@@ -2763,19 +2658,19 @@
           </Model>
           <Model xsi:type="TableModel">
             <CustomProperties>
-              <OID>162</OID>
+              <OID>157</OID>
               <Parent>0</Parent>
             </CustomProperties>
             <Location>
-              <X>-340 px</X>
-              <Y>410 px</Y>
+              <X>-350 px</X>
+              <Y>510 px</Y>
             </Location>
             <Size>
-              <Width>240 px</Width>
+              <Width>290 px</Width>
               <Height>144 px</Height>
             </Size>
             <DbOid>
-              <Path>FitnessClub.dbo.AgreementTypeService</Path>
+              <Path>FitnessClub.dbo.AgreementTemplateService</Path>
               <TypeName>Table</TypeName>
             </DbOid>
             <Compartments>
@@ -2786,170 +2681,12 @@
           </Model>
           <Model xsi:type="RelationLinkModel">
             <CustomProperties>
-              <OID>163</OID>
-              <Comment>164</Comment>
-              <OutModel>162</OutModel>
-              <InModel>21</InModel>
-              <OutPort>165</OutPort>
-              <InPort>166</InPort>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port>
-                <Location>
-                  <X>112.727281758279 px</X>
-                  <Y>125.151494681234 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Bottom</Align>
-                <CustomProperties>
-                  <OID>165</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-              </Port>
-              <Port>
-                <Location>
-                  <X>200.909115112188 px</X>
-                  <Y>74.4552966004001 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Right</Align>
-                <CustomProperties>
-                  <OID>166</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-              </Port>
-            </PortAnchors>
-            <BendPoints>
-              <PointD>
-                <X>-227.272720336914 px</X>
-                <Y>604.455322265625 px</Y>
-              </PointD>
-            </BendPoints>
-            <IsManuallyRouted>false</IsManuallyRouted>
-            <DbOid>
-              <Path>FitnessClub.dbo.AgreementTypeService.FK_AgreementTypeService_ServiceId</Path>
-              <TypeName>ForeignKey</TypeName>
-            </DbOid>
-          </Model>
-          <Model xsi:type="RelationCommentModel">
-            <CustomProperties>
-              <OID>164</OID>
-              <HolderModel>163</HolderModel>
-              <Port>167</Port>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port xsi:type="LinkPort">
-                <Location>
-                  <X>186.363634297342 px</X>
-                  <Y>-50.455322265625 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Bottom</Align>
-                <CustomProperties>
-                  <OID>167</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-                <LinkPortAnchor>OutPoint</LinkPortAnchor>
-              </Port>
-            </PortAnchors>
-            <CommentOffset>
-              <X>22 px</X>
-              <Y>2 px</Y>
-            </CommentOffset>
-          </Model>
-          <Model xsi:type="RelationLinkModel">
-            <CustomProperties>
-              <OID>168</OID>
-              <Comment>169</Comment>
-              <OutModel>162</OutModel>
-              <InModel>102</InModel>
-              <OutPort>170</OutPort>
-              <InPort>171</InPort>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port>
-                <Location>
-                  <X>2.12122554730831 px</X>
-                  <Y>90.6060403163995 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Left</Align>
-                <CustomProperties>
-                  <OID>170</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-              </Port>
-              <Port>
-                <Location>
-                  <X>174.736867829372 px</X>
-                  <Y>170.909071402117 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Bottom</Align>
-                <CustomProperties>
-                  <OID>171</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-              </Port>
-            </PortAnchors>
-            <BendPoints>
-              <PointD>
-                <X>-365 px</X>
-                <Y>500.6060403164 px</Y>
-              </PointD>
-              <PointD>
-                <X>-365 px</X>
-                <Y>520 px</Y>
-              </PointD>
-              <PointD>
-                <X>-525.263132170628 px</X>
-                <Y>520 px</Y>
-              </PointD>
-            </BendPoints>
-            <IsManuallyRouted>true</IsManuallyRouted>
-            <DbOid>
-              <Path>FitnessClub.dbo.AgreementTypeService.FK_AgreementTypeService_AgreementTypeId</Path>
-              <TypeName>ForeignKey</TypeName>
-            </DbOid>
-          </Model>
-          <Model xsi:type="RelationCommentModel">
-            <CustomProperties>
-              <OID>169</OID>
-              <HolderModel>168</HolderModel>
-              <Port>172</Port>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port xsi:type="LinkPort">
-                <Location>
-                  <X>105.131561279297 px</X>
-                  <Y>-19.3939596836005 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Left</Align>
-                <CustomProperties>
-                  <OID>172</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-                <LinkPortAnchor>OutPoint</LinkPortAnchor>
-              </Port>
-            </PortAnchors>
-            <CommentOffset>
-              <X>22 px</X>
-              <Y>2 px</Y>
-            </CommentOffset>
-          </Model>
-          <Model xsi:type="RelationLinkModel">
-            <CustomProperties>
-              <OID>173</OID>
-              <Comment>174</Comment>
+              <OID>158</OID>
+              <Comment>159</Comment>
               <OutModel>74</OutModel>
               <InModel>11</InModel>
-              <OutPort>175</OutPort>
-              <InPort>176</InPort>
+              <OutPort>160</OutPort>
+              <InPort>161</InPort>
               <Parent>0</Parent>
             </CustomProperties>
             <PortAnchors>
@@ -2961,19 +2698,19 @@
                 <Anchors>None</Anchors>
                 <Align>Left</Align>
                 <CustomProperties>
-                  <OID>175</OID>
+                  <OID>160</OID>
                   <PortType>FixedAnchor</PortType>
                 </CustomProperties>
               </Port>
               <Port>
                 <Location>
                   <X>215 px</X>
-                  <Y>43.9641791044776 px</Y>
+                  <Y>46.8059701492537 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Right</Align>
                 <CustomProperties>
-                  <OID>176</OID>
+                  <OID>161</OID>
                   <PortType>FixedAnchor</PortType>
                 </CustomProperties>
               </Port>
@@ -2985,7 +2722,7 @@
               </PointD>
               <PointD>
                 <X>320 px</X>
-                <Y>-76.0358208955224 px</Y>
+                <Y>-73.1940298507463 px</Y>
               </PointD>
             </BendPoints>
             <IsManuallyRouted>false</IsManuallyRouted>
@@ -2996,21 +2733,21 @@
           </Model>
           <Model xsi:type="RelationCommentModel">
             <CustomProperties>
-              <OID>174</OID>
-              <HolderModel>173</HolderModel>
-              <Port>177</Port>
+              <OID>159</OID>
+              <HolderModel>158</HolderModel>
+              <Port>162</Port>
               <Parent>0</Parent>
             </CustomProperties>
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
                   <X>639.5 px</X>
-                  <Y>-8.04391421194488 px</Y>
+                  <Y>-10.8857034575503 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Left</Align>
                 <CustomProperties>
-                  <OID>177</OID>
+                  <OID>162</OID>
                   <PortType>FixedAnchor</PortType>
                 </CustomProperties>
                 <LinkPortAnchor>OutPoint</LinkPortAnchor>
@@ -3023,12 +2760,12 @@
           </Model>
           <Model xsi:type="RelationLinkModel">
             <CustomProperties>
-              <OID>178</OID>
-              <Comment>179</Comment>
+              <OID>163</OID>
+              <Comment>164</Comment>
               <OutModel>74</OutModel>
               <InModel>11</InModel>
-              <OutPort>180</OutPort>
-              <InPort>181</InPort>
+              <OutPort>165</OutPort>
+              <InPort>166</InPort>
               <Parent>0</Parent>
             </CustomProperties>
             <PortAnchors>
@@ -3040,19 +2777,19 @@
                 <Anchors>None</Anchors>
                 <Align>Left</Align>
                 <CustomProperties>
-                  <OID>180</OID>
+                  <OID>165</OID>
                   <PortType>FixedAnchor</PortType>
                 </CustomProperties>
               </Port>
               <Port>
                 <Location>
                   <X>212.424278488061 px</X>
-                  <Y>70.0000019868214 px</Y>
+                  <Y>74.5247169441445 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Right</Align>
                 <CustomProperties>
-                  <OID>181</OID>
+                  <OID>166</OID>
                   <PortType>FixedAnchor</PortType>
                 </CustomProperties>
               </Port>
@@ -3072,12 +2809,245 @@
               </PointD>
               <PointD>
                 <X>-598.625 px</X>
-                <Y>-49.9999980131786 px</Y>
+                <Y>-45.4752830558555 px</Y>
               </PointD>
             </BendPoints>
             <IsManuallyRouted>true</IsManuallyRouted>
             <DbOid>
               <Path>FitnessClub.dbo.Visit.FK_Visit_EmployeeId</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>164</OID>
+              <HolderModel>163</HolderModel>
+              <Port>167</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>498.0625 px</X>
+                  <Y>69.455149501661 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>167</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>22 px</X>
+              <Y>2 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>168</OID>
+              <Comment>169</Comment>
+              <OutModel>146</OutModel>
+              <InModel>11</InModel>
+              <OutPort>170</OutPort>
+              <InPort>171</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>70 px</X>
+                  <Y>32 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Top</Align>
+                <CustomProperties>
+                  <OID>170</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>198.787915393558 px</X>
+                  <Y>98.6449879574797 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>171</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>60 px</X>
+                <Y>-21.3550120425203 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>FitnessClub.dbo.Shedule.FK_Shedule_EmployeeId</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>169</OID>
+              <HolderModel>168</HolderModel>
+              <Port>172</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>479.5 px</X>
+                  <Y>111.355012893677 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Top</Align>
+                <CustomProperties>
+                  <OID>172</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>22 px</X>
+              <Y>2 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>173</OID>
+              <Comment>174</Comment>
+              <OutModel>146</OutModel>
+              <InModel>11</InModel>
+              <OutPort>175</OutPort>
+              <InPort>176</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>-5 px</X>
+                  <Y>28.9631147540983 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>175</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>215.454581397951 px</X>
+                  <Y>127.962552695436 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>176</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>-70 px</X>
+                <Y>118.963114754098 px</Y>
+              </PointD>
+              <PointD>
+                <X>-70 px</X>
+                <Y>7.96255269543603 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>FitnessClub.dbo.Shedule.FK_Shedule_ClientId</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>174</OID>
+              <HolderModel>173</HolderModel>
+              <Port>177</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>474.5 px</X>
+                  <Y>111.000562206643 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>177</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>22 px</X>
+              <Y>2 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>178</OID>
+              <Comment>179</Comment>
+              <OutModel>146</OutModel>
+              <InModel>21</InModel>
+              <OutPort>180</OutPort>
+              <InPort>181</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>95.5 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>180</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>183.666524821759 px</X>
+                  <Y>126.646264597938 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>181</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>-40 px</X>
+                <Y>185.5 px</Y>
+              </PointD>
+              <PointD>
+                <X>-40 px</X>
+                <Y>716.646264597938 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>true</IsManuallyRouted>
+            <DbOid>
+              <Path>FitnessClub.dbo.Shedule.FK_Shedule_ServiceId</Path>
               <TypeName>ForeignKey</TypeName>
             </DbOid>
           </Model>
@@ -3091,8 +3061,8 @@
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>498.0625 px</X>
-                  <Y>69.455149501661 px</Y>
+                  <X>370 px</X>
+                  <Y>-531.146240234375 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Left</Align>
@@ -3112,243 +3082,10 @@
             <CustomProperties>
               <OID>183</OID>
               <Comment>184</Comment>
-              <OutModel>151</OutModel>
-              <InModel>11</InModel>
-              <OutPort>185</OutPort>
-              <InPort>186</InPort>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port>
-                <Location>
-                  <X>70 px</X>
-                  <Y>32 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Top</Align>
-                <CustomProperties>
-                  <OID>185</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-              </Port>
-              <Port>
-                <Location>
-                  <X>198.787915393558 px</X>
-                  <Y>92.655827974347 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Right</Align>
-                <CustomProperties>
-                  <OID>186</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-              </Port>
-            </PortAnchors>
-            <BendPoints>
-              <PointD>
-                <X>60 px</X>
-                <Y>-27.344172025653 px</Y>
-              </PointD>
-            </BendPoints>
-            <IsManuallyRouted>false</IsManuallyRouted>
-            <DbOid>
-              <Path>FitnessClub.dbo.Shedule.FK_Shedule_EmployeeId</Path>
-              <TypeName>ForeignKey</TypeName>
-            </DbOid>
-          </Model>
-          <Model xsi:type="RelationCommentModel">
-            <CustomProperties>
-              <OID>184</OID>
-              <HolderModel>183</HolderModel>
-              <Port>187</Port>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port xsi:type="LinkPort">
-                <Location>
-                  <X>479.5 px</X>
-                  <Y>117.344171524048 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Top</Align>
-                <CustomProperties>
-                  <OID>187</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-                <LinkPortAnchor>OutPoint</LinkPortAnchor>
-              </Port>
-            </PortAnchors>
-            <CommentOffset>
-              <X>22 px</X>
-              <Y>2 px</Y>
-            </CommentOffset>
-          </Model>
-          <Model xsi:type="RelationLinkModel">
-            <CustomProperties>
-              <OID>188</OID>
-              <Comment>189</Comment>
-              <OutModel>151</OutModel>
-              <InModel>11</InModel>
-              <OutPort>190</OutPort>
-              <InPort>191</InPort>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port>
-                <Location>
-                  <X>-5 px</X>
-                  <Y>28.9631147540983 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Left</Align>
-                <CustomProperties>
-                  <OID>190</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-              </Port>
-              <Port>
-                <Location>
-                  <X>215.454581397951 px</X>
-                  <Y>120.193397710356 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Right</Align>
-                <CustomProperties>
-                  <OID>191</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-              </Port>
-            </PortAnchors>
-            <BendPoints>
-              <PointD>
-                <X>-70 px</X>
-                <Y>118.963114754098 px</Y>
-              </PointD>
-              <PointD>
-                <X>-70 px</X>
-                <Y>0.193397710356024 px</Y>
-              </PointD>
-            </BendPoints>
-            <IsManuallyRouted>false</IsManuallyRouted>
-            <DbOid>
-              <Path>FitnessClub.dbo.Shedule.FK_Shedule_ClientId</Path>
-              <TypeName>ForeignKey</TypeName>
-            </DbOid>
-          </Model>
-          <Model xsi:type="RelationCommentModel">
-            <CustomProperties>
-              <OID>189</OID>
-              <HolderModel>188</HolderModel>
-              <Port>192</Port>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port xsi:type="LinkPort">
-                <Location>
-                  <X>474.5 px</X>
-                  <Y>118.769717038411 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Left</Align>
-                <CustomProperties>
-                  <OID>192</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-                <LinkPortAnchor>OutPoint</LinkPortAnchor>
-              </Port>
-            </PortAnchors>
-            <CommentOffset>
-              <X>22 px</X>
-              <Y>2 px</Y>
-            </CommentOffset>
-          </Model>
-          <Model xsi:type="RelationLinkModel">
-            <CustomProperties>
-              <OID>193</OID>
-              <Comment>194</Comment>
-              <OutModel>151</OutModel>
-              <InModel>21</InModel>
-              <OutPort>195</OutPort>
-              <InPort>196</InPort>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port>
-                <Location>
-                  <X>161 px</X>
-                  <Y>134.832 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Right</Align>
-                <CustomProperties>
-                  <OID>196</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-              </Port>
-              <Port>
-                <Location>
-                  <X>0 px</X>
-                  <Y>95.5 px</Y>
-                </Location>
-                <Anchors>Top Bottom</Anchors>
-                <Align>Left</Align>
-                <CustomProperties>
-                  <OID>195</OID>
-                  <PortType>FloatAnchor</PortType>
-                </CustomProperties>
-              </Port>
-            </PortAnchors>
-            <BendPoints>
-              <PointD>
-                <X>-70 px</X>
-                <Y>185.5 px</Y>
-              </PointD>
-              <PointD>
-                <X>-70 px</X>
-                <Y>664.832 px</Y>
-              </PointD>
-            </BendPoints>
-            <IsManuallyRouted>false</IsManuallyRouted>
-            <DbOid>
-              <Path>FitnessClub.dbo.Shedule.FK_Shedule_ServiceId</Path>
-              <TypeName>ForeignKey</TypeName>
-            </DbOid>
-          </Model>
-          <Model xsi:type="RelationCommentModel">
-            <CustomProperties>
-              <OID>194</OID>
-              <HolderModel>193</HolderModel>
-              <Port>197</Port>
-              <Parent>0</Parent>
-            </CustomProperties>
-            <PortAnchors>
-              <Port xsi:type="LinkPort">
-                <Location>
-                  <X>60 px</X>
-                  <Y>-239.665985107422 px</Y>
-                </Location>
-                <Anchors>None</Anchors>
-                <Align>Left</Align>
-                <CustomProperties>
-                  <OID>197</OID>
-                  <PortType>FixedAnchor</PortType>
-                </CustomProperties>
-                <LinkPortAnchor>OutPoint</LinkPortAnchor>
-              </Port>
-            </PortAnchors>
-            <CommentOffset>
-              <X>22 px</X>
-              <Y>2 px</Y>
-            </CommentOffset>
-          </Model>
-          <Model xsi:type="RelationLinkModel">
-            <CustomProperties>
-              <OID>198</OID>
-              <Comment>199</Comment>
               <OutModel>74</OutModel>
               <InModel>21</InModel>
-              <OutPort>200</OutPort>
-              <InPort>201</InPort>
+              <OutPort>185</OutPort>
+              <InPort>186</InPort>
               <Parent>0</Parent>
             </CustomProperties>
             <PortAnchors>
@@ -3360,19 +3097,19 @@
                 <Anchors>None</Anchors>
                 <Align>Bottom</Align>
                 <CustomProperties>
-                  <OID>200</OID>
+                  <OID>185</OID>
                   <PortType>FixedAnchor</PortType>
                 </CustomProperties>
               </Port>
               <Port>
                 <Location>
-                  <X>170.000021855036 px</X>
-                  <Y>164.46058099246 px</Y>
+                  <X>179.89045571828 px</X>
+                  <Y>147.040600086063 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Right</Align>
                 <CustomProperties>
-                  <OID>201</OID>
+                  <OID>186</OID>
                   <PortType>FixedAnchor</PortType>
                 </CustomProperties>
               </Port>
@@ -3396,7 +3133,7 @@
               </PointD>
               <PointD>
                 <X>700 px</X>
-                <Y>694.46058099246 px</Y>
+                <Y>737.040600086063 px</Y>
               </PointD>
             </BendPoints>
             <IsManuallyRouted>true</IsManuallyRouted>
@@ -3407,21 +3144,21 @@
           </Model>
           <Model xsi:type="RelationCommentModel">
             <CustomProperties>
-              <OID>199</OID>
-              <HolderModel>198</HolderModel>
-              <Port>202</Port>
+              <OID>184</OID>
+              <HolderModel>183</HolderModel>
+              <Port>187</Port>
               <Parent>0</Parent>
             </CustomProperties>
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>492.121187797702 px</X>
-                  <Y>-602.460571289063 px</Y>
+                  <X>552.121187797702 px</X>
+                  <Y>-645.040588378906 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Bottom</Align>
                 <CustomProperties>
-                  <OID>202</OID>
+                  <OID>187</OID>
                   <PortType>FixedAnchor</PortType>
                 </CustomProperties>
                 <LinkPortAnchor>OutPoint</LinkPortAnchor>
@@ -3434,12 +3171,12 @@
           </Model>
           <Model xsi:type="TableModel">
             <CustomProperties>
-              <OID>203</OID>
+              <OID>188</OID>
               <Parent>0</Parent>
             </CustomProperties>
             <Location>
-              <X>-380 px</X>
-              <Y>40 px</Y>
+              <X>-400 px</X>
+              <Y>120 px</Y>
             </Location>
             <Size>
               <Width>190 px</Width>
@@ -3457,24 +3194,24 @@
           </Model>
           <Model xsi:type="RelationLinkModel">
             <CustomProperties>
-              <OID>204</OID>
-              <Comment>205</Comment>
+              <OID>189</OID>
+              <Comment>190</Comment>
               <OutModel>11</OutModel>
-              <InModel>203</InModel>
-              <OutPort>206</OutPort>
-              <InPort>207</InPort>
+              <InModel>188</InModel>
+              <OutPort>191</OutPort>
+              <InPort>192</InPort>
               <Parent>0</Parent>
             </CustomProperties>
             <PortAnchors>
               <Port>
                 <Location>
                   <X>0 px</X>
-                  <Y>201.5 px</Y>
+                  <Y>214.524714828897 px</Y>
                 </Location>
                 <Anchors>Top Bottom</Anchors>
                 <Align>Right</Align>
                 <CustomProperties>
-                  <OID>206</OID>
+                  <OID>191</OID>
                   <PortType>FloatAnchor</PortType>
                 </CustomProperties>
               </Port>
@@ -3486,7 +3223,7 @@
                 <Anchors>Top Bottom</Anchors>
                 <Align>Left</Align>
                 <CustomProperties>
-                  <OID>207</OID>
+                  <OID>192</OID>
                   <PortType>FloatAnchor</PortType>
                 </CustomProperties>
               </Port>
@@ -3494,7 +3231,7 @@
             <BendPoints>
               <PointD>
                 <X>-786.75 px</X>
-                <Y>81.5 px</Y>
+                <Y>94.5247148288973 px</Y>
               </PointD>
               <PointD>
                 <X>-786.75 px</X>
@@ -3506,12 +3243,253 @@
               </PointD>
               <PointD>
                 <X>-530 px</X>
-                <Y>101.5 px</Y>
+                <Y>181.5 px</Y>
               </PointD>
             </BendPoints>
             <IsManuallyRouted>true</IsManuallyRouted>
             <DbOid>
               <Path>FitnessClub.dbo.People.FK_People_CategoryId</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>190</OID>
+              <HolderModel>189</HolderModel>
+              <Port>193</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>-240.625 px</X>
+                  <Y>64.5247148288973 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>193</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>22 px</X>
+              <Y>2 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>194</OID>
+              <Comment>195</Comment>
+              <OutModel>102</OutModel>
+              <InModel>188</InModel>
+              <OutPort>196</OutPort>
+              <InPort>197</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>215.759425834219 px</X>
+                  <Y>79.4764205239687 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>196</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>95 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>Left Right</Anchors>
+                <Align>Bottom</Align>
+                <CustomProperties>
+                  <OID>197</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>-526.25 px</X>
+                <Y>409.476420523969 px</Y>
+              </PointD>
+              <PointD>
+                <X>-526.25 px</X>
+                <Y>350 px</Y>
+              </PointD>
+              <PointD>
+                <X>-305 px</X>
+                <Y>350 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>true</IsManuallyRouted>
+            <DbOid>
+              <Path>FitnessClub.dbo.AgreementTemplate.FK_AgreementTemplate_PeopleCategoryId</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>195</OID>
+              <HolderModel>194</HolderModel>
+              <Port>198</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>-194.375 px</X>
+                  <Y>59.4764205239687 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>198</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>22 px</X>
+              <Y>2 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>199</OID>
+              <Comment>200</Comment>
+              <OutModel>157</OutModel>
+              <InModel>102</InModel>
+              <OutPort>201</OutPort>
+              <InPort>202</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>24 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>201</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>198.123595505618 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>202</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>-360 px</X>
+                <Y>534 px</Y>
+              </PointD>
+              <PointD>
+                <X>-360 px</X>
+                <Y>528.123595505618 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>FitnessClub.dbo.AgreementTemplateService.FK_AgreementTemplateService_AgreementTemplateId</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>200</OID>
+              <HolderModel>199</HolderModel>
+              <Port>203</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>135 px</X>
+                  <Y>5.87640380859375 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>203</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>22 px</X>
+              <Y>2 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>204</OID>
+              <Comment>205</Comment>
+              <OutModel>157</OutModel>
+              <InModel>21</InModel>
+              <OutPort>206</OutPort>
+              <InPort>207</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>132 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>206</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>12.9622641509434 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>207</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>-360 px</X>
+                <Y>642 px</Y>
+              </PointD>
+              <PointD>
+                <X>-360 px</X>
+                <Y>602.962264150943 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>FitnessClub.dbo.AgreementTemplateService.FK_AgreementTemplateService_ServiceId</Path>
               <TypeName>ForeignKey</TypeName>
             </DbOid>
           </Model>
@@ -3525,11 +3503,11 @@
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>-240.625 px</X>
-                  <Y>51.5 px</Y>
+                  <X>190 px</X>
+                  <Y>39.0377197265625 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
-                <Align>Right</Align>
+                <Align>Left</Align>
                 <CustomProperties>
                   <OID>208</OID>
                   <PortType>FixedAnchor</PortType>
@@ -3546,8 +3524,8 @@
             <CustomProperties>
               <OID>209</OID>
               <Comment>210</Comment>
-              <OutModel>102</OutModel>
-              <InModel>203</InModel>
+              <OutModel>101</OutModel>
+              <InModel>102</InModel>
               <OutPort>211</OutPort>
               <InPort>212</InPort>
               <Parent>0</Parent>
@@ -3555,46 +3533,42 @@
             <PortAnchors>
               <Port>
                 <Location>
-                  <X>188.787899498987 px</X>
-                  <Y>93.9393782856495 px</Y>
+                  <X>90 px</X>
+                  <Y>0 px</Y>
                 </Location>
-                <Anchors>None</Anchors>
-                <Align>Right</Align>
+                <Anchors>Left Right</Anchors>
+                <Align>Bottom</Align>
                 <CustomProperties>
                   <OID>211</OID>
-                  <PortType>FixedAnchor</PortType>
+                  <PortType>FloatAnchor</PortType>
                 </CustomProperties>
               </Port>
               <Port>
                 <Location>
-                  <X>110.606074092364 px</X>
-                  <Y>104.242419305474 px</Y>
+                  <X>200 px</X>
+                  <Y>0 px</Y>
                 </Location>
-                <Anchors>None</Anchors>
-                <Align>Bottom</Align>
+                <Anchors>Left Right</Anchors>
+                <Align>Top</Align>
                 <CustomProperties>
                   <OID>212</OID>
-                  <PortType>FixedAnchor</PortType>
+                  <PortType>FloatAnchor</PortType>
                 </CustomProperties>
               </Port>
             </PortAnchors>
             <BendPoints>
               <PointD>
-                <X>-420 px</X>
-                <Y>373.939378285649 px</Y>
+                <X>-620 px</X>
+                <Y>306 px</Y>
               </PointD>
               <PointD>
-                <X>-420 px</X>
-                <Y>330 px</Y>
-              </PointD>
-              <PointD>
-                <X>-269.393925907636 px</X>
-                <Y>330 px</Y>
+                <X>-640 px</X>
+                <Y>306 px</Y>
               </PointD>
             </BendPoints>
-            <IsManuallyRouted>true</IsManuallyRouted>
+            <IsManuallyRouted>false</IsManuallyRouted>
             <DbOid>
-              <Path>FitnessClub.dbo.AgreementType.FK_AgreementType_PeopleCategoryId</Path>
+              <Path>FitnessClub.dbo.Agreement.FK_Agreement_TemplateId</Path>
               <TypeName>ForeignKey</TypeName>
             </DbOid>
           </Model>
@@ -3608,11 +3582,11 @@
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>-135.303039550781 px</X>
-                  <Y>43.9393782856495 px</Y>
+                  <X>10 px</X>
+                  <Y>-20 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
-                <Align>Right</Align>
+                <Align>Bottom</Align>
                 <CustomProperties>
                   <OID>213</OID>
                   <PortType>FixedAnchor</PortType>
@@ -3625,13 +3599,356 @@
               <Y>2 px</Y>
             </CommentOffset>
           </Model>
+          <Model xsi:type="TableModel">
+            <CustomProperties>
+              <OID>214</OID>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <Location>
+              <X>-270 px</X>
+              <Y>310 px</Y>
+            </Location>
+            <Size>
+              <Width>170 px</Width>
+              <Height>161 px</Height>
+            </Size>
+            <DbOid>
+              <Path>FitnessClub.dbo.Organization</Path>
+              <TypeName>Table</TypeName>
+            </DbOid>
+            <Compartments>
+              <ConstraintsCollapsed>True</ConstraintsCollapsed>
+              <IndexesCollapsed>True</IndexesCollapsed>
+              <TriggersCollapsed>True</TriggersCollapsed>
+            </Compartments>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>215</OID>
+              <Comment>216</Comment>
+              <OutModel>102</OutModel>
+              <InModel>214</InModel>
+              <OutPort>217</OutPort>
+              <InPort>218</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>228.346322845813 px</X>
+                  <Y>128.25548755813 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>217</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>0 px</X>
+                  <Y>100.5 px</Y>
+                </Location>
+                <Anchors>Top Bottom</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>218</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>-460 px</X>
+                <Y>458.25548755813 px</Y>
+              </PointD>
+              <PointD>
+                <X>-460 px</X>
+                <Y>410.5 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>FitnessClub.dbo.AgreementTemplate.FK_AgreementTemplate_OrganizationId</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>216</OID>
+              <HolderModel>215</HolderModel>
+              <Port>219</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>-150 px</X>
+                  <Y>23.8777409760988 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>219</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>22 px</X>
+              <Y>2 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>220</OID>
+              <Comment>221</Comment>
+              <OutModel>11</OutModel>
+              <InModel>214</InModel>
+              <OutPort>222</OutPort>
+              <InPort>223</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>209.967346061763 px</X>
+                  <Y>166.571518942897 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>222</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>85 px</X>
+                  <Y>0 px</Y>
+                </Location>
+                <Anchors>Left Right</Anchors>
+                <Align>Top</Align>
+                <CustomProperties>
+                  <OID>223</OID>
+                  <PortType>FloatAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>-879 px</X>
+                <Y>46.5715189428973 px</Y>
+              </PointD>
+              <PointD>
+                <X>-879 px</X>
+                <Y>25 px</Y>
+              </PointD>
+              <PointD>
+                <X>-185 px</X>
+                <Y>25 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>FitnessClub.dbo.People.FK_People_OrganizationId</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>221</OID>
+              <HolderModel>220</HolderModel>
+              <Port>224</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>-367 px</X>
+                  <Y>21.5715189428973 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Right</Align>
+                <CustomProperties>
+                  <OID>224</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>22 px</X>
+              <Y>2 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>225</OID>
+              <Comment>226</Comment>
+              <OutModel>108</OutModel>
+              <InModel>11</InModel>
+              <OutPort>227</OutPort>
+              <InPort>228</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>116.908571253659 px</X>
+                  <Y>-7.55951094116398 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Top</Align>
+                <CustomProperties>
+                  <OID>227</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>12.3530629797394 px</X>
+                  <Y>215.660417288113 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>228</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>-1353.09143066406 px</X>
+                <Y>95.6604156494141 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>false</IsManuallyRouted>
+            <DbOid>
+              <Path>FitnessClub.dbo.PurchaseService.FK_PurchaseService_EmployeeId</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>226</OID>
+              <HolderModel>225</HolderModel>
+              <Port>229</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>-116.545774449466 px</X>
+                  <Y>84.3395843505859 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Top</Align>
+                <CustomProperties>
+                  <OID>229</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>22 px</X>
+              <Y>2 px</Y>
+            </CommentOffset>
+          </Model>
+          <Model xsi:type="RelationLinkModel">
+            <CustomProperties>
+              <OID>230</OID>
+              <Comment>231</Comment>
+              <OutModel>124</OutModel>
+              <InModel>74</InModel>
+              <OutPort>232</OutPort>
+              <InPort>233</InPort>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port>
+                <Location>
+                  <X>-19.2310965651725 px</X>
+                  <Y>39.7914471721747 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>232</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+              </Port>
+              <Port>
+                <Location>
+                  <X>120.749948233611 px</X>
+                  <Y>16.7874445049303 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Top</Align>
+                <CustomProperties>
+                  <OID>233</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+              </Port>
+            </PortAnchors>
+            <BendPoints>
+              <PointD>
+                <X>-1700 px</X>
+                <Y>-30.2085528278253 px</Y>
+              </PointD>
+              <PointD>
+                <X>-1700 px</X>
+                <Y>-510 px</Y>
+              </PointD>
+              <PointD>
+                <X>470.749948233611 px</X>
+                <Y>-510 px</Y>
+              </PointD>
+            </BendPoints>
+            <IsManuallyRouted>true</IsManuallyRouted>
+            <DbOid>
+              <Path>FitnessClub.dbo.CheckOperation.FK_CheckOperation_VisitId</Path>
+              <TypeName>ForeignKey</TypeName>
+            </DbOid>
+          </Model>
+          <Model xsi:type="RelationCommentModel">
+            <CustomProperties>
+              <OID>231</OID>
+              <HolderModel>230</HolderModel>
+              <Port>234</Port>
+              <Parent>0</Parent>
+            </CustomProperties>
+            <PortAnchors>
+              <Port xsi:type="LinkPort">
+                <Location>
+                  <X>-1065.37493896484 px</X>
+                  <Y>479.791447172175 px</Y>
+                </Location>
+                <Anchors>None</Anchors>
+                <Align>Left</Align>
+                <CustomProperties>
+                  <OID>234</OID>
+                  <PortType>FixedAnchor</PortType>
+                </CustomProperties>
+                <LinkPortAnchor>OutPoint</LinkPortAnchor>
+              </Port>
+            </PortAnchors>
+            <CommentOffset>
+              <X>-158.428771972656 px</X>
+              <Y>-69.7914471721747 px</Y>
+            </CommentOffset>
+          </Model>
         </Children>
         <ViewPort>
           <ScaleMode>Free</ScaleMode>
-          <Scale>0.66</Scale>
+          <Scale>0.794477</Scale>
           <Location>
-            <X>-2072.72719036449 px</X>
-            <Y>-471.212102487835 px</Y>
+            <X>-1913.20834576227 px</X>
+            <Y>-570.186432730582 px</Y>
           </Location>
         </ViewPort>
       </Model>
