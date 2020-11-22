@@ -1,4 +1,4 @@
-﻿USE master
+USE master
 GO
 
 
@@ -122,7 +122,7 @@ GO
 PRINT (N'Create table [dbo].[StorageType]')
 GO
 CREATE TABLE dbo.StorageType (
-  Id int IDENTITY,
+  Id int IDENTITY(1,1),
   Name nvarchar(150) NOT NULL,
   CONSTRAINT PK_StorageType_Id PRIMARY KEY CLUSTERED (Id),
   CONSTRAINT UQ_StorageType_Name UNIQUE (Name)
@@ -136,7 +136,7 @@ GO
 PRINT (N'Create table [dbo].[Sex]')
 GO
 CREATE TABLE dbo.Sex (
-  Id smallint IDENTITY,
+  Id smallint IDENTITY(1,1),
   Name nvarchar(10) NOT NULL,
   ShortName nvarchar(5) NOT NULL,
   CONSTRAINT PK_Sex_Id PRIMARY KEY CLUSTERED (Id),
@@ -159,7 +159,7 @@ GO
 PRINT (N'Create table [dbo].[ServiceCategory]')
 GO
 CREATE TABLE dbo.ServiceCategory (
-  Id int IDENTITY,
+  Id int IDENTITY(1,1),
   Name nvarchar(150) NOT NULL,
   Description nvarchar(300) NULL,
   CONSTRAINT PK_ServiceCategory_Id PRIMARY KEY CLUSTERED (Id),
@@ -182,7 +182,7 @@ GO
 PRINT (N'Create table [dbo].[Service]')
 GO
 CREATE TABLE dbo.Service (
-  Id bigint IDENTITY,
+  Id bigint IDENTITY(1,1),
   Name nvarchar(150) NOT NULL,
   CategoryId int NOT NULL,
   Price decimal(16, 2) NOT NULL,
@@ -284,7 +284,7 @@ GO
 PRINT (N'Create table [dbo].[RoomCategory]')
 GO
 CREATE TABLE dbo.RoomCategory (
-  Id int IDENTITY,
+  Id int IDENTITY(1,1),
   Name nvarchar(150) NOT NULL,
   CONSTRAINT PK_RoomCategory_Id PRIMARY KEY CLUSTERED (Id),
   CONSTRAINT UQ_RoomCategory_Name UNIQUE (Name)
@@ -298,7 +298,7 @@ GO
 PRINT (N'Create table [dbo].[Room]')
 GO
 CREATE TABLE dbo.Room (
-  Id int IDENTITY,
+  Id int IDENTITY(1,1),
   Number nvarchar(50) NOT NULL,
   CategoryId int NOT NULL,
   Description nvarchar(300) NULL,
@@ -324,7 +324,7 @@ GO
 PRINT (N'Create table [dbo].[Storage]')
 GO
 CREATE TABLE dbo.Storage (
-  Id int IDENTITY,
+  Id int IDENTITY(1,1),
   Number nvarchar(50) NOT NULL,
   RoomId int NOT NULL,
   TypeId int NOT NULL,
@@ -358,7 +358,7 @@ GO
 PRINT (N'Create table [dbo].[PeopleCategory]')
 GO
 CREATE TABLE dbo.PeopleCategory (
-  Id int IDENTITY,
+  Id int IDENTITY(1,1),
   Name nvarchar(255) NOT NULL,
   CONSTRAINT PK_PeopleCategory_Id PRIMARY KEY CLUSTERED (Id)
 )
@@ -371,7 +371,7 @@ GO
 PRINT (N'Create table [dbo].[Organization]')
 GO
 CREATE TABLE dbo.Organization (
-  Id bigint IDENTITY,
+  Id bigint IDENTITY(1,1),
   Name nvarchar(255) NOT NULL,
   Inn nvarchar(12) NOT NULL,
   Kpp nvarchar(10) NULL,
@@ -395,7 +395,7 @@ GO
 PRINT (N'Create table [dbo].[People]')
 GO
 CREATE TABLE dbo.People (
-  Id bigint IDENTITY,
+  Id bigint IDENTITY(1,1),
   FirstName nvarchar(150) NOT NULL,
   Patronymic nvarchar(150) NOT NULL,
   Surname nvarchar(250) NOT NULL,
@@ -447,7 +447,7 @@ GO
 PRINT (N'Create table [dbo].[Visit]')
 GO
 CREATE TABLE dbo.Visit (
-  Id bigint IDENTITY,
+  Id bigint IDENTITY(1,1),
   Date date NOT NULL,
   ServiceId bigint NOT NULL,
   ClientId bigint NOT NULL,
@@ -502,7 +502,7 @@ GO
 PRINT (N'Create table [dbo].[Shedule]')
 GO
 CREATE TABLE dbo.Shedule (
-  Id bigint IDENTITY,
+  Id bigint IDENTITY(1,1),
   ServiceId bigint NOT NULL,
   EmployeeId bigint NOT NULL,
   RoomId int NOT NULL,
@@ -556,7 +556,7 @@ GO
 PRINT (N'Create table [dbo].[PurchaseService]')
 GO
 CREATE TABLE dbo.PurchaseService (
-  Id bigint IDENTITY,
+  Id bigint IDENTITY(1,1),
   Date date NOT NULL,
   PeopleId bigint NOT NULL,
   SeviceId bigint NOT NULL,
@@ -645,7 +645,7 @@ GO
 PRINT (N'Create table [dbo].[Card]')
 GO
 CREATE TABLE dbo.Card (
-  Id bigint IDENTITY,
+  Id bigint IDENTITY(1,1),
   Number nvarchar(50) NOT NULL,
   PeopleId bigint NOT NULL,
   DateStart date NOT NULL,
@@ -671,7 +671,7 @@ GO
 PRINT (N'Create table [dbo].[AgreementTemplate]')
 GO
 CREATE TABLE dbo.AgreementTemplate (
-  Id int IDENTITY,
+  Id int IDENTITY(1,1),
   Name nvarchar(150) NOT NULL,
   StartDate date NOT NULL,
   EndDate date NULL,
@@ -767,7 +767,7 @@ GO
 PRINT (N'Create table [dbo].[Agreement]')
 GO
 CREATE TABLE dbo.Agreement (
-  Id bigint IDENTITY,
+  Id bigint IDENTITY(1,1),
   Number nvarchar(50) NOT NULL,
   Date date NOT NULL,
   PeopleId bigint NOT NULL,
@@ -777,6 +777,7 @@ CREATE TABLE dbo.Agreement (
   Discount decimal(6, 2) NOT NULL CONSTRAINT DF_Agreement_Discount DEFAULT (0),
   Frozen bit NOT NULL CONSTRAINT DF_Agreement_Blocked DEFAULT (0),
   FrozenTerm int NOT NULL DEFAULT (0),
+  FrozenDate date NULL,
   CONSTRAINT PK_Agreement_Id PRIMARY KEY CLUSTERED (Id)
 )
 ON [PRIMARY]
@@ -870,7 +871,7 @@ GO
 PRINT (N'Create table [dbo].[MaterialCategory]')
 GO
 CREATE TABLE dbo.MaterialCategory (
-  Id int IDENTITY,
+  Id int IDENTITY(1,1),
   Name nvarchar(150) NOT NULL,
   CONSTRAINT PK_MaterialCategory_Id PRIMARY KEY CLUSTERED (Id),
   CONSTRAINT UQ_MaterialCategory_Name UNIQUE (Name)
@@ -884,7 +885,7 @@ GO
 PRINT (N'Create table [dbo].[Material]')
 GO
 CREATE TABLE dbo.Material (
-  Id int IDENTITY,
+  Id int IDENTITY(1,1),
   Name nvarchar(150) NOT NULL,
   CategoryId int NOT NULL,
   Price decimal(16, 2) NOT NULL,
@@ -988,7 +989,7 @@ GO
 PRINT (N'Create table [dbo].[HealthRestrictionsCategory]')
 GO
 CREATE TABLE dbo.HealthRestrictionsCategory (
-  Id int IDENTITY,
+  Id int IDENTITY(1,1),
   Name nvarchar(150) NOT NULL,
   Description nvarchar(300) NULL,
   CONSTRAINT PK_HealthRestrictionsCategory_Id PRIMARY KEY CLUSTERED (Id),
@@ -1011,7 +1012,7 @@ GO
 PRINT (N'Create table [dbo].[HealthRestriction]')
 GO
 CREATE TABLE dbo.HealthRestriction (
-  Id int IDENTITY,
+  Id int IDENTITY(1,1),
   Name nvarchar(150) NOT NULL,
   CategoryId int NOT NULL,
   Description nvarchar(300) NULL,
@@ -1082,7 +1083,7 @@ GO
 PRINT (N'Create table [dbo].[EmployeeSpeciality]')
 GO
 CREATE TABLE dbo.EmployeeSpeciality (
-  Id int IDENTITY,
+  Id int IDENTITY(1,1),
   Name nvarchar(255) NOT NULL,
   Description nvarchar(300) NULL,
   CONSTRAINT PK_EmployeeSpeciality_Id PRIMARY KEY CLUSTERED (Id),
@@ -1105,7 +1106,7 @@ GO
 PRINT (N'Create table [dbo].[EmployeeCategory]')
 GO
 CREATE TABLE dbo.EmployeeCategory (
-  Id int IDENTITY,
+  Id int IDENTITY(1,1),
   Name nvarchar(255) NOT NULL,
   Description nvarchar(300) NULL,
   CONSTRAINT PK_EmployeeCategory_Id PRIMARY KEY CLUSTERED (Id),
@@ -1128,13 +1129,15 @@ GO
 PRINT (N'Create table [dbo].[Employee]')
 GO
 CREATE TABLE dbo.Employee (
-  Id bigint IDENTITY,
+  Id bigint IDENTITY(1,1),
   SpecialityId int NOT NULL,
   CategoryId int NOT NULL,
   PeopleId bigint NOT NULL,
   WorkStart date NOT NULL,
   WorkEnd date NULL,
-  CONSTRAINT PK_Employee_Id PRIMARY KEY CLUSTERED (Id)
+  CONSTRAINT PK_Employee_Id PRIMARY KEY CLUSTERED (Id),
+  CONSTRAINT UQ_Employee_PeopleId_WorStart UNIQUE (PeopleId, WorkStart),
+  CONSTRAINT CK_Employee_WorkDate CHECK ([WorkEnd] IS NULL OR [WorkEnd]>=[WorkStart])
 )
 ON [PRIMARY]
 GO

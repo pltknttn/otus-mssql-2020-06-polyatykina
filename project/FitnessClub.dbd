@@ -173,7 +173,7 @@
               <Parent>0</Parent>
             </CustomProperties>
             <Location>
-              <X>-1150 px</X>
+              <X>-1160 px</X>
               <Y>400 px</Y>
             </Location>
             <Size>
@@ -228,7 +228,7 @@
             </PortAnchors>
             <BendPoints>
               <PointD>
-                <X>-1061.38235294118 px</X>
+                <X>-1071.38235294118 px</X>
                 <Y>300 px</Y>
               </PointD>
               <PointD>
@@ -252,7 +252,7 @@
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>-26.9033490349266 px</X>
+                  <X>-31.9033490349266 px</X>
                   <Y>100 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
@@ -442,7 +442,7 @@
               </Port>
               <Port>
                 <Location>
-                  <X>Undefined</X>
+                  <X>0 px</X>
                   <Y>23.9551309944728 px</Y>
                 </Location>
                 <Anchors>Top Bottom</Anchors>
@@ -480,7 +480,7 @@
               <Port xsi:type="LinkPort">
                 <Location>
                   <X>-140 px</X>
-                  <Y>4.75111082915635 px</Y>
+                  <Y>4.75111082915669 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Right</Align>
@@ -1482,7 +1482,7 @@
               <Port xsi:type="LinkPort">
                 <Location>
                   <X>20 px</X>
-                  <Y>55.2479659315697 px</Y>
+                  <Y>55.2479659315696 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Left</Align>
@@ -1765,7 +1765,7 @@
             </Location>
             <Size>
               <Width>171 px</Width>
-              <Height>246 px</Height>
+              <Height>263 px</Height>
             </Size>
             <DbOid>
               <Path>FitnessClub.dbo.Agreement</Path>
@@ -1784,7 +1784,7 @@
             </CustomProperties>
             <Location>
               <X>-840 px</X>
-              <Y>330 px</Y>
+              <Y>340 px</Y>
             </Location>
             <Size>
               <Width>230 px</Width>
@@ -1814,7 +1814,7 @@
               <Port>
                 <Location>
                   <X>9.39395769677907 px</X>
-                  <Y>139.245273797017 px</Y>
+                  <Y>148.867914669169 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Left</Align>
@@ -1839,7 +1839,7 @@
             <BendPoints>
               <PointD>
                 <X>-945.454528808594 px</X>
-                <Y>179.245269775391 px</Y>
+                <Y>188.867919921875 px</Y>
               </PointD>
             </BendPoints>
             <IsManuallyRouted>false</IsManuallyRouted>
@@ -1859,7 +1859,7 @@
               <Port xsi:type="LinkPort">
                 <Location>
                   <X>117.727294921875 px</X>
-                  <Y>4.02162655177563E-06 px</Y>
+                  <Y>-5.25270598927818E-06 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Left</Align>
@@ -1936,7 +1936,7 @@
             </PortAnchors>
             <BendPoints>
               <PointD>
-                <X>-1035 px</X>
+                <X>-1045 px</X>
                 <Y>639.963614359047 px</Y>
               </PointD>
             </BendPoints>
@@ -1986,8 +1986,8 @@
             <PortAnchors>
               <Port>
                 <Location>
-                  <X>181 px</X>
-                  <Y>97.9652605459057 px</Y>
+                  <X>197.46471212786 px</X>
+                  <Y>153.070059394946 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Right</Align>
@@ -2012,7 +2012,7 @@
             <BendPoints>
               <PointD>
                 <X>-1255 px</X>
-                <Y>277.965260545906 px</Y>
+                <Y>333.070059394946 px</Y>
               </PointD>
               <PointD>
                 <X>-1255 px</X>
@@ -2036,7 +2036,7 @@
               <Port xsi:type="LinkPort">
                 <Location>
                   <X>-20 px</X>
-                  <Y>-203.205241163079 px</Y>
+                  <Y>-175.652840995679 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Right</Align>
@@ -2662,7 +2662,7 @@
               <Parent>0</Parent>
             </CustomProperties>
             <Location>
-              <X>-350 px</X>
+              <X>-340 px</X>
               <Y>510 px</Y>
             </Location>
             <Size>
@@ -3263,7 +3263,7 @@
               <Port xsi:type="LinkPort">
                 <Location>
                   <X>-240.625 px</X>
-                  <Y>64.5247148288973 px</Y>
+                  <Y>64.524714828897 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Right</Align>
@@ -3318,7 +3318,7 @@
             <BendPoints>
               <PointD>
                 <X>-526.25 px</X>
-                <Y>409.476420523969 px</Y>
+                <Y>419.476420523969 px</Y>
               </PointD>
               <PointD>
                 <X>-526.25 px</X>
@@ -3346,7 +3346,7 @@
               <Port xsi:type="LinkPort">
                 <Location>
                   <X>-194.375 px</X>
-                  <Y>59.4764205239687 px</Y>
+                  <Y>69.4764205239687 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Right</Align>
@@ -3405,7 +3405,7 @@
               </PointD>
               <PointD>
                 <X>-360 px</X>
-                <Y>528.123595505618 px</Y>
+                <Y>538.123595505618 px</Y>
               </PointD>
             </BendPoints>
             <IsManuallyRouted>false</IsManuallyRouted>
@@ -3424,8 +3424,8 @@
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>135 px</X>
-                  <Y>5.87640380859375 px</Y>
+                  <X>145 px</X>
+                  <Y>-4.12359619140625 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Left</Align>
@@ -3437,8 +3437,8 @@
               </Port>
             </PortAnchors>
             <CommentOffset>
-              <X>22 px</X>
-              <Y>2 px</Y>
+              <X>3.66763305664063 px</X>
+              <Y>16 px</Y>
             </CommentOffset>
           </Model>
           <Model xsi:type="RelationLinkModel">
@@ -3503,7 +3503,7 @@
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>190 px</X>
+                  <X>200 px</X>
                   <Y>39.0377197265625 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
@@ -3582,7 +3582,7 @@
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>10 px</X>
+                  <X>20 px</X>
                   <Y>-20 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
@@ -3661,7 +3661,7 @@
             <BendPoints>
               <PointD>
                 <X>-460 px</X>
-                <Y>458.25548755813 px</Y>
+                <Y>468.25548755813 px</Y>
               </PointD>
               <PointD>
                 <X>-460 px</X>
@@ -3685,7 +3685,7 @@
               <Port xsi:type="LinkPort">
                 <Location>
                   <X>-150 px</X>
-                  <Y>23.8777409760988 px</Y>
+                  <Y>28.8777409760987 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Right</Align>
@@ -3768,7 +3768,7 @@
               <Port xsi:type="LinkPort">
                 <Location>
                   <X>-367 px</X>
-                  <Y>21.5715189428973 px</Y>
+                  <Y>21.571518942897 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Right</Align>

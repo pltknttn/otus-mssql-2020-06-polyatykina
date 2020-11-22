@@ -1,4 +1,4 @@
-﻿USE FitnessClub
+USE FitnessClub
 GO
 
 INSERT INTO dbo.Service

@@ -11,7 +11,7 @@ begin
 
 	 if exists(select * from MaterialCategory where Name = @Name and Id <> @Id)
 	 begin 
-	     set @msg = 'Категория "'+@Name+'" уже существует!';
+	     set @msg = 'РљР°С‚РµРіРѕСЂРёСЏ "'+@Name+'" СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!';
 	     raiserror(@msg,16,1)
 		 return (-1)
 	 end
@@ -31,7 +31,7 @@ as
 begin
      if exists(select * from Material where CategoryId = @Id)
 	 begin 
-	     raiserror('Категория используется в материалах!',16,1)
+	     raiserror('РљР°С‚РµРіРѕСЂРёСЏ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РІ РјР°С‚РµСЂРёР°Р»Р°С…!',16,1)
 		 return (-1)
 	 end 
 
@@ -50,7 +50,7 @@ declare @msg nvarchar(255)
 begin      
      if @CategoryId is null or not exists(select * from MaterialCategory where Id = @CategoryId)
 	 begin 
-	     raiserror('Категория не существует!',16,1)
+	     raiserror('РљР°С‚РµРіРѕСЂРёСЏ РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!',16,1)
 		 return (-1)
 	 end
 	 
@@ -59,13 +59,13 @@ begin
 
 	 if @Id <> 0 and not exists(select * from Material where Id = @Id)
 	 begin 
-	     raiserror('Материал не существует!',16,1)
+	     raiserror('РњР°С‚РµСЂРёР°Р» РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!',16,1)
 		 return (-1)
 	 end
 
 	 if exists(select * from Material where Name = @Name and CategoryId = @CategoryId and Id <> @Id)
 	 begin 
-	     set @msg = 'Материал "'+@Name+'" уже существует!';
+	     set @msg = 'РњР°С‚РµСЂРёР°Р» "'+@Name+'" СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!';
 	     raiserror(@msg,16,1)
 		 return (-1)
 	 end
@@ -90,7 +90,7 @@ begin
      if exists(select * from PurchaseMaterial where MaterialId = @Id)
 	 or exists(select * from CheckOperation where MaterialId = @Id)
 	 begin 
-	     raiserror('Материал реализовывался, проверьте продажи!',16,1)
+	     raiserror('РњР°С‚РµСЂРёР°Р» СЂРµР°Р»РёР·РѕРІС‹РІР°Р»СЃСЏ, РїСЂРѕРІРµСЂСЊС‚Рµ РїСЂРѕРґР°Р¶Рё!',16,1)
 		 return (-1)
 	 end 
 

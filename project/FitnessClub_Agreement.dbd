@@ -80,7 +80,7 @@
             </Location>
             <Size>
               <Width>220 px</Width>
-              <Height>246 px</Height>
+              <Height>263 px</Height>
             </Size>
             <DbOid>
               <Path>FitnessClub.dbo.Agreement</Path>
@@ -106,7 +106,7 @@
               <Port>
                 <Location>
                   <X>0 px</X>
-                  <Y>31.5 px</Y>
+                  <Y>33.6768292682927 px</Y>
                 </Location>
                 <Anchors>Top Bottom</Anchors>
                 <Align>Right</Align>
@@ -131,7 +131,7 @@
             <BendPoints>
               <PointD>
                 <X>-760 px</X>
-                <Y>-318.5 px</Y>
+                <Y>-316.323170731707 px</Y>
               </PointD>
               <PointD>
                 <X>-760 px</X>
@@ -155,7 +155,7 @@
               <Port xsi:type="LinkPort">
                 <Location>
                   <X>-125 px</X>
-                  <Y>15.0361328125 px</Y>
+                  <Y>17.2129620807927 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Right</Align>
@@ -502,7 +502,7 @@
             <PortAnchors>
               <Port xsi:type="LinkPort">
                 <Location>
-                  <X>-84.2647022920496 px</X>
+                  <X>-84.2647022920497 px</X>
                   <Y>40 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
@@ -613,7 +613,7 @@
               </Port>
               <Port>
                 <Location>
-                  <X>Undefined</X>
+                  <X>0 px</X>
                   <Y>50 px</Y>
                 </Location>
                 <Anchors>Top Bottom</Anchors>
@@ -681,7 +681,7 @@
               <Port>
                 <Location>
                   <X>0 px</X>
-                  <Y>232 px</Y>
+                  <Y>248.032520325203 px</Y>
                 </Location>
                 <Anchors>Top Bottom</Anchors>
                 <Align>Right</Align>
@@ -706,7 +706,7 @@
             <BendPoints>
               <PointD>
                 <X>-760 px</X>
-                <Y>-118 px</Y>
+                <Y>-101.967479674797 px</Y>
               </PointD>
               <PointD>
                 <X>-760 px</X>
@@ -730,7 +730,7 @@
               <Port xsi:type="LinkPort">
                 <Location>
                   <X>-155 px</X>
-                  <Y>-39.9534912109375 px</Y>
+                  <Y>-23.9209708857342 px</Y>
                 </Location>
                 <Anchors>None</Anchors>
                 <Align>Right</Align>

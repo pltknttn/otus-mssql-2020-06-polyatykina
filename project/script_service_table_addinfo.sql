@@ -1,6 +1,6 @@
 ﻿USE FitnessClub
 GO
-
+ 
 
 INSERT INTO dbo.PeopleCategory
 (
@@ -8,7 +8,7 @@ INSERT INTO dbo.PeopleCategory
 )
 VALUES
 (
-  N'Обычный клиент'  
+  N'Клиент'  
 );
 GO 
 
@@ -28,9 +28,10 @@ INSERT INTO dbo.PeopleCategory
 )
 VALUES
 (
-  N'Сотрудник'  
+  N'Сотрудник клуба'  
 );
 GO 
+
 INSERT INTO dbo.PeopleCategory
 (
   Name
@@ -40,6 +41,36 @@ VALUES
   N'Социальный клиент'  
 );
 GO
+
+INSERT INTO dbo.PeopleCategory
+(
+  Name
+)
+VALUES
+(
+  N'Приглашенный клиент'  
+);
+GO
+
+INSERT INTO dbo.PeopleCategory
+(
+  Name
+)
+VALUES
+(
+  N'VIP-клиент'  
+);
+GO 
+
+INSERT INTO dbo.PeopleCategory
+(
+  Name
+)
+VALUES
+(
+  N'Дети'  
+);
+GO 
 
 SELECT * FROM dbo.PeopleCategory
  
@@ -224,7 +255,47 @@ VALUES
 );
 GO
 
-SELECT * FROM dbo.RoomCategory
+INSERT INTO dbo.RoomCategory
+(
+  Name
+)
+VALUES
+(
+  N'Раздевалка детская'
+);
+GO
+
+INSERT INTO dbo.RoomCategory
+(
+  Name
+)
+VALUES
+(
+  N'Комната матери и ребенка'
+);
+GO
+
+INSERT INTO dbo.RoomCategory
+(
+  Name
+)
+VALUES
+(
+  N'Зал единоборств'
+);
+GO
+
+INSERT INTO dbo.RoomCategory
+(
+  Name
+)
+VALUES
+(
+  N'Комната отдыха'
+);
+GO
+
+SELECT * FROM dbo.RoomCategory order by 1
 GO
 
 USE FitnessClub
